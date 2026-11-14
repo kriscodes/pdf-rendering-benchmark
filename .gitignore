@@ -147,3 +147,26 @@ vite.config.ts.timestamp-*
 
 # Turbo Repo
 .turbo
+
+
+# Dependencies
+node_modules/
+
+# Build output
+dist/
+.next/
+coverage/
+
+# Local environment
+.env
+.env.*
+!.env.example
+
+# Generated benchmark artifacts
+corpus/generated/
+results/raw/
+results/traces/
+results/screenshots/
+
+# Operating system
+.DS_Store
