@@ -7,7 +7,8 @@
     "build": "pnpm -r --if-present build",
     "typecheck": "pnpm -r --if-present typecheck",
     "test": "pnpm -r --if-present test",
-    "clean": "pnpm -r --if-present clean"
+    "clean": "pnpm -r --if-present clean",
+    "corpus:pilot": ".venv/bin/python packages/corpus/scripts/generate_text_pair.py"
   },
   "engines": {
     "node": "24.x"

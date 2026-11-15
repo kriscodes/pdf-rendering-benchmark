@@ -157,11 +157,6 @@ dist/
 .next/
 coverage/
 
-# Local environment
-.env
-.env.*
-!.env.example
-
 # Generated benchmark artifacts
 corpus/generated/
 results/raw/
@@ -170,3 +165,13 @@ results/screenshots/
 
 # Operating system
 .DS_Store
+
+# Local Python environment
+/.venv/
+
+# Python-generated files
+__pycache__/
+*.py[cod]
+
+# Generated PDF corpus and local validation artifacts
+/corpus/generated/
