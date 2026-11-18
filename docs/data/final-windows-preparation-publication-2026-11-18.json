@@ -1,0 +1,14 @@
+{
+  "kind": "preparation-not-measurement",
+  "archivePath": "/Users/kristian/Documents/labs/pdf-rendering-benchmark/results/raw/final-windows/preparation-2026-11-18/pdf-lab-001-final-campaign-preparation-2026-11-18.zip",
+  "bytes": 597436,
+  "sha256": "8028ed9a73cb8788f07dc33411525306991dde1cfbcf880da6632bd9299050b4",
+  "manifestFiles": 115,
+  "gitCommit": "249a0cdd04e0b3f895a51c36246cd397324fe7af",
+  "localVerification": "passed",
+  "downloadVerification": "passed",
+  "verifiedAtUTC": "2026-11-18T16:51:52.577618+00:00",
+  "stableNotionFile": "notion-file-block://41ce9784-8806-818c-a3c0-ea5d8f67767a/f0d2893f-4eae-4490-a219-b43f7ed62578?space_id=096e05a5-b0ae-459a-9d0f-8fe43646f54d&name=pdf-lab-001-final-campaign-preparation-2026-11-18.zip",
+  "page": "https://app.notion.com/p/41ce9784880681ca958ac1a6484f4eb2",
+  "downloadPath": "/Users/kristian/Documents/labs/pdf-rendering-benchmark/results/raw/final-windows/preparation-2026-11-18/download-verified.zip"
+}
