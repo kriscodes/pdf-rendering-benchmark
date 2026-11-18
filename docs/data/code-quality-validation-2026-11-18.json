@@ -1,0 +1,90 @@
+{
+  "schemaVersion": 1,
+  "purpose": "isolated-code-quality-validation-not-performance-results",
+  "recordedAtUTC": "2026-11-18T17:18:50.763988+00:00",
+  "qualityRuntime": {
+    "node": "24.22.3",
+    "pnpm": "11.28.12",
+    "python": "3.13",
+    "biome": "2.6.8",
+    "ruff": "0.17.5"
+  },
+  "checks": {
+    "frozenDependencyInstall": "passed in disposable checkout",
+    "lintGate": {
+      "status": "passed",
+      "deferredFindings": 11,
+      "newFindings": 0,
+      "biomeFiles": 45,
+      "ruffPythonFiles": 18
+    },
+    "typecheck": "passed for both packages",
+    "tests": {
+      "node": 77,
+      "corpusPython": 22,
+      "runnerPython": 53,
+      "lintBaselinePython": 3,
+      "total": 155
+    },
+    "workflowSyntax": "YAML parsed; GitHub execution unverified"
+  },
+  "initialTestIssue": "First server-unit invocation lacked loopback permission (EPERM); authorized rerun passed. Both logs are retained.",
+  "preservation": {
+    "repositoryFiles": 1112,
+    "runtimeFiles": 22,
+    "allHashesMatch": true
+  },
+  "measurementInterference": "Checks ran after window 1 finished; no builds, lint, installs, tests or uploads overlapped its measurement suite.",
+  "logs": {
+    "results/raw/code-quality/2026-11-18/workspace-tests.log": {
+      "bytes": 19999,
+      "sha256": "f99f2f3589bc702b53044fb688232a2cb95b60fe019943bf022e9bae3d04170d"
+    },
+    "results/raw/code-quality/2026-11-18/workspace-tests-ports.log": {
+      "bytes": 12795,
+      "sha256": "2ce397212817288a187f39ab531ff297c2f12b8bbf9024f005ba18f131aa76b8"
+    },
+    "results/raw/code-quality/2026-11-18/quality-tests.log": {
+      "bytes": 454,
+      "sha256": "823d0b907e9932309a60071ac7e4176a912bd6fb986268d2f41e7dd7283a52f2"
+    },
+    "results/raw/code-quality/2026-11-18/runner-python-tests.log": {
+      "bytes": 9293,
+      "sha256": "09159d098a3224a79688671786ed7d83ae0f06bf5c9b0c181a0cce0cbd0968c0"
+    },
+    "results/raw/code-quality/2026-11-18/typecheck.log": {
+      "bytes": 210,
+      "sha256": "82066d995f38f199a8a33f22529ccbd47ac782c39f68e7a13bce4d15793e0215"
+    },
+    "results/raw/code-quality/2026-11-18/lint.log": {
+      "bytes": 1227,
+      "sha256": "a09c16f8f07523ca6cd437a8bf12690040038c90d56b7f9400b18879762b9c49"
+    },
+    "results/raw/code-quality/2026-11-18/biome-initial.json": {
+      "bytes": 81363,
+      "sha256": "2b5fef69a3c229c2409146f4329f9ecefd2d47eac6ff752af94678b6bce21371"
+    },
+    "results/raw/code-quality/2026-11-18/biome-focused.json": {
+      "bytes": 2949,
+      "sha256": "149fdfc33f138032305ee0eb15f44e015339abaab77b332a26ef2e8d5ba5f778"
+    },
+    "results/raw/code-quality/2026-11-18/ruff-initial.json": {
+      "bytes": 42888,
+      "sha256": "0d467da0387b9e34d1fa72c570b9e072d3b082d12caa0d1468158103ca314cb3"
+    },
+    "results/raw/code-quality/2026-11-18/ruff-focused.json": {
+      "bytes": 45444,
+      "sha256": "2be8db2d660f4c9b0b19be3699e828bda01aa86edfbd85d5e37bc9e664e2d477"
+    },
+    "results/raw/code-quality/2026-11-18/source-hashes-before.json": {
+      "bytes": 12901,
+      "sha256": "cb7a67c1ce04ae3bbcf36385f8c5277b9ac947d125ad4ad5a5c5ee4006d9cc06"
+    }
+  },
+  "limitations": [
+    "The Linux GitHub runner has not executed the workflow.",
+    "Eleven known lint findings remain explicitly baselined; style, naming and broad any cleanup are deferred.",
+    "No dependency advisory or third-party source security audit.",
+    "Frozen source changes, including the legacy shared-temp audit output repair, remain unimplemented."
+  ]
+}

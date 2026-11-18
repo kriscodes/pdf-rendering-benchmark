@@ -65,6 +65,8 @@ Evidence:
 
 The invocation used the protocol's exact `run_final_windows.py --window 1` command. The audit used `audit_final_windows.py --plan experiments/final-windows.json --ledger-root results/raw/final-windows --output-prefix docs/data/final-windows-progress-window-1`. No tests, builds, lint checks, package installation or uploads ran concurrently with the measurement suite.
 
+Lightweight documentation reads and security-tool administration occurred during the suite. Source-review workers and quality verification started after it finished. This was not a controlled idle-machine run, and no causal explanation for the clock-width rejection is inferred from these activities.
+
 Window 1 was committed as `625d4bb`. Its evidence ZIP was published to Notion and downloaded for verification: 5,184,064 bytes, SHA-256 `c936fcbabb1a20b626dd08f788561d3742c70815d0c24e2ca3080e3565053e5b`, with 203 manifest-listed files plus the manifest. The downloaded archive and every file size/hash match. The [publication receipt](data/final-windows-window-1-publication.json) contains the stable file reference. This ZIP is close to the workspace's 5 MiB limit; later bundles may need separate complete ZIP parts with per-part manifests and verified combined coverage. A large archive is not a reason to change or repeat a measurement.
 
 ## Continuing a scheduled window
