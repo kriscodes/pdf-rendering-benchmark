@@ -294,8 +294,8 @@ def paired_rows(rows: list[dict]) -> list[dict]:
             reasons.append("session pre/post guards not validated")
         pair = {key: first[key] for key in ("pairId", "session", "block", "position", "condition", "variant", "rangeEnabled")}
         pair.update(firstArm=first["arm"], threeId=low["id"], fifteenId=high["id"], comparable=not reasons,
-                    exclusionReason="; ".join(reasons), threeClockPassed=low.get("referenceStatus") == "passed",
-                    fifteenNestedClockPassed=high.get("referenceStatus") == "passed", fifteenCandidateClockPassed=high.get("candidateStatus") == "passed")
+                    exclusionReason="; ".join(reasons), threeClockPassed=low.get("referenceClockStatus") == "passed",
+                    fifteenNestedClockPassed=high.get("referenceClockStatus") == "passed", fifteenCandidateClockPassed=high.get("candidateClockStatus") == "passed")
         if not reasons:
             for metric in METRICS:
                 pair[metric + "Three"] = low[metric]

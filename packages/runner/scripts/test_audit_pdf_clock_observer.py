@@ -7,6 +7,7 @@ from audit_pdf_clock_observer import METRICS, POINTS, clock_analysis, csv_text, 
 def complete_rows():
     return [{**entry, "attempted": True, "operationStatus": "passed", "operationValidated": True,
              "sessionValidated": True, "referenceStatus": "failed", "candidateStatus": "failed",
+             "referenceClockStatus": "failed", "candidateClockStatus": "failed",
              **{metric: 20 if entry["arm"] == "fifteen" else 10 for metric in METRICS}} for entry in schedule()]
 
 
@@ -18,6 +19,17 @@ def clock_trial(width=.0005):
 
 
 class ObserverAuditBoundaryTests(unittest.TestCase):
+    def test_operational_failure_does_not_relabel_a_valid_clock_as_rejected(self):
+        rows = complete_rows()
+        for row in rows:
+            row.update(referenceClockStatus="passed", candidateClockStatus="passed")
+        rows[0].update(operationStatus="failed", operationValidated=False)
+        pair = paired_rows(rows)[0]
+        self.assertFalse(pair["comparable"])
+        self.assertTrue(pair["threeClockPassed"])
+        self.assertTrue(pair["fifteenNestedClockPassed"])
+        self.assertTrue(pair["fifteenCandidateClockPassed"])
+
     def test_clock_rejections_do_not_select_perturbation_pairs(self):
         pairs = paired_rows(complete_rows())
         self.assertEqual(len(pairs), 48)
