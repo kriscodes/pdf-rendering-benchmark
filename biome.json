@@ -1,0 +1,26 @@
+{
+  "$schema": "https://biomejs.dev/schemas/2.6.8/schema.json",
+  "files": {
+    "includes": [
+      "packages/**/src/**/*.ts",
+      "packages/runner/viewer/*.mjs",
+      "experiments/*.json",
+      "biome.json",
+      "package.json",
+      "packages/*/package.json",
+      "tsconfig*.json",
+      "packages/*/tsconfig*.json"
+    ]
+  },
+  "formatter": { "enabled": false },
+  "assist": { "enabled": false },
+  "linter": {
+    "enabled": true,
+    "rules": {
+      "preset": "none",
+      "correctness": { "recommended": true },
+      "security": { "recommended": true },
+      "suspicious": { "recommended": true, "noExplicitAny": "off" }
+    }
+  }
+}
