@@ -6,6 +6,9 @@ first-page rendering completes when the configured chunk size is 16,384 bytes.
 It does not estimate a linearization speed benefit. The four-run, 65,536-byte
 baseline and its original source/configuration files remain unchanged.
 
+The [November 17 execution record](partial-loading-2026-11-17.md) retains both
+successful diagnostic runs, their source snapshots, observations, and limitations.
+
 ## Declared protocol
 
 `experiments/partial-loading-local.json` defines two serial AB/BA pairs: four
