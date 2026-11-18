@@ -4,7 +4,7 @@
   "auditStatus": "passed",
   "reportPath": "/Users/kristian/Documents/labs/pdf-rendering-benchmark/results/raw/controlled-delivery/run-VnOBcz/report.json",
   "reportSha256": "87070956c2672ed172d0b25660d2757df6fb29e0e29725858067f7a891d7cc64",
-  "analysisScriptSha256": "a51558051132218d7e643e23f5f4283179d30e95af9bd5e738a1600cdbec143c",
+  "analysisScriptSha256": "18b5457504d7c0306974dfcd1737d7a9433c0c1c9a7b14ca6759e34dd1cf7b33",
   "experiment": {
     "schemaVersion": 1,
     "id": "text-100-controlled-delivery-v1",
@@ -504,11 +504,11 @@
   "exports": [
     {
       "path": "/Users/kristian/Documents/labs/pdf-rendering-benchmark/docs/data/controlled-delivery-2026-11-17.csv",
-      "sha256": "6bc30b923fb494270fc977982d582bb0aca7b01072785907e7bfbbb9807c2046"
+      "sha256": "23125d86125158ae730040ac5f5d1e275f85b08377c27841bcbb76475e2a4f2b"
     },
     {
       "path": "/Users/kristian/Documents/labs/pdf-rendering-benchmark/docs/data/controlled-delivery-2026-11-17.json",
-      "sha256": "b9fc82505485d3a0e96a081700899cf198ed741ebb25d3c4570dffdfeb11630c"
+      "sha256": "1e6f18527e7e4be6235dda1428ad12f54a104fd31942bb816a244f535437b995"
     }
   ]
 }

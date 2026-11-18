@@ -458,7 +458,7 @@ def main() -> int:
         require(not any(path.exists() for path in outputs), "Export target already exists; choose a new output prefix")
         analysis = audit_report(report_path)
         buffer = io.StringIO(newline="")
-        writer = csv.DictWriter(buffer, fieldnames=list(analysis["trials"][0]))
+        writer = csv.DictWriter(buffer, fieldnames=list(analysis["trials"][0]), lineterminator="\n")
         writer.writeheader()
         writer.writerows(analysis["trials"])
         write_new(outputs[0], buffer.getvalue())
