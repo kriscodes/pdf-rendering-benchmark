@@ -53,7 +53,7 @@ The table separates clock-gate acceptance from the combined workload-and-clock r
 
 Within the same 48 actual-fifteen executions, both methods passed every trial: zero nested-only, candidate-only, neither, or unavailable outcomes. The paired candidate-minus-nested width median was **−0.198500 ms**, range −0.423 to −0.071 ms. This is distinct from subtracting the two marginal medians. Nested render-event classifications and verification-phase request assignments changed in **zero** trials.
 
-A narrower intersection follows mathematically from additional constraints and is not independent accuracy evidence. The 36-probe fixture campaign and this PDF campaign both had zero nested acceptance gains. The earlier rejected PDF replications remain rejected; their clock instability was not reproduced here.
+A narrower intersection follows mathematically from additional constraints and is not independent accuracy evidence. The 36-probe fixture campaign and this PDF campaign both had zero nested acceptance gains. The earlier rejected PDF replications remain rejected; their clock-width rejections were not reproduced here.
 
 ## Observed perturbation between actual arms
 
@@ -142,6 +142,6 @@ Final exports are `docs/data/pdf-clock-observer-2026-11-18.csv` (all 96 schedule
 
 The bounded integration procedure and audit are complete. It supports successful clock collection under these preserved PDF controls, with measurable sampling/verification-delay differences and one separately rejected delivery workload. It does **not** demonstrate an acceptance-rate improvement, establish clock accuracy, or validate PDF performance repeatability. The old observer and all three historical rejections remain unchanged.
 
-Keep the benchmark observer unchanged for now. If research continues, the next proposed step is a separately predeclared repetition of this integration protocol in different time windows to test whether the earlier clock instability recurs and whether the added brackets then improve acceptance, while retaining workload failures and measuring overhead. The single write delay can be investigated using its retained ledger; its cause remains unresolved. No additional campaign, observer adoption or performance replication was started.
+Keep the benchmark observer unchanged for now. If research continues, the next proposed step is a separately predeclared repetition of this integration protocol in different time windows to test whether the earlier clock-width rejections recur and whether the added brackets then improve acceptance, while retaining workload failures and measuring overhead. The single write delay can be investigated using its retained ledger; its cause remains unresolved. No additional campaign, observer adoption or performance replication was started.
 
 Other days/machines/browsers/PDF profiles, exact renderer-consumed byte accounting, controlled OS/font-cache state and compositor presentation remain outside this step. Protocol, results and all evidence are saved under Labs → PDF Rendering Lab 001 → PDF-workload observer integration. The final upload/download receipt is recorded separately in `docs/data/pdf-clock-observer-publication-2026-11-18.json`.
