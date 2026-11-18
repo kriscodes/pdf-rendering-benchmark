@@ -100,17 +100,17 @@ async function bounded<T>(promise: Promise<T>, timeoutMs: number): Promise<T> {
   } finally { clearTimeout(timer); }
 }
 
-async function clockSample(cdp: CDPSession): Promise<CalibrationSample> {
+async function clockSample(cdp: CDPSession, timeoutMs: number): Promise<CalibrationSample> {
   const timestamp = async () => {
-    const { metrics } = await cdp.send("Performance.getMetrics");
+    const { metrics } = await bounded(cdp.send("Performance.getMetrics"), timeoutMs);
     const value = metrics.find(metric => metric.name === "Timestamp")?.value;
     assert(value !== undefined && Number.isFinite(value), "Missing CDP monotonic Timestamp");
     return value;
   };
   const beforeSeconds = await timestamp();
-  const { result, exceptionDetails } = await cdp.send("Runtime.evaluate", {
+  const { result, exceptionDetails } = await bounded(cdp.send("Runtime.evaluate", {
     expression: "performance.now()", returnByValue: true,
-  });
+  }), timeoutMs);
   assert(!exceptionDetails);
   const afterSeconds = await timestamp();
   return { beforeSeconds, pageNowMs: Number(result.value), afterSeconds };
@@ -164,7 +164,7 @@ async function observedPage(browser: Browser, experiment: any, record: any) {
 async function awaitTerminalEvents(cdp: CDPSession, events: NetworkEvent[], timeoutMs: number) {
   const deadline = Date.now() + timeoutMs;
   while (true) {
-    await cdp.send("Performance.getMetrics");
+    await bounded(cdp.send("Performance.getMetrics"), Math.max(1, deadline - Date.now()));
     const requests = events.filter(event => event.kind === "request");
     const done = new Set(events.filter(event => ["finished", "failed"].includes(event.kind)).map(event => event.requestId));
     if (requests.length && requests.every(event => done.has(event.requestId))) return;
@@ -184,10 +184,12 @@ function alignClock(samples: CalibrationSample[], pageTimeMs: number, experiment
 }
 
 async function runObserverProbe(browser: Browser, origin: string, experiment: any, record: any) {
-  const observer = await observedPage(browser, experiment, record);
+  const observer = await bounded(observedPage(browser, experiment, record), experiment.timeoutMs);
+  record.clockSamples = [];
   try {
     await observer.page.goto(origin, { waitUntil: "load", timeout: experiment.timeoutMs });
-    const before = await clockSample(observer.cdp);
+    const before = await clockSample(observer.cdp, experiment.timeoutMs);
+    record.clockSamples.push(before);
     const result = await bounded(observer.page.evaluate(async ({ origin, gap }) => {
       const fetchRange = async (label: string, first: number, last: number) => {
         const url = `${origin}/diagnostic/probe.bin?phase=${label}`;
@@ -208,9 +210,10 @@ async function runObserverProbe(browser: Browser, origin: string, experiment: an
       const second = await fetchRange("after", 4096, 8191);
       return { first, second, markerMs, timeOriginMs: performance.timeOrigin };
     }, { origin, gap: experiment.observation.probeSeparationMs }), experiment.timeoutMs);
-    const after = await clockSample(observer.cdp);
-    await awaitTerminalEvents(observer.cdp, observer.events, experiment.timeoutMs);
     record.result = result;
+    const after = await clockSample(observer.cdp, experiment.timeoutMs);
+    record.clockSamples.push(after);
+    await awaitTerminalEvents(observer.cdp, observer.events, experiment.timeoutMs);
     record.clock = alignClock([before, after], result.markerMs, experiment);
     record.first = summarizeNetwork(observer.events, { documentUrl: result.first.url, renderBoundary: record.clock.boundary });
     record.second = summarizeNetwork(observer.events, { documentUrl: result.second.url, renderBoundary: record.clock.boundary });
@@ -224,7 +227,7 @@ async function runObserverProbe(browser: Browser, origin: string, experiment: an
       assert.equal(summary.byRenderTime[phase === "after" ? "at-or-before" : "after"].reportedDataBytes, 0);
     }
   } finally {
-    await observer.context.close();
+    await bounded(observer.context.close(), experiment.timeoutMs);
     assert.deepEqual(record.errors, [], "Probe browser diagnostics invalidate observer");
   }
   record.status = "passed";
@@ -280,23 +283,26 @@ async function main() {
     const schedule = createSchedule(0, 2); report.schedule = schedule;
     await mkdir(path.join(output, "samples"));
     for (const entry of schedule) {
-      const trial: any = { ...entry, status: "running" }; report.trials.push(trial);
+      const trial: any = { ...entry, status: "running", clockSamples: [] }; report.trials.push(trial);
       const requestStart = server.requests.length;
-      const observer = await observedPage(browser, experiment, trial);
+      const observer = await bounded(observedPage(browser, experiment, trial), experiment.timeoutMs);
       try {
         await observer.page.goto(server.origin, { waitUntil: "load", timeout: experiment.timeoutMs });
         await observer.page.waitForFunction("typeof window.runPartialFirstPage === 'function'", null, { timeout: experiment.timeoutMs });
         report.environment.userAgent ??= await observer.page.evaluate(() => navigator.userAgent);
-        const before = await clockSample(observer.cdp);
+        const before = await clockSample(observer.cdp, experiment.timeoutMs);
+        trial.clockSamples.push(before);
         const url = `${server.origin}/pdf/text-100-${entry.variant}.pdf?trial=${entry.id}`;
         trial.render = await bounded(observer.page.evaluate(async (input) => {
           return (window as any).runPartialFirstPage(input);
         }, { url, scale: experiment.scale, options: experiment.pdfjs }), experiment.timeoutMs);
-        const afterRender = await clockSample(observer.cdp);
+        const afterRender = await clockSample(observer.cdp, experiment.timeoutMs);
+        trial.clockSamples.push(afterRender);
         // Return/control boundary: no getData call has run at this snapshot.
         trial.eventCountBeforeExplicitVerification = observer.events.length;
         const verification: any = await bounded(observer.page.evaluate(async () => (window as any).verifyPartialDocument()), experiment.timeoutMs);
-        const afterVerification = await clockSample(observer.cdp);
+        const afterVerification = await clockSample(observer.cdp, experiment.timeoutMs);
+        trial.clockSamples.push(afterVerification);
         const { png, ...verified } = verification; trial.verification = verified;
         await awaitTerminalEvents(observer.cdp, observer.events, experiment.timeoutMs);
         trial.clock = alignClock([before, afterRender, afterVerification], trial.render.firstPageRenderedAtMs, experiment);
@@ -324,7 +330,7 @@ async function main() {
       } catch (error) {
         trial.status = "failed"; trial.error = String(error); throw error;
       } finally {
-        await observer.context.close(); trial.serverRequests = server.requests.slice(requestStart); await save();
+        await bounded(observer.context.close(), experiment.timeoutMs); trial.serverRequests = server.requests.slice(requestStart); await save();
       }
       assert.deepEqual(trial.errors, [], "Browser diagnostics invalidate trial");
       assert(trial.networkEvents.every((event: NetworkEvent) => event.kind !== "failed"));
@@ -370,7 +376,9 @@ async function main() {
     }
     process.exitCode = 1; console.error(report.error);
   } finally {
-    const cleanup = await Promise.allSettled([browser?.close(), server?.close()]);
+    const cleanup = await Promise.allSettled([
+      bounded(Promise.resolve(browser?.close()), 30000), bounded(Promise.resolve(server?.close()), 30000),
+    ]);
     const failures = cleanup.filter(item => item.status === "rejected");
     if (failures.length) { report.status = "failed"; report.cleanupErrors = failures.map(item => String(item.reason)); process.exitCode = 1; }
     report.finishedAt = new Date().toISOString(); await save();
