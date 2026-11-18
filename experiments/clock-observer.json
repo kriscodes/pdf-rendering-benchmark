@@ -1,0 +1,49 @@
+{
+  "schemaVersion": 1,
+  "id": "text-100-clock-observer-diagnostic-v1",
+  "purpose": "known-event-clock-observer-diagnostic-not-pdf-performance",
+  "sessions": 3,
+  "probesPerSession": 12,
+  "bracketsPerPoint": 5,
+  "points": [
+    "beforeMarker",
+    "afterMarker",
+    "afterSecondTransfer"
+  ],
+  "fixtureLengthBytes": 49152,
+  "transferBytes": 4096,
+  "requestedGapMs": 30,
+  "viewport": {
+    "width": 1280,
+    "height": 1000
+  },
+  "deviceScaleFactor": 1,
+  "clockResolutionMarginMs": 1,
+  "maximumBoundaryWidthMs": 5,
+  "operationTimeoutMs": 5000,
+  "burstTimeoutMs": 5000,
+  "probeTimeoutMs": 20000,
+  "sessionTimeoutMs": 120000,
+  "campaignTimeoutMs": 420000,
+  "cleanupTimeoutMs": 10000,
+  "expectedNodeVersion": "v24.22.1",
+  "expectedPlaywrightVersion": "1.62.1",
+  "expectedChromiumVersion": "151.0.7922.34",
+  "delivery": {
+    "responseHeaderDelayMs": 100,
+    "bytesPerSecond": 125000,
+    "maxQuantumBytes": 2048
+  },
+  "pacingAuditLimits": {
+    "rangeBytes": 65536,
+    "headerMinimumMs": 99,
+    "headerMaximumMs": 125,
+    "bodyMaximumSlowdown": 1.15,
+    "bodySlackMs": 25,
+    "minimumDurationToleranceMs": 1,
+    "clientServerToleranceMs": 25,
+    "unpacedMaximumMs": 50,
+    "maximumWriteLatenessMs": 25
+  },
+  "replacementPolicy": "One fixed campaign: three fresh browser sessions, twelve fresh-context probes each; no replacements, no retry-until-pass, and no performance benchmark invocation."
+}
