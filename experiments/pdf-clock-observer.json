@@ -1,0 +1,36 @@
+{
+  "schemaVersion": 1,
+  "id": "text-100-pdf-clock-observer-v1",
+  "purpose": "bounded-pdf-workload-observer-integration-not-performance-replication",
+  "workloadConfig": "experiments/controlled-delivery.json",
+  "sessions": 3,
+  "blocksPerSession": 4,
+  "arms": [
+    {
+      "id": "three",
+      "bracketsPerPoint": 1
+    },
+    {
+      "id": "fifteen",
+      "bracketsPerPoint": 5
+    }
+  ],
+  "points": [
+    "beforeRender",
+    "afterRender",
+    "afterVerification"
+  ],
+  "clockResolutionMarginMs": 1,
+  "maximumBoundaryWidthMs": 5,
+  "operationTimeoutMs": 30000,
+  "burstTimeoutMs": 5000,
+  "trialTimeoutMs": 45000,
+  "sessionTimeoutMs": 180000,
+  "campaignTimeoutMs": 600000,
+  "cleanupTimeoutMs": 10000,
+  "expectedNodeVersion": "v24.22.1",
+  "expectedPdfjsVersion": "5.6.205",
+  "expectedPlaywrightVersion": "1.62.1",
+  "expectedChromiumVersion": "151.0.7922.34",
+  "replacementPolicy": "One fixed campaign, three fresh sessions, 96 scheduled diagnostic trials; no exclusions, replacements, adaptive samples or retry-until-pass. Clock rejection alone does not abort collection."
+}
