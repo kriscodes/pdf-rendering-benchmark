@@ -1,6 +1,6 @@
 # Final fixed-window campaign: execution record
 
-Status: preparation in progress; no new measurement has started. This is not the final scientific conclusion.
+Status: preparation passed and the three windows are scheduled; no new measurement has started. This is not the final scientific conclusion.
 
 The prospective protocol is [final-windows.md](final-windows.md), with machine-readable schedule and frozen hashes in [final-windows.json](../experiments/final-windows.json). The existing branch remains `feat/corpus-text-pair`. Protocol commit: `4df7821` (before all new measurements). Parent commit: `942be7b`.
 
@@ -21,6 +21,28 @@ Reporting target: November 19, 11:00 Pacific (19:00 UTC). Measurements end after
 ## Notion record
 
 The [final campaign page](https://app.notion.com/p/41ce9784880681ca958ac1a6484f4eb2) is a child of [PDF Rendering Lab 001](https://app.notion.com/p/41ce9784880681528bc3c71d28407372). The prospective protocol and pending table were published before measurement. The Lab 001 home has an added status callout; prior findings remain intact. An attempted replacement of the historical callout was automatically rejected; an additive status update succeeded, resolving the issue without removing historical content.
+
+## Preparation validation — November 18, before 09:00 Pacific
+
+The final plan was frozen at `2026-11-18T16:49:06.242895+00:00`. SHA-256: `fd3c35e827e0adcedf6caee2aae440982c40a5328e132a69dee492f035aed80f`. It protects 1,112 repository files, including 663 PDF.js/Playwright package files, plus 22 external runtime files (Node, qpdf and the pinned headless Chromium installation). It also preserves all prior local raw artifacts. New progress documents and outputs are deliberately outside the immutable input set. The plan itself is pinned in every irreversible window claim and source snapshot.
+
+Implementation and preflight commit: `96f7c1d`. Scheduling/evidence workflow commit: `f4746f6`. All commits remain on the existing branch.
+
+All 53 runner-script Python tests passed in 1.785 seconds: 23 new launcher tests, eight new final-audit tests, and 22 existing tests. The tests cover the exclusive start deadline, missed and interrupted slots, duplicate/overlapping attempts, changed inputs, unavailable runtimes, rejection-independent sequencing, process cleanup, copied reports, clock/operation labels and pending-result interpretation. Browser measurements were not invoked by these tests. The preserved TypeScript/browser implementation was not rebuilt or changed.
+
+```sh
+.venv/bin/python -m unittest discover -s packages/runner/scripts -p 'test_*.py'
+.venv/bin/python packages/runner/scripts/audit_final_windows.py \
+  --plan experiments/final-windows.json \
+  --ledger-root results/raw/final-windows \
+  --output-prefix docs/data/final-windows-preflight-2026-11-18
+```
+
+The real preflight audit passed all 1,134 preserved-file checks and independently re-audited the historical accepted performance pilot. All three new windows were `pending-not-open`; `0/3` is a progress count, not three failures or a final inconclusive finding. Immutable [JSON](data/final-windows-preflight-2026-11-18.json) and [CSV](data/final-windows-preflight-2026-11-18.csv) preserve that state.
+
+Calling the actual launcher for window 1 before 17:00 UTC returned `not-open` (exit 2) without creating a claim or invoking a browser. A read-only process check found no prior benchmark or protected browser process. This verifies the early-start guard, not future scheduler delivery or future benchmark acceptance.
+
+Review found that Playwright launches Chromium in a separate process group. The launcher therefore checks both the runner group and protected browser processes after execution; a successful Node exit alone is not cleanup proof. Unverified cleanup blocks subsequent execution and archival of potentially changing raw files. The independent auditor checks these recorded facts separately from the completion flag.
 
 ## Continuing a scheduled window
 
