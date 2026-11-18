@@ -1,0 +1,44 @@
+{
+  "schemaVersion": 1,
+  "id": "text-100-controlled-delivery-v1",
+  "profileId": "text-100-v1",
+  "metric": "getDocument start through page 1 render().promise resolution",
+  "timeoutMs": 30000,
+  "viewport": {
+    "width": 1280,
+    "height": 1000
+  },
+  "deviceScaleFactor": 1,
+  "scale": 1,
+  "pdfjs": {
+    "rangeChunkSize": 16384,
+    "disableRange": false,
+    "disableStream": false,
+    "disableAutoFetch": false,
+    "useSystemFonts": true
+  },
+  "purpose": "local-controlled-pdf-delivery-factorial-pilot",
+  "observation": {
+    "clockResolutionMarginMs": 1,
+    "maximumBoundaryWidthMs": 5,
+    "probeSeparationMs": 30
+  },
+  "warmupBlocks": 4,
+  "measuredBlocks": 12,
+  "delivery": {
+    "responseHeaderDelayMs": 100,
+    "bytesPerSecond": 125000,
+    "maxQuantumBytes": 2048
+  },
+  "calibration": {
+    "rangeBytes": 65536,
+    "headerMinimumMs": 99,
+    "headerMaximumMs": 125,
+    "bodyMaximumSlowdown": 1.15,
+    "bodySlackMs": 25,
+    "minimumDurationToleranceMs": 1,
+    "clientServerToleranceMs": 25,
+    "unpacedMaximumMs": 50,
+    "maximumWriteLatenessMs": 25
+  }
+}
