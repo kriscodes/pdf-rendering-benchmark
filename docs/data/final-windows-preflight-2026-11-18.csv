@@ -1,0 +1,4 @@
+window,state,performanceAccepted,reportPath,reportSha256,observerExecution,performanceExecution,performanceEvidence,startedAt
+1,pending-not-open,False,,,unattempted,unattempted,,
+2,pending-not-open,False,,,unattempted,unattempted,,
+3,pending-not-open,False,,,unattempted,unattempted,,

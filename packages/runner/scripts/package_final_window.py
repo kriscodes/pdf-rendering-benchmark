@@ -27,8 +27,14 @@ def main() -> int:
     ledger = json.loads((directory / "ledger.json").read_text())
     if ledger.get("status") in ("running", "claimed"):
         parser.error("Do not archive an active measurement")
+    if ledger.get("cleanupVerified") is not True:
+        parser.error("Process cleanup is unverified; do not archive potentially changing evidence")
+    if subprocess.check_output(["git", "status", "--porcelain", "--untracked-files=no"], cwd=ROOT, text=True).strip():
+        parser.error("Commit tracked changes before packaging the project")
     files = set(subprocess.check_output(["git", "ls-files"], cwd=ROOT, text=True).splitlines())
     files.update(p.relative_to(ROOT).as_posix() for p in directory.rglob("*") if p.is_file())
+    claim = Path(ledger["claimPath"]).resolve()
+    files.add(claim.relative_to(ROOT).as_posix())
     for name in ("manifest.json", "text-100-linearized.pdf", "text-100-nonlinearized.pdf"):
         files.add("corpus/generated/pilot/" + name)
     contents = {name: (ROOT / name).read_bytes() for name in sorted(files)}
