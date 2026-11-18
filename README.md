@@ -28,3 +28,9 @@ to install the pinned Chromium binary, then run `pnpm bench:first-page`. It save
 raw trials, summaries, and samples under `results/raw/first-page-local/`. This
 small local full-response experiment does not establish a network-delivery or
 general linearization speed benefit.
+
+The [four-run repeatability comparison](docs/first-page-repeatability-2026-11-17.md)
+retains every measured trial and excluded warmup from the original pilot and
+three unchanged repeats. All runs passed, but timing varied between sessions.
+The [PDF Rendering Lab 001 notebook](https://app.notion.com/p/41ce9784880681528bc3c71d28407372)
+collects the protocol, work log, results, and evidence under Labs.

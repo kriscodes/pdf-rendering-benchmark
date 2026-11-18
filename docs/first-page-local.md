@@ -8,6 +8,9 @@ unchanged. It does not select a hosting provider or create a deployed viewer.
 
 The [November 16, 2026 execution record](first-page-local-2026-11-16.md) contains
 the first successful run's commands, measurements, sample review, and limitations.
+The [November 17 repeatability comparison](first-page-repeatability-2026-11-17.md)
+compares that run with three additional invocations using the same inputs,
+configuration, benchmark sources, and recorded environment.
 
 The implementation is a small local harness:
 
