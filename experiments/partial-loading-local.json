@@ -1,0 +1,28 @@
+{
+  "schemaVersion": 1,
+  "id": "text-100-partial-loading-local-v1",
+  "profileId": "text-100-v1",
+  "metric": "getDocument start through page 1 render().promise resolution",
+  "warmupPairs": 0,
+  "measuredPairs": 2,
+  "timeoutMs": 30000,
+  "viewport": {
+    "width": 1280,
+    "height": 1000
+  },
+  "deviceScaleFactor": 1,
+  "scale": 1,
+  "pdfjs": {
+    "rangeChunkSize": 16384,
+    "disableRange": false,
+    "disableStream": false,
+    "disableAutoFetch": false,
+    "useSystemFonts": true
+  },
+  "purpose": "range-eligibility-and-observation-diagnostic-not-performance-comparison",
+  "observation": {
+    "clockResolutionMarginMs": 1,
+    "maximumBoundaryWidthMs": 5,
+    "probeSeparationMs": 30
+  }
+}
