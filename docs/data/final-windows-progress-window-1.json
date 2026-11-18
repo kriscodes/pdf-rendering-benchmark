@@ -1,0 +1,2423 @@
+{
+  "schemaVersion": 1,
+  "purpose": "independent-final-window-evidence-comparison",
+  "auditStatus": "passed",
+  "integrityIssues": [],
+  "asOfUTC": "2026-11-18T17:07:24.586182+00:00",
+  "planPath": "/Users/kristian/Documents/labs/pdf-rendering-benchmark/experiments/final-windows.json",
+  "planSha256": "fd3c35e827e0adcedf6caee2aae440982c40a5328e132a69dee492f035aed80f",
+  "ledgerRoot": "/Users/kristian/Documents/labs/pdf-rendering-benchmark/results/raw/final-windows",
+  "auditScriptSha256": "1df278bb278d881ac6cae0931dd652d036bae1fe031c826a0c24bdd3b8c3c906",
+  "frozenAuditorHashes": {
+    "audit_pdf_clock_observer.py": "e284474d055f5f0955b06a75b65667d0b3873c1f5c9204acf8d69efe226f4a7b",
+    "summarize_controlled_delivery.py": "18b5457504d7c0306974dfcd1737d7a9433c0c1c9a7b14ca6759e34dd1cf7b33"
+  },
+  "preservation": {
+    "verifiedFiles": 1134
+  },
+  "acceptedNewWindows": 0,
+  "plannedNewWindows": 3,
+  "allSlotsTerminal": false,
+  "decisionState": "in progress",
+  "pendingOrUnresolvedWindows": 2,
+  "windowStateCounts": {
+    "pending-not-open": 2,
+    "rejected": 1
+  },
+  "acceptedFraction": "0/3",
+  "windows": [
+    {
+      "ordinal": 1,
+      "opensAtUTC": "2026-11-18T17:00:00Z",
+      "latestStartAtUTC": "2026-11-18T18:00:00Z",
+      "ledgerPath": "/Users/kristian/Documents/labs/pdf-rendering-benchmark/results/raw/final-windows/window-1/ledger.json",
+      "observer": {
+        "executionStatus": "finished",
+        "exitCode": 0,
+        "timeout": false,
+        "cleanupVerified": true,
+        "reportPath": "/Users/kristian/Documents/labs/pdf-rendering-benchmark/results/raw/final-windows/window-1/observer/report.json",
+        "reportSha256": "1e5713999ab7fc561f547e0474d5fe543a5b54bdff40b0a60b3c44de8dc6e164",
+        "scientificAcceptance": "Diagnostic operations/clocks are reported separately; this is not a performance estimate.",
+        "reportStatus": "complete",
+        "partialEvidence": {
+          "recordedTrials": 96,
+          "recordedOperationPassed": 96,
+          "lastTrial": {
+            "id": "session-3-block-4-linearized-range-enabled-three",
+            "phase": null,
+            "block": 4,
+            "condition": "linearized-range-enabled",
+            "arm": "three",
+            "status": null,
+            "operationStatus": "passed",
+            "error": null
+          },
+          "reportError": null
+        },
+        "environment": {
+          "node": "v24.22.1",
+          "platform": "darwin",
+          "release": "24.6.0",
+          "arch": "arm64",
+          "cpu": "Apple M2",
+          "logicalCpus": 8,
+          "memoryBytes": 8589934592,
+          "pdfjs": "5.6.205",
+          "playwright": "1.62.1",
+          "qpdf": "qpdf version 12.4.2",
+          "executableOverride": null,
+          "chromium": "151.0.7922.34",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.7922.34 Safari/537.36"
+        },
+        "evidenceStatus": "independently audited",
+        "observer": {
+          "scheduledTrials": 96,
+          "attemptedTrials": 96,
+          "operationValidTrials": 96,
+          "clockOutcomes": {
+            "three": {
+              "reference": {
+                "passed": 48,
+                "width": 0,
+                "non-overlap": 0,
+                "invalid-input": 0,
+                "unavailable": 0
+              }
+            },
+            "fifteen": {
+              "reference": {
+                "passed": 48,
+                "width": 0,
+                "non-overlap": 0,
+                "invalid-input": 0,
+                "unavailable": 0
+              },
+              "candidate": {
+                "passed": 48,
+                "width": 0,
+                "non-overlap": 0,
+                "invalid-input": 0,
+                "unavailable": 0
+              }
+            }
+          },
+          "guardOutcomes": [
+            {
+              "session": 1,
+              "validated": true,
+              "stages": [
+                {
+                  "stage": "before",
+                  "validated": true,
+                  "reason": null,
+                  "knownOperations": {
+                    "status": "passed",
+                    "reason": null,
+                    "cdpReportedTransferBodyBytes": [
+                      4096,
+                      4096
+                    ]
+                  },
+                  "knownClocks": {
+                    "reference": {
+                      "sampleCount": 3,
+                      "status": "passed",
+                      "reason": null,
+                      "offset": {
+                        "lowerSeconds": 1456072.1009970002,
+                        "upperSeconds": 1456072.103591
+                      },
+                      "boundary": {
+                        "lowerSeconds": 1456072.1873970001,
+                        "upperSeconds": 1456072.1919909997
+                      },
+                      "widthMs": 4.593999590724707
+                    },
+                    "candidate": {
+                      "sampleCount": 15,
+                      "status": "passed",
+                      "reason": null,
+                      "offset": {
+                        "lowerSeconds": 1456072.1013260002,
+                        "upperSeconds": 1456072.103504
+                      },
+                      "boundary": {
+                        "lowerSeconds": 1456072.187726,
+                        "upperSeconds": 1456072.1919039998
+                      },
+                      "widthMs": 4.177999682724476
+                    }
+                  },
+                  "knownMethods": {
+                    "reference": {
+                      "passed": true,
+                      "classification": {
+                        "status": "passed",
+                        "reason": null,
+                        "first": {
+                          "buckets": {
+                            "at-or-before": {
+                              "requestStarts": 1,
+                              "responseHeaders": 1,
+                              "dataEvents": 1,
+                              "reportedDataBytes": 4096,
+                              "reportedEncodedDataBytes": 4096,
+                              "loadingFinished": 1,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 4356
+                            },
+                            "uncertain": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            },
+                            "after": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            }
+                          },
+                          "requests": [
+                            {
+                              "requestId": "33334.4",
+                              "start": 1456072.155198,
+                              "status": 206,
+                              "range": "bytes=0-4095",
+                              "observedRange": true,
+                              "reportedBodyBytes": 4096,
+                              "finishClass": "at-or-before"
+                            }
+                          ]
+                        },
+                        "second": {
+                          "buckets": {
+                            "at-or-before": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            },
+                            "uncertain": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            },
+                            "after": {
+                              "requestStarts": 1,
+                              "responseHeaders": 1,
+                              "dataEvents": 1,
+                              "reportedDataBytes": 4096,
+                              "reportedEncodedDataBytes": 4096,
+                              "loadingFinished": 1,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 4359
+                            }
+                          },
+                          "requests": [
+                            {
+                              "requestId": "33334.5",
+                              "start": 1456072.227656,
+                              "status": 206,
+                              "range": "bytes=4096-8191",
+                              "observedRange": true,
+                              "reportedBodyBytes": 4096,
+                              "finishClass": "after"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "candidate": {
+                      "passed": true,
+                      "classification": {
+                        "status": "passed",
+                        "reason": null,
+                        "first": {
+                          "buckets": {
+                            "at-or-before": {
+                              "requestStarts": 1,
+                              "responseHeaders": 1,
+                              "dataEvents": 1,
+                              "reportedDataBytes": 4096,
+                              "reportedEncodedDataBytes": 4096,
+                              "loadingFinished": 1,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 4356
+                            },
+                            "uncertain": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            },
+                            "after": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            }
+                          },
+                          "requests": [
+                            {
+                              "requestId": "33334.4",
+                              "start": 1456072.155198,
+                              "status": 206,
+                              "range": "bytes=0-4095",
+                              "observedRange": true,
+                              "reportedBodyBytes": 4096,
+                              "finishClass": "at-or-before"
+                            }
+                          ]
+                        },
+                        "second": {
+                          "buckets": {
+                            "at-or-before": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            },
+                            "uncertain": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            },
+                            "after": {
+                              "requestStarts": 1,
+                              "responseHeaders": 1,
+                              "dataEvents": 1,
+                              "reportedDataBytes": 4096,
+                              "reportedEncodedDataBytes": 4096,
+                              "loadingFinished": 1,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 4359
+                            }
+                          },
+                          "requests": [
+                            {
+                              "requestId": "33334.5",
+                              "start": 1456072.227656,
+                              "status": 206,
+                              "range": "bytes=4096-8191",
+                              "observedRange": true,
+                              "reportedBodyBytes": 4096,
+                              "finishClass": "after"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "deliveryCalibration": {
+                    "stage": "before",
+                    "passed": true,
+                    "groups": [
+                      {
+                        "kind": "single",
+                        "passed": true,
+                        "bodyBytes": 65536,
+                        "nominalBodyMs": 524.288,
+                        "serverBodyMs": 577.0346670000001,
+                        "browserBodyMs": 577.2000000476837,
+                        "pacing": {
+                          "passed": true,
+                          "requestCount": 1,
+                          "totalBodyBytes": 65536,
+                          "writeCount": 32,
+                          "headerMinimumMs": 101.19074999999998,
+                          "headerMaximumMs": 101.19074999999998,
+                          "maximumWriteLatenessMs": 2.319249999999556
+                        }
+                      },
+                      {
+                        "kind": "concurrent",
+                        "passed": true,
+                        "bodyBytes": 131072,
+                        "nominalBodyMs": 1048.576,
+                        "serverBodyMs": 1167.4940000000001,
+                        "browserBodyMs": 1166.9000000953674,
+                        "pacing": {
+                          "passed": true,
+                          "requestCount": 2,
+                          "totalBodyBytes": 131072,
+                          "writeCount": 64,
+                          "headerMinimumMs": 100.56041700000014,
+                          "headerMaximumMs": 100.60362500000019,
+                          "maximumWriteLatenessMs": 2.3975420000001577
+                        }
+                      },
+                      {
+                        "kind": "unshaped",
+                        "passed": true,
+                        "durationMs": 2.4000000953674316
+                      }
+                    ]
+                  }
+                },
+                {
+                  "stage": "after",
+                  "validated": true,
+                  "reason": null,
+                  "knownOperations": {
+                    "status": "passed",
+                    "reason": null,
+                    "cdpReportedTransferBodyBytes": [
+                      4096,
+                      4096
+                    ]
+                  },
+                  "knownClocks": {
+                    "reference": {
+                      "sampleCount": 3,
+                      "status": "passed",
+                      "reason": null,
+                      "offset": {
+                        "lowerSeconds": 1456115.7518149999,
+                        "upperSeconds": 1456115.754215
+                      },
+                      "boundary": {
+                        "lowerSeconds": 1456115.8088149999,
+                        "upperSeconds": 1456115.8132149999
+                      },
+                      "widthMs": 4.399999976158142
+                    },
+                    "candidate": {
+                      "sampleCount": 15,
+                      "status": "passed",
+                      "reason": null,
+                      "offset": {
+                        "lowerSeconds": 1456115.751877,
+                        "upperSeconds": 1456115.754107
+                      },
+                      "boundary": {
+                        "lowerSeconds": 1456115.8088770001,
+                        "upperSeconds": 1456115.813107
+                      },
+                      "widthMs": 4.2299998458474874
+                    }
+                  },
+                  "knownMethods": {
+                    "reference": {
+                      "passed": true,
+                      "classification": {
+                        "status": "passed",
+                        "reason": null,
+                        "first": {
+                          "buckets": {
+                            "at-or-before": {
+                              "requestStarts": 1,
+                              "responseHeaders": 1,
+                              "dataEvents": 1,
+                              "reportedDataBytes": 4096,
+                              "reportedEncodedDataBytes": 4096,
+                              "loadingFinished": 1,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 4356
+                            },
+                            "uncertain": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            },
+                            "after": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            }
+                          },
+                          "requests": [
+                            {
+                              "requestId": "33463.4",
+                              "start": 1456115.776243,
+                              "status": 206,
+                              "range": "bytes=0-4095",
+                              "observedRange": true,
+                              "reportedBodyBytes": 4096,
+                              "finishClass": "at-or-before"
+                            }
+                          ]
+                        },
+                        "second": {
+                          "buckets": {
+                            "at-or-before": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            },
+                            "uncertain": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            },
+                            "after": {
+                              "requestStarts": 1,
+                              "responseHeaders": 1,
+                              "dataEvents": 1,
+                              "reportedDataBytes": 4096,
+                              "reportedEncodedDataBytes": 4096,
+                              "loadingFinished": 1,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 4359
+                            }
+                          },
+                          "requests": [
+                            {
+                              "requestId": "33463.5",
+                              "start": 1456115.846388,
+                              "status": 206,
+                              "range": "bytes=4096-8191",
+                              "observedRange": true,
+                              "reportedBodyBytes": 4096,
+                              "finishClass": "after"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "candidate": {
+                      "passed": true,
+                      "classification": {
+                        "status": "passed",
+                        "reason": null,
+                        "first": {
+                          "buckets": {
+                            "at-or-before": {
+                              "requestStarts": 1,
+                              "responseHeaders": 1,
+                              "dataEvents": 1,
+                              "reportedDataBytes": 4096,
+                              "reportedEncodedDataBytes": 4096,
+                              "loadingFinished": 1,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 4356
+                            },
+                            "uncertain": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            },
+                            "after": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            }
+                          },
+                          "requests": [
+                            {
+                              "requestId": "33463.4",
+                              "start": 1456115.776243,
+                              "status": 206,
+                              "range": "bytes=0-4095",
+                              "observedRange": true,
+                              "reportedBodyBytes": 4096,
+                              "finishClass": "at-or-before"
+                            }
+                          ]
+                        },
+                        "second": {
+                          "buckets": {
+                            "at-or-before": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            },
+                            "uncertain": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            },
+                            "after": {
+                              "requestStarts": 1,
+                              "responseHeaders": 1,
+                              "dataEvents": 1,
+                              "reportedDataBytes": 4096,
+                              "reportedEncodedDataBytes": 4096,
+                              "loadingFinished": 1,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 4359
+                            }
+                          },
+                          "requests": [
+                            {
+                              "requestId": "33463.5",
+                              "start": 1456115.846388,
+                              "status": 206,
+                              "range": "bytes=4096-8191",
+                              "observedRange": true,
+                              "reportedBodyBytes": 4096,
+                              "finishClass": "after"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "deliveryCalibration": {
+                    "stage": "after",
+                    "passed": true,
+                    "groups": [
+                      {
+                        "kind": "single",
+                        "passed": true,
+                        "bodyBytes": 65536,
+                        "nominalBodyMs": 524.288,
+                        "serverBodyMs": 578.4181249999965,
+                        "browserBodyMs": 579.1000001430511,
+                        "pacing": {
+                          "passed": true,
+                          "requestCount": 1,
+                          "totalBodyBytes": 65536,
+                          "writeCount": 32,
+                          "headerMinimumMs": 101.18287500000588,
+                          "headerMaximumMs": 101.18287500000588,
+                          "maximumWriteLatenessMs": 2.550167000001238
+                        }
+                      },
+                      {
+                        "kind": "concurrent",
+                        "passed": true,
+                        "bodyBytes": 131072,
+                        "nominalBodyMs": 1048.576,
+                        "serverBodyMs": 1164.4625830000004,
+                        "browserBodyMs": 1164.8000001907349,
+                        "pacing": {
+                          "passed": true,
+                          "requestCount": 2,
+                          "totalBodyBytes": 131072,
+                          "writeCount": 64,
+                          "headerMinimumMs": 101.3448339999959,
+                          "headerMaximumMs": 101.46529200000077,
+                          "maximumWriteLatenessMs": 7.602749999998196
+                        }
+                      },
+                      {
+                        "kind": "unshaped",
+                        "passed": true,
+                        "durationMs": 3.9000000953674316
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "session": 2,
+              "validated": true,
+              "stages": [
+                {
+                  "stage": "before",
+                  "validated": true,
+                  "reason": null,
+                  "knownOperations": {
+                    "status": "passed",
+                    "reason": null,
+                    "cdpReportedTransferBodyBytes": [
+                      4096,
+                      4096
+                    ]
+                  },
+                  "knownClocks": {
+                    "reference": {
+                      "sampleCount": 3,
+                      "status": "passed",
+                      "reason": null,
+                      "offset": {
+                        "lowerSeconds": 1456118.557183,
+                        "upperSeconds": 1456118.5596599998
+                      },
+                      "boundary": {
+                        "lowerSeconds": 1456118.611483,
+                        "upperSeconds": 1456118.6159599996
+                      },
+                      "widthMs": 4.476999631151557
+                    },
+                    "candidate": {
+                      "sampleCount": 15,
+                      "status": "passed",
+                      "reason": null,
+                      "offset": {
+                        "lowerSeconds": 1456118.557373,
+                        "upperSeconds": 1456118.5596359998
+                      },
+                      "boundary": {
+                        "lowerSeconds": 1456118.611673,
+                        "upperSeconds": 1456118.6159359997
+                      },
+                      "widthMs": 4.262999631464481
+                    }
+                  },
+                  "knownMethods": {
+                    "reference": {
+                      "passed": true,
+                      "classification": {
+                        "status": "passed",
+                        "reason": null,
+                        "first": {
+                          "buckets": {
+                            "at-or-before": {
+                              "requestStarts": 1,
+                              "responseHeaders": 1,
+                              "dataEvents": 1,
+                              "reportedDataBytes": 4096,
+                              "reportedEncodedDataBytes": 4096,
+                              "loadingFinished": 1,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 4356
+                            },
+                            "uncertain": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            },
+                            "after": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            }
+                          },
+                          "requests": [
+                            {
+                              "requestId": "33468.4",
+                              "start": 1456118.580909,
+                              "status": 206,
+                              "range": "bytes=0-4095",
+                              "observedRange": true,
+                              "reportedBodyBytes": 4096,
+                              "finishClass": "at-or-before"
+                            }
+                          ]
+                        },
+                        "second": {
+                          "buckets": {
+                            "at-or-before": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            },
+                            "uncertain": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            },
+                            "after": {
+                              "requestStarts": 1,
+                              "responseHeaders": 1,
+                              "dataEvents": 1,
+                              "reportedDataBytes": 4096,
+                              "reportedEncodedDataBytes": 4096,
+                              "loadingFinished": 1,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 4359
+                            }
+                          },
+                          "requests": [
+                            {
+                              "requestId": "33468.5",
+                              "start": 1456118.64925,
+                              "status": 206,
+                              "range": "bytes=4096-8191",
+                              "observedRange": true,
+                              "reportedBodyBytes": 4096,
+                              "finishClass": "after"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "candidate": {
+                      "passed": true,
+                      "classification": {
+                        "status": "passed",
+                        "reason": null,
+                        "first": {
+                          "buckets": {
+                            "at-or-before": {
+                              "requestStarts": 1,
+                              "responseHeaders": 1,
+                              "dataEvents": 1,
+                              "reportedDataBytes": 4096,
+                              "reportedEncodedDataBytes": 4096,
+                              "loadingFinished": 1,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 4356
+                            },
+                            "uncertain": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            },
+                            "after": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            }
+                          },
+                          "requests": [
+                            {
+                              "requestId": "33468.4",
+                              "start": 1456118.580909,
+                              "status": 206,
+                              "range": "bytes=0-4095",
+                              "observedRange": true,
+                              "reportedBodyBytes": 4096,
+                              "finishClass": "at-or-before"
+                            }
+                          ]
+                        },
+                        "second": {
+                          "buckets": {
+                            "at-or-before": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            },
+                            "uncertain": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            },
+                            "after": {
+                              "requestStarts": 1,
+                              "responseHeaders": 1,
+                              "dataEvents": 1,
+                              "reportedDataBytes": 4096,
+                              "reportedEncodedDataBytes": 4096,
+                              "loadingFinished": 1,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 4359
+                            }
+                          },
+                          "requests": [
+                            {
+                              "requestId": "33468.5",
+                              "start": 1456118.64925,
+                              "status": 206,
+                              "range": "bytes=4096-8191",
+                              "observedRange": true,
+                              "reportedBodyBytes": 4096,
+                              "finishClass": "after"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "deliveryCalibration": {
+                    "stage": "before",
+                    "passed": true,
+                    "groups": [
+                      {
+                        "kind": "single",
+                        "passed": true,
+                        "bodyBytes": 65536,
+                        "nominalBodyMs": 524.288,
+                        "serverBodyMs": 579.249708000003,
+                        "browserBodyMs": 579.7000000476837,
+                        "pacing": {
+                          "passed": true,
+                          "requestCount": 1,
+                          "totalBodyBytes": 65536,
+                          "writeCount": 32,
+                          "headerMinimumMs": 101.12958300000173,
+                          "headerMaximumMs": 101.12958300000173,
+                          "maximumWriteLatenessMs": 2.5957500000004075
+                        }
+                      },
+                      {
+                        "kind": "concurrent",
+                        "passed": true,
+                        "bodyBytes": 131072,
+                        "nominalBodyMs": 1048.576,
+                        "serverBodyMs": 1162.2033750000046,
+                        "browserBodyMs": 1161.4000000953674,
+                        "pacing": {
+                          "passed": true,
+                          "requestCount": 2,
+                          "totalBodyBytes": 131072,
+                          "writeCount": 64,
+                          "headerMinimumMs": 100.71045899999444,
+                          "headerMaximumMs": 100.8796250000014,
+                          "maximumWriteLatenessMs": 3.0636670000021695
+                        }
+                      },
+                      {
+                        "kind": "unshaped",
+                        "passed": true,
+                        "durationMs": 7.799999952316284
+                      }
+                    ]
+                  }
+                },
+                {
+                  "stage": "after",
+                  "validated": true,
+                  "reason": null,
+                  "knownOperations": {
+                    "status": "passed",
+                    "reason": null,
+                    "cdpReportedTransferBodyBytes": [
+                      4096,
+                      4096
+                    ]
+                  },
+                  "knownClocks": {
+                    "reference": {
+                      "sampleCount": 3,
+                      "status": "passed",
+                      "reason": null,
+                      "offset": {
+                        "lowerSeconds": 1456162.634858,
+                        "upperSeconds": 1456162.637387
+                      },
+                      "boundary": {
+                        "lowerSeconds": 1456162.689458,
+                        "upperSeconds": 1456162.6939869998
+                      },
+                      "widthMs": 4.528999794274569
+                    },
+                    "candidate": {
+                      "sampleCount": 15,
+                      "status": "passed",
+                      "reason": null,
+                      "offset": {
+                        "lowerSeconds": 1456162.6350310002,
+                        "upperSeconds": 1456162.637312
+                      },
+                      "boundary": {
+                        "lowerSeconds": 1456162.6896310002,
+                        "upperSeconds": 1456162.6939119997
+                      },
+                      "widthMs": 4.280999535694718
+                    }
+                  },
+                  "knownMethods": {
+                    "reference": {
+                      "passed": true,
+                      "classification": {
+                        "status": "passed",
+                        "reason": null,
+                        "first": {
+                          "buckets": {
+                            "at-or-before": {
+                              "requestStarts": 1,
+                              "responseHeaders": 1,
+                              "dataEvents": 1,
+                              "reportedDataBytes": 4096,
+                              "reportedEncodedDataBytes": 4096,
+                              "loadingFinished": 1,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 4356
+                            },
+                            "uncertain": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            },
+                            "after": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            }
+                          },
+                          "requests": [
+                            {
+                              "requestId": "33551.4",
+                              "start": 1456162.656945,
+                              "status": 206,
+                              "range": "bytes=0-4095",
+                              "observedRange": true,
+                              "reportedBodyBytes": 4096,
+                              "finishClass": "at-or-before"
+                            }
+                          ]
+                        },
+                        "second": {
+                          "buckets": {
+                            "at-or-before": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            },
+                            "uncertain": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            },
+                            "after": {
+                              "requestStarts": 1,
+                              "responseHeaders": 1,
+                              "dataEvents": 1,
+                              "reportedDataBytes": 4096,
+                              "reportedEncodedDataBytes": 4096,
+                              "loadingFinished": 1,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 4359
+                            }
+                          },
+                          "requests": [
+                            {
+                              "requestId": "33551.5",
+                              "start": 1456162.730192,
+                              "status": 206,
+                              "range": "bytes=4096-8191",
+                              "observedRange": true,
+                              "reportedBodyBytes": 4096,
+                              "finishClass": "after"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "candidate": {
+                      "passed": true,
+                      "classification": {
+                        "status": "passed",
+                        "reason": null,
+                        "first": {
+                          "buckets": {
+                            "at-or-before": {
+                              "requestStarts": 1,
+                              "responseHeaders": 1,
+                              "dataEvents": 1,
+                              "reportedDataBytes": 4096,
+                              "reportedEncodedDataBytes": 4096,
+                              "loadingFinished": 1,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 4356
+                            },
+                            "uncertain": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            },
+                            "after": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            }
+                          },
+                          "requests": [
+                            {
+                              "requestId": "33551.4",
+                              "start": 1456162.656945,
+                              "status": 206,
+                              "range": "bytes=0-4095",
+                              "observedRange": true,
+                              "reportedBodyBytes": 4096,
+                              "finishClass": "at-or-before"
+                            }
+                          ]
+                        },
+                        "second": {
+                          "buckets": {
+                            "at-or-before": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            },
+                            "uncertain": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            },
+                            "after": {
+                              "requestStarts": 1,
+                              "responseHeaders": 1,
+                              "dataEvents": 1,
+                              "reportedDataBytes": 4096,
+                              "reportedEncodedDataBytes": 4096,
+                              "loadingFinished": 1,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 4359
+                            }
+                          },
+                          "requests": [
+                            {
+                              "requestId": "33551.5",
+                              "start": 1456162.730192,
+                              "status": 206,
+                              "range": "bytes=4096-8191",
+                              "observedRange": true,
+                              "reportedBodyBytes": 4096,
+                              "finishClass": "after"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "deliveryCalibration": {
+                    "stage": "after",
+                    "passed": true,
+                    "groups": [
+                      {
+                        "kind": "single",
+                        "passed": true,
+                        "bodyBytes": 65536,
+                        "nominalBodyMs": 524.288,
+                        "serverBodyMs": 575.1171659999964,
+                        "browserBodyMs": 576.3999998569489,
+                        "pacing": {
+                          "passed": true,
+                          "requestCount": 1,
+                          "totalBodyBytes": 65536,
+                          "writeCount": 32,
+                          "headerMinimumMs": 101.2247090000019,
+                          "headerMaximumMs": 101.2247090000019,
+                          "maximumWriteLatenessMs": 2.4131669999915175
+                        }
+                      },
+                      {
+                        "kind": "concurrent",
+                        "passed": true,
+                        "bodyBytes": 131072,
+                        "nominalBodyMs": 1048.576,
+                        "serverBodyMs": 1170.7987089999951,
+                        "browserBodyMs": 1171.3999998569489,
+                        "pacing": {
+                          "passed": true,
+                          "requestCount": 2,
+                          "totalBodyBytes": 131072,
+                          "writeCount": 64,
+                          "headerMinimumMs": 101.28324999999313,
+                          "headerMaximumMs": 101.5367089999927,
+                          "maximumWriteLatenessMs": 2.516749999995227
+                        }
+                      },
+                      {
+                        "kind": "unshaped",
+                        "passed": true,
+                        "durationMs": 3.4000000953674316
+                      }
+                    ]
+                  }
+                }
+              ]
+            },
+            {
+              "session": 3,
+              "validated": true,
+              "stages": [
+                {
+                  "stage": "before",
+                  "validated": true,
+                  "reason": null,
+                  "knownOperations": {
+                    "status": "passed",
+                    "reason": null,
+                    "cdpReportedTransferBodyBytes": [
+                      4096,
+                      4096
+                    ]
+                  },
+                  "knownClocks": {
+                    "reference": {
+                      "sampleCount": 3,
+                      "status": "passed",
+                      "reason": null,
+                      "offset": {
+                        "lowerSeconds": 1456165.490428,
+                        "upperSeconds": 1456165.492842
+                      },
+                      "boundary": {
+                        "lowerSeconds": 1456165.545628,
+                        "upperSeconds": 1456165.550042
+                      },
+                      "widthMs": 4.413999849930406
+                    },
+                    "candidate": {
+                      "sampleCount": 15,
+                      "status": "passed",
+                      "reason": null,
+                      "offset": {
+                        "lowerSeconds": 1456165.490561,
+                        "upperSeconds": 1456165.492807
+                      },
+                      "boundary": {
+                        "lowerSeconds": 1456165.5457610001,
+                        "upperSeconds": 1456165.5500069999
+                      },
+                      "widthMs": 4.245999734848738
+                    }
+                  },
+                  "knownMethods": {
+                    "reference": {
+                      "passed": true,
+                      "classification": {
+                        "status": "passed",
+                        "reason": null,
+                        "first": {
+                          "buckets": {
+                            "at-or-before": {
+                              "requestStarts": 1,
+                              "responseHeaders": 1,
+                              "dataEvents": 1,
+                              "reportedDataBytes": 4096,
+                              "reportedEncodedDataBytes": 4096,
+                              "loadingFinished": 1,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 4356
+                            },
+                            "uncertain": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            },
+                            "after": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            }
+                          },
+                          "requests": [
+                            {
+                              "requestId": "33556.4",
+                              "start": 1456165.515394,
+                              "status": 206,
+                              "range": "bytes=0-4095",
+                              "observedRange": true,
+                              "reportedBodyBytes": 4096,
+                              "finishClass": "at-or-before"
+                            }
+                          ]
+                        },
+                        "second": {
+                          "buckets": {
+                            "at-or-before": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            },
+                            "uncertain": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            },
+                            "after": {
+                              "requestStarts": 1,
+                              "responseHeaders": 1,
+                              "dataEvents": 1,
+                              "reportedDataBytes": 4096,
+                              "reportedEncodedDataBytes": 4096,
+                              "loadingFinished": 1,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 4359
+                            }
+                          },
+                          "requests": [
+                            {
+                              "requestId": "33556.5",
+                              "start": 1456165.583578,
+                              "status": 206,
+                              "range": "bytes=4096-8191",
+                              "observedRange": true,
+                              "reportedBodyBytes": 4096,
+                              "finishClass": "after"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "candidate": {
+                      "passed": true,
+                      "classification": {
+                        "status": "passed",
+                        "reason": null,
+                        "first": {
+                          "buckets": {
+                            "at-or-before": {
+                              "requestStarts": 1,
+                              "responseHeaders": 1,
+                              "dataEvents": 1,
+                              "reportedDataBytes": 4096,
+                              "reportedEncodedDataBytes": 4096,
+                              "loadingFinished": 1,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 4356
+                            },
+                            "uncertain": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            },
+                            "after": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            }
+                          },
+                          "requests": [
+                            {
+                              "requestId": "33556.4",
+                              "start": 1456165.515394,
+                              "status": 206,
+                              "range": "bytes=0-4095",
+                              "observedRange": true,
+                              "reportedBodyBytes": 4096,
+                              "finishClass": "at-or-before"
+                            }
+                          ]
+                        },
+                        "second": {
+                          "buckets": {
+                            "at-or-before": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            },
+                            "uncertain": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            },
+                            "after": {
+                              "requestStarts": 1,
+                              "responseHeaders": 1,
+                              "dataEvents": 1,
+                              "reportedDataBytes": 4096,
+                              "reportedEncodedDataBytes": 4096,
+                              "loadingFinished": 1,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 4359
+                            }
+                          },
+                          "requests": [
+                            {
+                              "requestId": "33556.5",
+                              "start": 1456165.583578,
+                              "status": 206,
+                              "range": "bytes=4096-8191",
+                              "observedRange": true,
+                              "reportedBodyBytes": 4096,
+                              "finishClass": "after"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "deliveryCalibration": {
+                    "stage": "before",
+                    "passed": true,
+                    "groups": [
+                      {
+                        "kind": "single",
+                        "passed": true,
+                        "bodyBytes": 65536,
+                        "nominalBodyMs": 524.288,
+                        "serverBodyMs": 581.7487499999988,
+                        "browserBodyMs": 582.0,
+                        "pacing": {
+                          "passed": true,
+                          "requestCount": 1,
+                          "totalBodyBytes": 65536,
+                          "writeCount": 32,
+                          "headerMinimumMs": 101.19000000000233,
+                          "headerMaximumMs": 101.19000000000233,
+                          "maximumWriteLatenessMs": 2.54749999998603
+                        }
+                      },
+                      {
+                        "kind": "concurrent",
+                        "passed": true,
+                        "bodyBytes": 131072,
+                        "nominalBodyMs": 1048.576,
+                        "serverBodyMs": 1159.3334999999934,
+                        "browserBodyMs": 1159.3000001907349,
+                        "pacing": {
+                          "passed": true,
+                          "requestCount": 2,
+                          "totalBodyBytes": 131072,
+                          "writeCount": 64,
+                          "headerMinimumMs": 100.51933300000383,
+                          "headerMaximumMs": 100.63687500001106,
+                          "maximumWriteLatenessMs": 4.827707999997074
+                        }
+                      },
+                      {
+                        "kind": "unshaped",
+                        "passed": true,
+                        "durationMs": 2.9000000953674316
+                      }
+                    ]
+                  }
+                },
+                {
+                  "stage": "after",
+                  "validated": true,
+                  "reason": null,
+                  "knownOperations": {
+                    "status": "passed",
+                    "reason": null,
+                    "cdpReportedTransferBodyBytes": [
+                      4096,
+                      4096
+                    ]
+                  },
+                  "knownClocks": {
+                    "reference": {
+                      "sampleCount": 3,
+                      "status": "passed",
+                      "reason": null,
+                      "offset": {
+                        "lowerSeconds": 1456209.765908,
+                        "upperSeconds": 1456209.7682659999
+                      },
+                      "boundary": {
+                        "lowerSeconds": 1456209.8279080002,
+                        "upperSeconds": 1456209.8322659999
+                      },
+                      "widthMs": 4.3579996563494205
+                    },
+                    "candidate": {
+                      "sampleCount": 15,
+                      "status": "passed",
+                      "reason": null,
+                      "offset": {
+                        "lowerSeconds": 1456209.765994,
+                        "upperSeconds": 1456209.7682079999
+                      },
+                      "boundary": {
+                        "lowerSeconds": 1456209.8279940002,
+                        "upperSeconds": 1456209.832208
+                      },
+                      "widthMs": 4.2139997240155935
+                    }
+                  },
+                  "knownMethods": {
+                    "reference": {
+                      "passed": true,
+                      "classification": {
+                        "status": "passed",
+                        "reason": null,
+                        "first": {
+                          "buckets": {
+                            "at-or-before": {
+                              "requestStarts": 1,
+                              "responseHeaders": 1,
+                              "dataEvents": 1,
+                              "reportedDataBytes": 4096,
+                              "reportedEncodedDataBytes": 4096,
+                              "loadingFinished": 1,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 4356
+                            },
+                            "uncertain": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            },
+                            "after": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            }
+                          },
+                          "requests": [
+                            {
+                              "requestId": "33619.4",
+                              "start": 1456209.798227,
+                              "status": 206,
+                              "range": "bytes=0-4095",
+                              "observedRange": true,
+                              "reportedBodyBytes": 4096,
+                              "finishClass": "at-or-before"
+                            }
+                          ]
+                        },
+                        "second": {
+                          "buckets": {
+                            "at-or-before": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            },
+                            "uncertain": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            },
+                            "after": {
+                              "requestStarts": 1,
+                              "responseHeaders": 1,
+                              "dataEvents": 1,
+                              "reportedDataBytes": 4096,
+                              "reportedEncodedDataBytes": 4096,
+                              "loadingFinished": 1,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 4359
+                            }
+                          },
+                          "requests": [
+                            {
+                              "requestId": "33619.5",
+                              "start": 1456209.865179,
+                              "status": 206,
+                              "range": "bytes=4096-8191",
+                              "observedRange": true,
+                              "reportedBodyBytes": 4096,
+                              "finishClass": "after"
+                            }
+                          ]
+                        }
+                      }
+                    },
+                    "candidate": {
+                      "passed": true,
+                      "classification": {
+                        "status": "passed",
+                        "reason": null,
+                        "first": {
+                          "buckets": {
+                            "at-or-before": {
+                              "requestStarts": 1,
+                              "responseHeaders": 1,
+                              "dataEvents": 1,
+                              "reportedDataBytes": 4096,
+                              "reportedEncodedDataBytes": 4096,
+                              "loadingFinished": 1,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 4356
+                            },
+                            "uncertain": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            },
+                            "after": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            }
+                          },
+                          "requests": [
+                            {
+                              "requestId": "33619.4",
+                              "start": 1456209.798227,
+                              "status": 206,
+                              "range": "bytes=0-4095",
+                              "observedRange": true,
+                              "reportedBodyBytes": 4096,
+                              "finishClass": "at-or-before"
+                            }
+                          ]
+                        },
+                        "second": {
+                          "buckets": {
+                            "at-or-before": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            },
+                            "uncertain": {
+                              "requestStarts": 0,
+                              "responseHeaders": 0,
+                              "dataEvents": 0,
+                              "reportedDataBytes": 0,
+                              "reportedEncodedDataBytes": 0,
+                              "loadingFinished": 0,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 0
+                            },
+                            "after": {
+                              "requestStarts": 1,
+                              "responseHeaders": 1,
+                              "dataEvents": 1,
+                              "reportedDataBytes": 4096,
+                              "reportedEncodedDataBytes": 4096,
+                              "loadingFinished": 1,
+                              "loadingFailed": 0,
+                              "finishedEncodedDataLength": 4359
+                            }
+                          },
+                          "requests": [
+                            {
+                              "requestId": "33619.5",
+                              "start": 1456209.865179,
+                              "status": 206,
+                              "range": "bytes=4096-8191",
+                              "observedRange": true,
+                              "reportedBodyBytes": 4096,
+                              "finishClass": "after"
+                            }
+                          ]
+                        }
+                      }
+                    }
+                  },
+                  "deliveryCalibration": {
+                    "stage": "after",
+                    "passed": true,
+                    "groups": [
+                      {
+                        "kind": "single",
+                        "passed": true,
+                        "bodyBytes": 65536,
+                        "nominalBodyMs": 524.288,
+                        "serverBodyMs": 581.7965830000176,
+                        "browserBodyMs": 581.8999998569489,
+                        "pacing": {
+                          "passed": true,
+                          "requestCount": 1,
+                          "totalBodyBytes": 65536,
+                          "writeCount": 32,
+                          "headerMinimumMs": 101.16812499999651,
+                          "headerMaximumMs": 101.16812499999651,
+                          "maximumWriteLatenessMs": 9.308375000022352
+                        }
+                      },
+                      {
+                        "kind": "concurrent",
+                        "passed": true,
+                        "bodyBytes": 131072,
+                        "nominalBodyMs": 1048.576,
+                        "serverBodyMs": 1148.0692090000084,
+                        "browserBodyMs": 1148.5999999046326,
+                        "pacing": {
+                          "passed": true,
+                          "requestCount": 2,
+                          "totalBodyBytes": 131072,
+                          "writeCount": 64,
+                          "headerMinimumMs": 101.21495900000446,
+                          "headerMaximumMs": 101.27841599998646,
+                          "maximumWriteLatenessMs": 2.544084000022849
+                        }
+                      },
+                      {
+                        "kind": "unshaped",
+                        "passed": true,
+                        "durationMs": 3.4000000953674316
+                      }
+                    ]
+                  }
+                }
+              ]
+            }
+          ],
+          "actualArms": {
+            "three": {
+              "attempted": 48,
+              "operationValid": 48
+            },
+            "fifteen": {
+              "attempted": 48,
+              "operationValid": 48
+            }
+          },
+          "nestedClockAcceptanceAmongOperationValidHighTrials": {
+            "eligibleHighArmTrials": 48,
+            "bothPassed": 48,
+            "referenceOnly": 0,
+            "candidateOnly": 0,
+            "neither": 0
+          },
+          "nestedClockAcceptanceAmongGuardValidatedOperationValidHighTrials": {
+            "eligibleHighArmTrials": 48,
+            "bothPassed": 48,
+            "referenceOnly": 0,
+            "candidateOnly": 0,
+            "neither": 0
+          },
+          "nestedMethodValidityAmongOperationValidHighTrials": {
+            "eligibleHighArmTrials": 48,
+            "bothPassed": 48,
+            "referenceOnly": 0,
+            "candidateOnly": 0,
+            "neither": 0
+          },
+          "perturbation": {
+            "scheduledPairs": 48,
+            "comparablePairs": 48,
+            "excludedPairs": 0,
+            "differenceDefinition": "actual fifteen-bracket arm minus actual three-bracket arm within the adjacent condition pair",
+            "population": "Operation/content-valid and pre/post-session-guard-valid pairs, without clock-gate filtering. Descriptive observer perturbation only.",
+            "metricUnits": {
+              "firstPageRenderMs": "milliseconds",
+              "renderToVerificationStartMs": "milliseconds",
+              "renderReturnToVerificationCallMs": "milliseconds",
+              "observerCollectionMs": "milliseconds",
+              "observationWindowMs": "milliseconds",
+              "postObservationDrainMs": "milliseconds",
+              "trialElapsedMs": "milliseconds",
+              "bracketSpanSumMs": "milliseconds",
+              "rangeRequestCount": "requests",
+              "cdpTotalBodyBytes": "bytes",
+              "completedResourceTimingBytes": "bytes"
+            },
+            "pairedDifferences": {
+              "firstPageRenderMs": {
+                "count": 48,
+                "minimum": -79.40000009536743,
+                "median": 5.5,
+                "maximum": 31.59999990463257,
+                "p25": -5.050000011920929,
+                "p75": 12.725000143051147
+              },
+              "renderToVerificationStartMs": {
+                "count": 48,
+                "minimum": -4.0,
+                "median": 3.350000023841858,
+                "maximum": 8.799999952316284,
+                "p25": 1.75,
+                "p75": 4.525000035762787
+              },
+              "renderReturnToVerificationCallMs": {
+                "count": 48,
+                "minimum": -3.3261660000007396,
+                "median": 3.4279995000033523,
+                "maximum": 8.559124999999767,
+                "p25": 2.1460100000094826,
+                "p75": 4.662906249996013
+              },
+              "observerCollectionMs": {
+                "count": 48,
+                "minimum": 1.7940410000001066,
+                "median": 8.358707500010496,
+                "maximum": 34.6842080000024,
+                "p25": 7.132145999981731,
+                "p75": 10.80318699999225
+              },
+              "observationWindowMs": {
+                "count": 48,
+                "minimum": -56.12100000001374,
+                "median": 13.296687500003827,
+                "maximum": 45.22295899999153,
+                "p25": 2.432697499999449,
+                "p75": 19.556615250000505
+              },
+              "postObservationDrainMs": {
+                "count": 48,
+                "minimum": -31.570250000004307,
+                "median": -0.1393955000094138,
+                "maximum": 20.963917000000947,
+                "p25": -3.7764797500021814,
+                "p75": 0.040999499999088584
+              },
+              "trialElapsedMs": {
+                "count": 48,
+                "minimum": -62.95024999999441,
+                "median": 16.814083499997878,
+                "maximum": 68.62591600000087,
+                "p25": -8.433697250007754,
+                "p75": 31.619344250000722
+              },
+              "bracketSpanSumMs": {
+                "count": 48,
+                "minimum": 2.4020003620535135,
+                "median": 5.441999761387706,
+                "maximum": 19.377000397071242,
+                "p25": 4.547749529592693,
+                "p75": 6.49600027827546
+              },
+              "rangeRequestCount": {
+                "count": 48,
+                "minimum": 0,
+                "median": 0.0,
+                "maximum": 0,
+                "p25": 0.0,
+                "p75": 0.0
+              },
+              "cdpTotalBodyBytes": {
+                "count": 48,
+                "minimum": 0,
+                "median": 0.0,
+                "maximum": 0,
+                "p25": 0.0,
+                "p75": 0.0
+              },
+              "completedResourceTimingBytes": {
+                "count": 48,
+                "minimum": 0,
+                "median": 0.0,
+                "maximum": 0,
+                "p25": 0.0,
+                "p75": 0.0
+              }
+            }
+          },
+          "candidateGainMeaning": "Candidate-only clock acceptance within the same high-arm execution, restricted to operation-valid trials. Network/joint-method validity is separate. Actual low/high arm pass-count differences are not same-execution gains."
+        },
+        "startedAt": "2026-11-18T17:03:07.509348+00:00",
+        "finishedAt": "2026-11-18T17:05:29.387589+00:00",
+        "runnerPid": 33319
+      },
+      "performance": {
+        "executionStatus": "finished",
+        "exitCode": 1,
+        "timeout": false,
+        "cleanupVerified": true,
+        "reportPath": "/Users/kristian/Documents/labs/pdf-rendering-benchmark/results/raw/final-windows/window-1/performance/report.json",
+        "reportSha256": "a81e2d518fb43b72431bf677f123581fe8c39ca988e156942128262d5bd59928",
+        "accepted": false,
+        "summary": null,
+        "reportStatus": "failed",
+        "partialEvidence": {
+          "recordedTrials": 39,
+          "recordedOperationPassed": 38,
+          "lastTrial": {
+            "id": "measured-6-nonlinearized-range-enabled",
+            "phase": "measured",
+            "block": 6,
+            "condition": "nonlinearized-range-enabled",
+            "arm": null,
+            "status": "failed",
+            "operationStatus": null,
+            "error": "AssertionError [ERR_ASSERTION]: Clock boundary too imprecise"
+          },
+          "reportError": "AssertionError [ERR_ASSERTION]: Clock boundary too imprecise\n    at alignClock (file:///Users/kristian/Documents/labs/pdf-rendering-benchmark/packages/runner/dist/controlled-delivery.js:193:5)\n    at main (file:///Users/kristian/Documents/labs/pdf-rendering-benchmark/packages/runner/dist/controlled-delivery.js:429:31)"
+        },
+        "environment": {
+          "node": "v24.22.1",
+          "platform": "darwin",
+          "release": "24.6.0",
+          "arch": "arm64",
+          "cpu": "Apple M2",
+          "logicalCpus": 8,
+          "memoryBytes": 8589934592,
+          "pdfjs": "5.6.205",
+          "playwright": "1.62.1",
+          "qpdf": "qpdf version 12.4.2",
+          "executableOverride": null,
+          "chromium": "151.0.7922.34",
+          "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.7922.34 Safari/537.36"
+        },
+        "evidenceStatus": "rejected or incomplete; no timing estimate",
+        "startedAt": "2026-11-18T17:05:30.513046+00:00",
+        "finishedAt": "2026-11-18T17:06:24.190192+00:00",
+        "runnerPid": 33633
+      },
+      "ledgerSha256": "e50cd190f47571ff50d8d9decc5b9ad540baaaa13c6ba8f6d46f5f8faca4c3f4",
+      "state": "rejected",
+      "startedAt": "2026-11-18T17:03:06.042535+00:00",
+      "admittedAt": "2026-11-18T17:03:07.503567+00:00",
+      "finishedAt": "2026-11-18T17:06:25.687193+00:00",
+      "cleanupVerified": true,
+      "launcherError": null
+    },
+    {
+      "ordinal": 2,
+      "opensAtUTC": "2026-11-18T23:00:00Z",
+      "latestStartAtUTC": "2026-11-19T00:00:00Z",
+      "ledgerPath": "/Users/kristian/Documents/labs/pdf-rendering-benchmark/results/raw/final-windows/window-2/ledger.json",
+      "observer": {
+        "executionStatus": "unattempted"
+      },
+      "performance": {
+        "executionStatus": "unattempted",
+        "accepted": false,
+        "summary": null
+      },
+      "state": "pending-not-open"
+    },
+    {
+      "ordinal": 3,
+      "opensAtUTC": "2026-11-19T17:00:00Z",
+      "latestStartAtUTC": "2026-11-19T18:00:00Z",
+      "ledgerPath": "/Users/kristian/Documents/labs/pdf-rendering-benchmark/results/raw/final-windows/window-3/ledger.json",
+      "observer": {
+        "executionStatus": "unattempted"
+      },
+      "performance": {
+        "executionStatus": "unattempted",
+        "accepted": false,
+        "summary": null
+      },
+      "state": "pending-not-open"
+    }
+  ],
+  "historicalPilot": {
+    "role": "historical; excluded from accepted-new-window count and comparison",
+    "reportPath": "/Users/kristian/Documents/labs/pdf-rendering-benchmark/results/raw/controlled-delivery/run-VnOBcz/report.json",
+    "reportSha256": "87070956c2672ed172d0b25660d2757df6fb29e0e29725858067f7a891d7cc64",
+    "startedAt": "2026-11-18T05:21:54.389Z",
+    "finishedAt": "2026-11-18T05:23:26.814Z",
+    "independentAuditStatus": "passed",
+    "summary": {
+      "interpretation": "Descriptive statistics only; no inferential significance claim.",
+      "quantileMethod": "linear interpolation at (n - 1) * q",
+      "measuredBlocks": 12,
+      "excludedWarmupBlocks": 4,
+      "byCondition": {
+        "nonlinearized-range-enabled": {
+          "count": 12,
+          "medianMs": 1036.2999999523163,
+          "minMs": 1020.5,
+          "maxMs": 1064.2000000476837,
+          "p25Ms": 1031.1249999403954,
+          "p75Ms": 1047.6749998927116
+        },
+        "linearized-range-enabled": {
+          "count": 12,
+          "medianMs": 1142.3499999046326,
+          "minMs": 1127.5999999046326,
+          "maxMs": 1154.5999999046326,
+          "p25Ms": 1133.8499999642372,
+          "p75Ms": 1148.7750000357628
+        },
+        "nonlinearized-range-disabled": {
+          "count": 12,
+          "medianMs": 984.7000000476837,
+          "minMs": 974.7999999523163,
+          "maxMs": 1001.4000000953674,
+          "p25Ms": 979.9500000476837,
+          "p75Ms": 997.1250001192093
+        },
+        "linearized-range-disabled": {
+          "count": 12,
+          "medianMs": 996.1000000238419,
+          "minMs": 990.2999999523163,
+          "maxMs": 1052.7000000476837,
+          "p25Ms": 992.2999999523163,
+          "p75Ms": 1002.25
+        }
+      },
+      "pairedStructureEffect": {
+        "rangeEnabled": {
+          "definition": "linearized minus nonlinearized, range enabled",
+          "count": 12,
+          "medianMs": 105.09999990463257,
+          "minMs": 68.29999995231628,
+          "maxMs": 126.40000009536743,
+          "p25Ms": 95.15000003576279,
+          "p75Ms": 118.74999976158142,
+          "blocks": [
+            {
+              "block": 1,
+              "differenceMs": 106.29999995231628
+            },
+            {
+              "block": 2,
+              "differenceMs": 68.29999995231628
+            },
+            {
+              "block": 3,
+              "differenceMs": 75.49999976158142
+            },
+            {
+              "block": 4,
+              "differenceMs": 107.70000004768372
+            },
+            {
+              "block": 5,
+              "differenceMs": 95.90000009536743
+            },
+            {
+              "block": 6,
+              "differenceMs": 103.89999985694885
+            },
+            {
+              "block": 7,
+              "differenceMs": 92.89999985694885
+            },
+            {
+              "block": 8,
+              "differenceMs": 126.40000009536743
+            },
+            {
+              "block": 9,
+              "differenceMs": 98.39999985694885
+            },
+            {
+              "block": 10,
+              "differenceMs": 122.20000004768372
+            },
+            {
+              "block": 11,
+              "differenceMs": 123.09999990463257
+            },
+            {
+              "block": 12,
+              "differenceMs": 117.59999966621399
+            }
+          ]
+        },
+        "rangeDisabled": {
+          "definition": "linearized minus nonlinearized, range disabled",
+          "count": 12,
+          "medianMs": 7.599999904632568,
+          "minMs": -5.700000047683716,
+          "maxMs": 73.5,
+          "p25Ms": -3.950000047683716,
+          "p75Ms": 23.399999976158142,
+          "blocks": [
+            {
+              "block": 1,
+              "differenceMs": -4.700000047683716
+            },
+            {
+              "block": 2,
+              "differenceMs": -5.1000001430511475
+            },
+            {
+              "block": 3,
+              "differenceMs": 7.0
+            },
+            {
+              "block": 4,
+              "differenceMs": -3.700000047683716
+            },
+            {
+              "block": 5,
+              "differenceMs": -5.700000047683716
+            },
+            {
+              "block": 6,
+              "differenceMs": 11.600000143051147
+            },
+            {
+              "block": 7,
+              "differenceMs": 8.199999809265137
+            },
+            {
+              "block": 8,
+              "differenceMs": 20.5
+            },
+            {
+              "block": 9,
+              "differenceMs": 73.5
+            },
+            {
+              "block": 10,
+              "differenceMs": 37.39999985694885
+            },
+            {
+              "block": 11,
+              "differenceMs": 32.09999990463257
+            },
+            {
+              "block": 12,
+              "differenceMs": 7.0
+            }
+          ]
+        }
+      },
+      "pairedRangeEffect": {
+        "nonlinearized": {
+          "definition": "range enabled minus range disabled, nonlinearized",
+          "count": 12,
+          "medianMs": 48.699999928474426,
+          "minMs": 33.299999952316284,
+          "maxMs": 75.90000009536743,
+          "p25Ms": 43.150000154972076,
+          "p75Ms": 58.874999940395355,
+          "blocks": [
+            {
+              "block": 1,
+              "differenceMs": 33.299999952316284
+            },
+            {
+              "block": 2,
+              "differenceMs": 63.59999990463257
+            },
+            {
+              "block": 3,
+              "differenceMs": 66.80000019073486
+            },
+            {
+              "block": 4,
+              "differenceMs": 47.49999976158142
+            },
+            {
+              "block": 5,
+              "differenceMs": 38.799999713897705
+            },
+            {
+              "block": 6,
+              "differenceMs": 49.90000009536743
+            },
+            {
+              "block": 7,
+              "differenceMs": 57.299999952316284
+            },
+            {
+              "block": 8,
+              "differenceMs": 40.59999990463257
+            },
+            {
+              "block": 9,
+              "differenceMs": 75.90000009536743
+            },
+            {
+              "block": 10,
+              "differenceMs": 56.49999976158142
+            },
+            {
+              "block": 11,
+              "differenceMs": 45.700000047683716
+            },
+            {
+              "block": 12,
+              "differenceMs": 44.00000023841858
+            }
+          ]
+        },
+        "linearized": {
+          "definition": "range enabled minus range disabled, linearized",
+          "count": 12,
+          "medianMs": 141.64999997615814,
+          "minMs": 100.79999995231628,
+          "maxMs": 158.89999985694885,
+          "p25Ms": 136.92500001192093,
+          "p75Ms": 144.8499999642372,
+          "blocks": [
+            {
+              "block": 1,
+              "differenceMs": 144.29999995231628
+            },
+            {
+              "block": 2,
+              "differenceMs": 137.0
+            },
+            {
+              "block": 3,
+              "differenceMs": 135.29999995231628
+            },
+            {
+              "block": 4,
+              "differenceMs": 158.89999985694885
+            },
+            {
+              "block": 5,
+              "differenceMs": 140.39999985694885
+            },
+            {
+              "block": 6,
+              "differenceMs": 142.19999980926514
+            },
+            {
+              "block": 7,
+              "differenceMs": 142.0
+            },
+            {
+              "block": 8,
+              "differenceMs": 146.5
+            },
+            {
+              "block": 9,
+              "differenceMs": 100.79999995231628
+            },
+            {
+              "block": 10,
+              "differenceMs": 141.29999995231628
+            },
+            {
+              "block": 11,
+              "differenceMs": 136.70000004768372
+            },
+            {
+              "block": 12,
+              "differenceMs": 154.59999990463257
+            }
+          ]
+        }
+      },
+      "differenceOfStructureEffects": {
+        "definition": "(linearized minus nonlinearized) with range enabled minus (linearized minus nonlinearized) with range disabled",
+        "count": 12,
+        "medianMs": 91.64999985694885,
+        "minMs": 24.899999856948853,
+        "maxMs": 111.40000009536743,
+        "p25Ms": 81.87500005960464,
+        "p75Ms": 107.07499998807907,
+        "blocks": [
+          {
+            "block": 1,
+            "differenceMs": 111.0
+          },
+          {
+            "block": 2,
+            "differenceMs": 73.40000009536743
+          },
+          {
+            "block": 3,
+            "differenceMs": 68.49999976158142
+          },
+          {
+            "block": 4,
+            "differenceMs": 111.40000009536743
+          },
+          {
+            "block": 5,
+            "differenceMs": 101.60000014305115
+          },
+          {
+            "block": 6,
+            "differenceMs": 92.2999997138977
+          },
+          {
+            "block": 7,
+            "differenceMs": 84.70000004768372
+          },
+          {
+            "block": 8,
+            "differenceMs": 105.90000009536743
+          },
+          {
+            "block": 9,
+            "differenceMs": 24.899999856948853
+          },
+          {
+            "block": 10,
+            "differenceMs": 84.80000019073486
+          },
+          {
+            "block": 11,
+            "differenceMs": 91.0
+          },
+          {
+            "block": 12,
+            "differenceMs": 110.59999966621399
+          }
+        ]
+      }
+    }
+  },
+  "actualPerformanceStartSeparations": [],
+  "betweenWindowComparison": {
+    "status": "fixed windows pending; no comparison yet",
+    "acceptedNewWindows": 0,
+    "interpretation": "At least two accepted new windows are required. The historical pilot does not count toward this threshold."
+  },
+  "limits": [
+    "Pending, missed, interrupted and rejected windows are never replaced or used for timing estimates.",
+    "The fixed observer-before-performance order may affect machine state; OS/font caches and machine load are not independently controlled.",
+    "Fresh processes and separate time windows on one host are not independent hardware/environmental replications.",
+    "No historical or partial trial timings are pooled with accepted new windows; narrower nested intervals do not independently prove clock accuracy."
+  ],
+  "csv": {
+    "path": "/Users/kristian/Documents/labs/pdf-rendering-benchmark/docs/data/final-windows-progress-window-1.csv",
+    "sha256": "c5ce63aa0adf106a5bbabeeb5853bbd505bca4a768eb7b57ad9a455c254e217d"
+  }
+}

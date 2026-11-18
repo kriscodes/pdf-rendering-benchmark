@@ -1,6 +1,6 @@
 # Final fixed-window campaign: execution record
 
-Status: preparation passed and the three windows are scheduled; no new measurement has started. This is not the final scientific conclusion.
+Status: window 1 completed and its performance attempt was rejected by the unchanged clock gate. Windows 2 and 3 remain scheduled. This is not the final scientific conclusion.
 
 The prospective protocol is [final-windows.md](final-windows.md), with machine-readable schedule and frozen hashes in [final-windows.json](../experiments/final-windows.json). The existing branch remains `feat/corpus-text-pair`. Protocol commit: `4df7821` (before all new measurements). Parent commit: `942be7b`.
 
@@ -8,7 +8,7 @@ The prospective protocol is [final-windows.md](final-windows.md), with machine-r
 
 | Window | Pacific target | Allowed suite start (UTC) | Outcome |
 | --- | --- | --- | --- |
-| 1 | November 18, 09:00 | November 18, 17:00–18:00 | Pending |
+| 1 | November 18, 09:00 | November 18, 17:00–18:00 | Rejected performance attempt; observer diagnostic complete |
 | 2 | November 18, 15:00 | November 18, 23:00–November 19, 00:00 | Pending |
 | 3 | November 19, 09:00 | November 19, 17:00–18:00 | Pending |
 
@@ -45,6 +45,25 @@ Calling the actual launcher for window 1 before 17:00 UTC returned `not-open` (e
 Review found that Playwright launches Chromium in a separate process group. The launcher therefore checks both the runner group and protected browser processes after execution; a successful Node exit alone is not cleanup proof. Unverified cleanup blocks subsequent execution and archival of potentially changing raw files. The independent auditor checks these recorded facts separately from the completion flag.
 
 The preparation archive was published to the final campaign's Notion page and downloaded for verification before the first measurement window. It contains the project at `249a0cd`, original PDFs/manifest, protocol, frozen plan, launcher/auditor/tests, and preflight exports: 115 manifest-listed files plus the manifest. The ZIP is 597,436 bytes; SHA-256 `8028ed9a73cb8788f07dc33411525306991dde1cfbcf880da6632bd9299050b4`. Downloaded ZIP bytes, exact entry inventory, and every listed file's size/hash match. The [publication receipt](data/final-windows-preparation-publication-2026-11-18.json) records its stable Notion reference. This archive contains preparation evidence only, not new benchmark measurements.
+
+## Window 1 — November 18, 09:03–09:06 Pacific
+
+The suite started from the active chat within its declared interval: `2026-11-18T17:03:06.042535+00:00` to `17:06:25.687193+00:00`. This establishes an on-time launcher execution, not proof of automatic scheduler delivery. Its irreversible claim is retained. No replacement invocation was made.
+
+The observer diagnostic collected all 96 trials; all 96 workloads and 144 clock analyses passed. All six pre/post control stages passed, and all 48 adjacent arm pairs were independently comparable. There were zero candidate-only clock acceptance gains among the 48 valid high-arm executions. Fifteen minus three brackets had paired medians of +8.359 ms for collection, +3.350 ms from render to verification, and +5.500 ms for first-page render (range −79.400 to +31.600 ms). These are instrumentation observations, not performance replication or evidence of equivalence.
+
+The preserved performance runner attempted 39 of 64 trials: all 16 warmups and 22 measured trials passed before `measured-6-nonlinearized-range-enabled` failed. Its reconstructed boundary width was 5.105 ms, above the unchanged 5 ms limit. The 25 remaining trials and post-run controls were not reached. Pre-run observer/delivery controls passed. All partial records remain available, but this rejected attempt supplies no performance estimate. The underlying cause of the wide clock interval remains unestablished.
+
+The independent final-window audit passed, verified all 1,134 frozen files, confirmed process/browser cleanup and retained the rejection. The current accepted count is **0/3 with two pending windows**; this is not yet a closing conclusion. Both historical PDFs and the historical accepted pilot remain unchanged and separate.
+
+Evidence:
+
+- Ledger: `results/raw/final-windows/window-1/ledger.json`.
+- Observer report SHA-256: `1e5713999ab7fc561f547e0474d5fe543a5b54bdff40b0a60b3c44de8dc6e164`.
+- Performance report SHA-256: `a81e2d518fb43b72431bf677f123581fe8c39ca988e156942128262d5bd59928`.
+- Independent [progress JSON](data/final-windows-progress-window-1.json) and [CSV](data/final-windows-progress-window-1.csv).
+
+The invocation used the protocol's exact `run_final_windows.py --window 1` command. The audit used `audit_final_windows.py --plan experiments/final-windows.json --ledger-root results/raw/final-windows --output-prefix docs/data/final-windows-progress-window-1`. No tests, builds, lint checks, package installation or uploads ran concurrently with the measurement suite.
 
 ## Continuing a scheduled window
 
