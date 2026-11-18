@@ -222,6 +222,12 @@ def inspect_attempt(attempt: dict, original: dict, integrity_issues: list[str]) 
 
 
 def session_median_descriptions(accepted: list[dict]) -> dict:
+    if len(accepted) == 1:
+        return {
+            "status": "not-estimable: no accepted additional run", "acceptedSessionCount": 1,
+            "interpretation": "Only the historical session is accepted. No across-session variability estimate or replication conclusion is available; historical statistics remain separately labeled.",
+        }
+
     def describe(values):
         medians = [item["medianMs"] for item in values]
         return {"acceptedSessionCount": len(medians), "sessionMedians": values,
@@ -229,6 +235,7 @@ def session_median_descriptions(accepted: list[dict]) -> dict:
                 "medianOfSessionMediansMs": statistics.median(medians)}
 
     return {
+        "status": "descriptive-only",
         "interpretation": "Descriptive variation of accepted session-level medians only. No raw timings are pooled, and these are not significance tests or independent environmental samples.",
         "byCondition": {condition: describe([
             {"session": session["session"], "medianMs": session["summary"]["byCondition"][condition]["medianMs"]}

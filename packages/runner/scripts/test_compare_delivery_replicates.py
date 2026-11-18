@@ -6,7 +6,7 @@ import unittest
 from pathlib import Path
 from unittest.mock import patch
 
-from compare_delivery_replicates import csv_text, inspect_attempt, sha256
+from compare_delivery_replicates import csv_text, inspect_attempt, session_median_descriptions, sha256
 
 
 class ComparisonBoundaryTests(unittest.TestCase):
@@ -77,6 +77,13 @@ class ComparisonBoundaryTests(unittest.TestCase):
         result = csv_text([{"session": "original", "medianMs": 1}, {"session": "failed"}])
         self.assertNotIn("\r", result)
         self.assertEqual(result, "session,medianMs\noriginal,1\nfailed,\n")
+
+    def test_historical_only_cannot_estimate_replication_variability(self):
+        result = session_median_descriptions([{"session": "original"}])
+        self.assertEqual(result["status"], "not-estimable: no accepted additional run")
+        self.assertEqual(result["acceptedSessionCount"], 1)
+        self.assertNotIn("byCondition", result)
+        self.assertNotIn("pairedContrasts", result)
 
 
 if __name__ == "__main__":
