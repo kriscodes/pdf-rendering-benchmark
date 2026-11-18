@@ -10,6 +10,7 @@ for hand-authored documents.
 
 from __future__ import annotations
 
+import argparse
 import hashlib
 import json
 import platform
@@ -95,16 +96,22 @@ def create_source(path: Path) -> None:
 
 
 def main() -> None:
+    parser = argparse.ArgumentParser(description=__doc__)
+    parser.add_argument(
+        "--output-dir", type=Path, default=OUTPUT,
+        help="Generated files directory (default: corpus/generated/pilot).",
+    )
+    output = parser.parse_args().output_dir.resolve()
     qpdf = shutil.which("qpdf")
     if qpdf is None:
         raise RuntimeError("qpdf was not found on PATH. Install it before running.")
 
-    OUTPUT.mkdir(parents=True, exist_ok=True)
+    output.mkdir(parents=True, exist_ok=True)
     documents: list[dict[str, object]] = []
 
     # Both variants are written from the SAME source with the SAME common flags.
     # Only the linearized variant receives --linearize.
-    with TemporaryDirectory(prefix=".build-", dir=OUTPUT) as temporary:
+    with TemporaryDirectory(prefix=".build-", dir=output) as temporary:
         working = Path(temporary)
         source = working / "source.pdf"
         create_source(source)
@@ -148,7 +155,7 @@ def main() -> None:
         # Publish outputs only after BOTH variants have passed the checks.
         for document in documents:
             filename = str(document["file"])
-            (working / filename).replace(OUTPUT / filename)
+            (working / filename).replace(output / filename)
 
     manifest = {
         "schemaVersion": 1,
@@ -170,13 +177,13 @@ def main() -> None:
         "visualEquivalence": "not-automatically-checked",
         "documents": documents,
     }
-    manifest_path = OUTPUT / "manifest.json"
+    manifest_path = output / "manifest.json"
     manifest_path.write_text(json.dumps(manifest, indent=2) + "\n", encoding="utf-8")
 
     for document in documents:
         print(f"PASS: {document['file']} | {document['pageCount']} pages | {document['bytes']} bytes")
         print(f"  SHA-256: {document['sha256']}")
-    print(f"Manifest: {manifest_path.relative_to(ROOT)}")
+    print(f"Manifest: {manifest_path}")
     print("Next: check repeated-generation hashes and inspect the pages visually.")
 
 

@@ -8,7 +8,9 @@
     "typecheck": "pnpm -r --if-present typecheck",
     "test": "pnpm -r --if-present test",
     "clean": "pnpm -r --if-present clean",
-    "corpus:pilot": ".venv/bin/python packages/corpus/scripts/generate_text_pair.py"
+    "corpus:pilot": ".venv/bin/python packages/corpus/scripts/generate_text_pair.py",
+    "corpus:verify": ".venv/bin/python packages/corpus/scripts/verify_text_pair.py",
+    "bench:first-page": "pnpm --filter @pdf-benchmark/runner build && pnpm --filter @pdf-benchmark/runner benchmark"
   },
   "engines": {
     "node": "24.x"
