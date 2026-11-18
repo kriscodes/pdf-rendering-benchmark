@@ -1,0 +1,163 @@
+{
+  "schemaVersion": 1,
+  "purpose": "descriptive-four-run-repeatability-comparison",
+  "experimentId": "text-100-first-page-local-v1",
+  "allExperimentSourceEnvironmentCorpusControlsIdentical": true,
+  "totalTrials": 96,
+  "measuredTrials": 80,
+  "excludedWarmupTrials": 16,
+  "totalPdfRequests": 96,
+  "rangeRequests": 0,
+  "rgbaSha256": "527747daf68cf54de7953e3fa106a4c0c044b6162d782bb5f8838e158575e947",
+  "runs": [
+    {
+      "run": 1,
+      "runId": "run-e3Sman",
+      "report": "results/raw/first-page-local/run-e3Sman/report.json",
+      "reportSha256": "483c454a0c28adfdc73dbf5e28069c8348389294003a66f96d15ddc9d76d19d4",
+      "startedAtUTC": "2026-11-17T07:33:39.176Z",
+      "startedAtLosAngeles": "2026-11-16T23:33:39.176000-08:00",
+      "finishedAtUTC": "2026-11-17T07:33:44.363Z",
+      "summary": {
+        "quantileMethod": "linear interpolation at (n - 1) * q",
+        "byVariant": {
+          "nonlinearized": {
+            "count": 10,
+            "medianMs": 73.75,
+            "minMs": 67,
+            "maxMs": 83.20000004768372,
+            "p25Ms": 72.67499989271164,
+            "p75Ms": 81.85000002384186
+          },
+          "linearized": {
+            "count": 10,
+            "medianMs": 72.99999988079071,
+            "minMs": 66.10000014305115,
+            "maxMs": 78.59999990463257,
+            "p25Ms": 72.02499997615814,
+            "p75Ms": 74.30000001192093
+          }
+        },
+        "pairedDifference": {
+          "definition": "linearized minus nonlinearized",
+          "count": 10,
+          "medianMs": -3.799999952316284,
+          "minMs": -11,
+          "maxMs": 6
+        }
+      }
+    },
+    {
+      "run": 2,
+      "runId": "run-gPX30J",
+      "report": "results/raw/first-page-local/run-gPX30J/report.json",
+      "reportSha256": "a2a6e58caeec27bf56992ef7bae9ddcda8e19ae184baf6a11a85edc3b656759e",
+      "startedAtUTC": "2026-11-18T01:03:16.421Z",
+      "startedAtLosAngeles": "2026-11-17T17:03:16.421000-08:00",
+      "finishedAtUTC": "2026-11-18T01:03:22.649Z",
+      "summary": {
+        "quantileMethod": "linear interpolation at (n - 1) * q",
+        "byVariant": {
+          "nonlinearized": {
+            "count": 10,
+            "medianMs": 71.15000009536743,
+            "minMs": 67.60000014305115,
+            "maxMs": 85.90000009536743,
+            "p25Ms": 69.17500013113022,
+            "p75Ms": 78.44999992847443
+          },
+          "linearized": {
+            "count": 10,
+            "medianMs": 75.35000002384186,
+            "minMs": 68.20000004768372,
+            "maxMs": 89.69999980926514,
+            "p25Ms": 70.42499989271164,
+            "p75Ms": 82.05000001192093
+          }
+        },
+        "pairedDifference": {
+          "definition": "linearized minus nonlinearized",
+          "count": 10,
+          "medianMs": -0.10000014305114746,
+          "minMs": -10.200000047683716,
+          "maxMs": 20.59999966621399
+        }
+      }
+    },
+    {
+      "run": 3,
+      "runId": "run-nW2Myj",
+      "report": "results/raw/first-page-local/run-nW2Myj/report.json",
+      "reportSha256": "71ec417bfaf82133d3f43735fdb4308162d00aa7a4db219a30f6a78416b5fee1",
+      "startedAtUTC": "2026-11-18T01:03:24.174Z",
+      "startedAtLosAngeles": "2026-11-17T17:03:24.174000-08:00",
+      "finishedAtUTC": "2026-11-18T01:03:30.204Z",
+      "summary": {
+        "quantileMethod": "linear interpolation at (n - 1) * q",
+        "byVariant": {
+          "nonlinearized": {
+            "count": 10,
+            "medianMs": 97.24999988079071,
+            "minMs": 66.79999995231628,
+            "maxMs": 121.69999980926514,
+            "p25Ms": 86.14999997615814,
+            "p75Ms": 110.30000013113022
+          },
+          "linearized": {
+            "count": 10,
+            "medianMs": 83.10000002384186,
+            "minMs": 71.80000019073486,
+            "maxMs": 113.5,
+            "p25Ms": 80.82499998807907,
+            "p75Ms": 98.200000166893
+          }
+        },
+        "pairedDifference": {
+          "definition": "linearized minus nonlinearized",
+          "count": 10,
+          "medianMs": -4.7499998807907104,
+          "minMs": -45.799999713897705,
+          "maxMs": 16.40000009536743
+        }
+      }
+    },
+    {
+      "run": 4,
+      "runId": "run-NhoNyB",
+      "report": "results/raw/first-page-local/run-NhoNyB/report.json",
+      "reportSha256": "ee111ae6cf84084c5349390d1f8d9a8e9de00cb89f766e321f1730e7a41097fa",
+      "startedAtUTC": "2026-11-18T01:03:31.784Z",
+      "startedAtLosAngeles": "2026-11-17T17:03:31.784000-08:00",
+      "finishedAtUTC": "2026-11-18T01:03:36.656Z",
+      "summary": {
+        "quantileMethod": "linear interpolation at (n - 1) * q",
+        "byVariant": {
+          "nonlinearized": {
+            "count": 10,
+            "medianMs": 75.65000009536743,
+            "minMs": 70.79999995231628,
+            "maxMs": 101.90000009536743,
+            "p25Ms": 71.52500009536743,
+            "p75Ms": 91.17500001192093
+          },
+          "linearized": {
+            "count": 10,
+            "medianMs": 81.54999995231628,
+            "minMs": 69.59999990463257,
+            "maxMs": 91.29999995231628,
+            "p25Ms": 73.39999997615814,
+            "p75Ms": 88.35000002384186
+          }
+        },
+        "pairedDifference": {
+          "definition": "linearized minus nonlinearized",
+          "count": 10,
+          "medianMs": -1.0000001192092896,
+          "minMs": -17.40000009536743,
+          "maxMs": 17.700000047683716
+        }
+      }
+    }
+  ],
+  "interpretation": "Descriptive per-run results only. No statistical significance or generalized linearization benefit established. No partial-download requests occurred."
+}

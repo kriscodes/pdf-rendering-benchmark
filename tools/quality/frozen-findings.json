@@ -1,0 +1,83 @@
+{
+  "schemaVersion": 1,
+  "reason": "Measured source files are frozen for the final-window campaign. These exact findings remain visible; review cleanup semantics before changing unsafe-finally paths. New, changed, or stale findings fail the gate.",
+  "findings": [
+    {
+      "path": "packages/runner/src/clock-observer.ts",
+      "code": "lint/correctness/noUnsafeFinally",
+      "line": 244,
+      "column": 9,
+      "sourceSha256": "d6d8ea5f7087b6467479b24ee2d53fc5f0f375c40a69f284abd14abae3440700"
+    },
+    {
+      "path": "packages/runner/src/clock-observer.ts",
+      "code": "lint/correctness/noUnsafeFinally",
+      "line": 249,
+      "column": 7,
+      "sourceSha256": "d6d8ea5f7087b6467479b24ee2d53fc5f0f375c40a69f284abd14abae3440700"
+    },
+    {
+      "path": "packages/runner/src/clock-observer.ts",
+      "code": "lint/correctness/noUnsafeFinally",
+      "line": 336,
+      "column": 140,
+      "sourceSha256": "d6d8ea5f7087b6467479b24ee2d53fc5f0f375c40a69f284abd14abae3440700"
+    },
+    {
+      "path": "packages/runner/src/controlled-delivery.ts",
+      "code": "lint/correctness/noUnusedImports",
+      "line": 10,
+      "column": 34,
+      "sourceSha256": "1462c1f12ab8581ae5ebac6eca00ff67aab16a22942e4c6c84a406151ec8d47f"
+    },
+    {
+      "path": "packages/runner/src/partial-loading.ts",
+      "code": "lint/correctness/noUnusedImports",
+      "line": 10,
+      "column": 34,
+      "sourceSha256": "667676cf83ebd7ccdd398d1095f2ba8b365d060ef11862db627ffd3302ffe997"
+    },
+    {
+      "path": "packages/runner/src/pdf-clock-observer.ts",
+      "code": "lint/correctness/noUnusedImports",
+      "line": 30,
+      "column": 10,
+      "sourceSha256": "9e4a75e33501c26c4242b86f95e88ceaeb86090bfece77ca383a3783c99364b2"
+    },
+    {
+      "path": "packages/runner/src/pdf-clock-observer.ts",
+      "code": "lint/correctness/noUnsafeFinally",
+      "line": 284,
+      "column": 86,
+      "sourceSha256": "9e4a75e33501c26c4242b86f95e88ceaeb86090bfece77ca383a3783c99364b2"
+    },
+    {
+      "path": "packages/runner/src/pdf-clock-observer.ts",
+      "code": "lint/correctness/noUnsafeFinally",
+      "line": 397,
+      "column": 22,
+      "sourceSha256": "9e4a75e33501c26c4242b86f95e88ceaeb86090bfece77ca383a3783c99364b2"
+    },
+    {
+      "path": "packages/runner/src/pdf-clock-observer.ts",
+      "code": "lint/correctness/noUnsafeFinally",
+      "line": 411,
+      "column": 23,
+      "sourceSha256": "9e4a75e33501c26c4242b86f95e88ceaeb86090bfece77ca383a3783c99364b2"
+    },
+    {
+      "path": "packages/runner/src/pdf-clock-observer.ts",
+      "code": "lint/correctness/noUnsafeFinally",
+      "line": 515,
+      "column": 22,
+      "sourceSha256": "9e4a75e33501c26c4242b86f95e88ceaeb86090bfece77ca383a3783c99364b2"
+    },
+    {
+      "path": "packages/runner/src/pdf-clock-observer.ts",
+      "code": "lint/correctness/noUnsafeFinally",
+      "line": 659,
+      "column": 25,
+      "sourceSha256": "9e4a75e33501c26c4242b86f95e88ceaeb86090bfece77ca383a3783c99364b2"
+    }
+  ]
+}

@@ -1,0 +1,437 @@
+{
+  "schemaVersion": 1,
+  "purpose": "independent-final-window-evidence-comparison",
+  "auditStatus": "passed",
+  "integrityIssues": [],
+  "asOfUTC": "2026-11-18T16:49:06.431335+00:00",
+  "planPath": "/Users/kristian/Documents/labs/pdf-rendering-benchmark/experiments/final-windows.json",
+  "planSha256": "fd3c35e827e0adcedf6caee2aae440982c40a5328e132a69dee492f035aed80f",
+  "ledgerRoot": "/Users/kristian/Documents/labs/pdf-rendering-benchmark/results/raw/final-windows",
+  "auditScriptSha256": "1df278bb278d881ac6cae0931dd652d036bae1fe031c826a0c24bdd3b8c3c906",
+  "frozenAuditorHashes": {
+    "audit_pdf_clock_observer.py": "e284474d055f5f0955b06a75b65667d0b3873c1f5c9204acf8d69efe226f4a7b",
+    "summarize_controlled_delivery.py": "18b5457504d7c0306974dfcd1737d7a9433c0c1c9a7b14ca6759e34dd1cf7b33"
+  },
+  "preservation": {
+    "verifiedFiles": 1134
+  },
+  "acceptedNewWindows": 0,
+  "plannedNewWindows": 3,
+  "allSlotsTerminal": false,
+  "decisionState": "in progress",
+  "pendingOrUnresolvedWindows": 3,
+  "windowStateCounts": {
+    "pending-not-open": 3
+  },
+  "acceptedFraction": "0/3",
+  "windows": [
+    {
+      "ordinal": 1,
+      "opensAtUTC": "2026-11-18T17:00:00Z",
+      "latestStartAtUTC": "2026-11-18T18:00:00Z",
+      "ledgerPath": "/Users/kristian/Documents/labs/pdf-rendering-benchmark/results/raw/final-windows/window-1/ledger.json",
+      "observer": {
+        "executionStatus": "unattempted"
+      },
+      "performance": {
+        "executionStatus": "unattempted",
+        "accepted": false,
+        "summary": null
+      },
+      "state": "pending-not-open"
+    },
+    {
+      "ordinal": 2,
+      "opensAtUTC": "2026-11-18T23:00:00Z",
+      "latestStartAtUTC": "2026-11-19T00:00:00Z",
+      "ledgerPath": "/Users/kristian/Documents/labs/pdf-rendering-benchmark/results/raw/final-windows/window-2/ledger.json",
+      "observer": {
+        "executionStatus": "unattempted"
+      },
+      "performance": {
+        "executionStatus": "unattempted",
+        "accepted": false,
+        "summary": null
+      },
+      "state": "pending-not-open"
+    },
+    {
+      "ordinal": 3,
+      "opensAtUTC": "2026-11-19T17:00:00Z",
+      "latestStartAtUTC": "2026-11-19T18:00:00Z",
+      "ledgerPath": "/Users/kristian/Documents/labs/pdf-rendering-benchmark/results/raw/final-windows/window-3/ledger.json",
+      "observer": {
+        "executionStatus": "unattempted"
+      },
+      "performance": {
+        "executionStatus": "unattempted",
+        "accepted": false,
+        "summary": null
+      },
+      "state": "pending-not-open"
+    }
+  ],
+  "historicalPilot": {
+    "role": "historical; excluded from accepted-new-window count and comparison",
+    "reportPath": "/Users/kristian/Documents/labs/pdf-rendering-benchmark/results/raw/controlled-delivery/run-VnOBcz/report.json",
+    "reportSha256": "87070956c2672ed172d0b25660d2757df6fb29e0e29725858067f7a891d7cc64",
+    "startedAt": "2026-11-18T05:21:54.389Z",
+    "finishedAt": "2026-11-18T05:23:26.814Z",
+    "independentAuditStatus": "passed",
+    "summary": {
+      "interpretation": "Descriptive statistics only; no inferential significance claim.",
+      "quantileMethod": "linear interpolation at (n - 1) * q",
+      "measuredBlocks": 12,
+      "excludedWarmupBlocks": 4,
+      "byCondition": {
+        "nonlinearized-range-enabled": {
+          "count": 12,
+          "medianMs": 1036.2999999523163,
+          "minMs": 1020.5,
+          "maxMs": 1064.2000000476837,
+          "p25Ms": 1031.1249999403954,
+          "p75Ms": 1047.6749998927116
+        },
+        "linearized-range-enabled": {
+          "count": 12,
+          "medianMs": 1142.3499999046326,
+          "minMs": 1127.5999999046326,
+          "maxMs": 1154.5999999046326,
+          "p25Ms": 1133.8499999642372,
+          "p75Ms": 1148.7750000357628
+        },
+        "nonlinearized-range-disabled": {
+          "count": 12,
+          "medianMs": 984.7000000476837,
+          "minMs": 974.7999999523163,
+          "maxMs": 1001.4000000953674,
+          "p25Ms": 979.9500000476837,
+          "p75Ms": 997.1250001192093
+        },
+        "linearized-range-disabled": {
+          "count": 12,
+          "medianMs": 996.1000000238419,
+          "minMs": 990.2999999523163,
+          "maxMs": 1052.7000000476837,
+          "p25Ms": 992.2999999523163,
+          "p75Ms": 1002.25
+        }
+      },
+      "pairedStructureEffect": {
+        "rangeEnabled": {
+          "definition": "linearized minus nonlinearized, range enabled",
+          "count": 12,
+          "medianMs": 105.09999990463257,
+          "minMs": 68.29999995231628,
+          "maxMs": 126.40000009536743,
+          "p25Ms": 95.15000003576279,
+          "p75Ms": 118.74999976158142,
+          "blocks": [
+            {
+              "block": 1,
+              "differenceMs": 106.29999995231628
+            },
+            {
+              "block": 2,
+              "differenceMs": 68.29999995231628
+            },
+            {
+              "block": 3,
+              "differenceMs": 75.49999976158142
+            },
+            {
+              "block": 4,
+              "differenceMs": 107.70000004768372
+            },
+            {
+              "block": 5,
+              "differenceMs": 95.90000009536743
+            },
+            {
+              "block": 6,
+              "differenceMs": 103.89999985694885
+            },
+            {
+              "block": 7,
+              "differenceMs": 92.89999985694885
+            },
+            {
+              "block": 8,
+              "differenceMs": 126.40000009536743
+            },
+            {
+              "block": 9,
+              "differenceMs": 98.39999985694885
+            },
+            {
+              "block": 10,
+              "differenceMs": 122.20000004768372
+            },
+            {
+              "block": 11,
+              "differenceMs": 123.09999990463257
+            },
+            {
+              "block": 12,
+              "differenceMs": 117.59999966621399
+            }
+          ]
+        },
+        "rangeDisabled": {
+          "definition": "linearized minus nonlinearized, range disabled",
+          "count": 12,
+          "medianMs": 7.599999904632568,
+          "minMs": -5.700000047683716,
+          "maxMs": 73.5,
+          "p25Ms": -3.950000047683716,
+          "p75Ms": 23.399999976158142,
+          "blocks": [
+            {
+              "block": 1,
+              "differenceMs": -4.700000047683716
+            },
+            {
+              "block": 2,
+              "differenceMs": -5.1000001430511475
+            },
+            {
+              "block": 3,
+              "differenceMs": 7.0
+            },
+            {
+              "block": 4,
+              "differenceMs": -3.700000047683716
+            },
+            {
+              "block": 5,
+              "differenceMs": -5.700000047683716
+            },
+            {
+              "block": 6,
+              "differenceMs": 11.600000143051147
+            },
+            {
+              "block": 7,
+              "differenceMs": 8.199999809265137
+            },
+            {
+              "block": 8,
+              "differenceMs": 20.5
+            },
+            {
+              "block": 9,
+              "differenceMs": 73.5
+            },
+            {
+              "block": 10,
+              "differenceMs": 37.39999985694885
+            },
+            {
+              "block": 11,
+              "differenceMs": 32.09999990463257
+            },
+            {
+              "block": 12,
+              "differenceMs": 7.0
+            }
+          ]
+        }
+      },
+      "pairedRangeEffect": {
+        "nonlinearized": {
+          "definition": "range enabled minus range disabled, nonlinearized",
+          "count": 12,
+          "medianMs": 48.699999928474426,
+          "minMs": 33.299999952316284,
+          "maxMs": 75.90000009536743,
+          "p25Ms": 43.150000154972076,
+          "p75Ms": 58.874999940395355,
+          "blocks": [
+            {
+              "block": 1,
+              "differenceMs": 33.299999952316284
+            },
+            {
+              "block": 2,
+              "differenceMs": 63.59999990463257
+            },
+            {
+              "block": 3,
+              "differenceMs": 66.80000019073486
+            },
+            {
+              "block": 4,
+              "differenceMs": 47.49999976158142
+            },
+            {
+              "block": 5,
+              "differenceMs": 38.799999713897705
+            },
+            {
+              "block": 6,
+              "differenceMs": 49.90000009536743
+            },
+            {
+              "block": 7,
+              "differenceMs": 57.299999952316284
+            },
+            {
+              "block": 8,
+              "differenceMs": 40.59999990463257
+            },
+            {
+              "block": 9,
+              "differenceMs": 75.90000009536743
+            },
+            {
+              "block": 10,
+              "differenceMs": 56.49999976158142
+            },
+            {
+              "block": 11,
+              "differenceMs": 45.700000047683716
+            },
+            {
+              "block": 12,
+              "differenceMs": 44.00000023841858
+            }
+          ]
+        },
+        "linearized": {
+          "definition": "range enabled minus range disabled, linearized",
+          "count": 12,
+          "medianMs": 141.64999997615814,
+          "minMs": 100.79999995231628,
+          "maxMs": 158.89999985694885,
+          "p25Ms": 136.92500001192093,
+          "p75Ms": 144.8499999642372,
+          "blocks": [
+            {
+              "block": 1,
+              "differenceMs": 144.29999995231628
+            },
+            {
+              "block": 2,
+              "differenceMs": 137.0
+            },
+            {
+              "block": 3,
+              "differenceMs": 135.29999995231628
+            },
+            {
+              "block": 4,
+              "differenceMs": 158.89999985694885
+            },
+            {
+              "block": 5,
+              "differenceMs": 140.39999985694885
+            },
+            {
+              "block": 6,
+              "differenceMs": 142.19999980926514
+            },
+            {
+              "block": 7,
+              "differenceMs": 142.0
+            },
+            {
+              "block": 8,
+              "differenceMs": 146.5
+            },
+            {
+              "block": 9,
+              "differenceMs": 100.79999995231628
+            },
+            {
+              "block": 10,
+              "differenceMs": 141.29999995231628
+            },
+            {
+              "block": 11,
+              "differenceMs": 136.70000004768372
+            },
+            {
+              "block": 12,
+              "differenceMs": 154.59999990463257
+            }
+          ]
+        }
+      },
+      "differenceOfStructureEffects": {
+        "definition": "(linearized minus nonlinearized) with range enabled minus (linearized minus nonlinearized) with range disabled",
+        "count": 12,
+        "medianMs": 91.64999985694885,
+        "minMs": 24.899999856948853,
+        "maxMs": 111.40000009536743,
+        "p25Ms": 81.87500005960464,
+        "p75Ms": 107.07499998807907,
+        "blocks": [
+          {
+            "block": 1,
+            "differenceMs": 111.0
+          },
+          {
+            "block": 2,
+            "differenceMs": 73.40000009536743
+          },
+          {
+            "block": 3,
+            "differenceMs": 68.49999976158142
+          },
+          {
+            "block": 4,
+            "differenceMs": 111.40000009536743
+          },
+          {
+            "block": 5,
+            "differenceMs": 101.60000014305115
+          },
+          {
+            "block": 6,
+            "differenceMs": 92.2999997138977
+          },
+          {
+            "block": 7,
+            "differenceMs": 84.70000004768372
+          },
+          {
+            "block": 8,
+            "differenceMs": 105.90000009536743
+          },
+          {
+            "block": 9,
+            "differenceMs": 24.899999856948853
+          },
+          {
+            "block": 10,
+            "differenceMs": 84.80000019073486
+          },
+          {
+            "block": 11,
+            "differenceMs": 91.0
+          },
+          {
+            "block": 12,
+            "differenceMs": 110.59999966621399
+          }
+        ]
+      }
+    }
+  },
+  "actualPerformanceStartSeparations": [],
+  "betweenWindowComparison": {
+    "status": "fixed windows pending; no comparison yet",
+    "acceptedNewWindows": 0,
+    "interpretation": "At least two accepted new windows are required. The historical pilot does not count toward this threshold."
+  },
+  "limits": [
+    "Pending, missed, interrupted and rejected windows are never replaced or used for timing estimates.",
+    "The fixed observer-before-performance order may affect machine state; OS/font caches and machine load are not independently controlled.",
+    "Fresh processes and separate time windows on one host are not independent hardware/environmental replications.",
+    "No historical or partial trial timings are pooled with accepted new windows; narrower nested intervals do not independently prove clock accuracy."
+  ],
+  "csv": {
+    "path": "/Users/kristian/Documents/labs/pdf-rendering-benchmark/docs/data/final-windows-preflight-2026-11-18.csv",
+    "sha256": "cbf6e2570d7ca7847ecdd3c6c1285338b7bce57e954dd1ac1c29ece35ed15de4"
+  }
+}

@@ -1,0 +1,191 @@
+{
+  "auditStatus": "passed",
+  "issues": [],
+  "runs": [
+    {
+      "run": "run-QAWtig",
+      "auditStatus": "passed",
+      "reportSha256": "008ec0b5df4ad5a86241b23ac6f505e82804c63e89fb4bfebd8f868c524b879d",
+      "observerProbe": {
+        "clockWidthMs": 4.626999842002988,
+        "rangeTransfers": [
+          {
+            "phase": "first",
+            "class": "at-or-before",
+            "reportedBodyBytes": 4096,
+            "status": 206,
+            "contentRange": "bytes 0-4095/49152"
+          },
+          {
+            "phase": "second",
+            "class": "after",
+            "reportedBodyBytes": 4096,
+            "status": 206,
+            "contentRange": "bytes 4096-8191/49152"
+          }
+        ]
+      },
+      "trials": [
+        {
+          "id": "measured-1-nonlinearized",
+          "variant": "nonlinearized",
+          "reportedDataBytesBeforeRender": 86329,
+          "uncertainBytes": 0,
+          "afterBytes": 0,
+          "clockWidthMs": 4.43999981507659,
+          "latestDataEventToEarliestRenderBoundaryMs": 66.62100018002093,
+          "resourceTimingCompletionToRenderMs": 69.40000009536743,
+          "verificationStartAfterRenderMs": 7.0,
+          "verificationBoundaryLowerMinusRenderUpperMs": 2.560000168159604,
+          "verificationStartedRequests": 0,
+          "networkEventsPresentBeforeExplicitVerification": 4
+        },
+        {
+          "id": "measured-1-linearized",
+          "variant": "linearized",
+          "reportedDataBytesBeforeRender": 87189,
+          "uncertainBytes": 0,
+          "afterBytes": 0,
+          "clockWidthMs": 4.403999773785472,
+          "latestDataEventToEarliestRenderBoundaryMs": 17.850999953225255,
+          "resourceTimingCompletionToRenderMs": 20.299999952316284,
+          "verificationStartAfterRenderMs": 4.299999952316284,
+          "verificationBoundaryLowerMinusRenderUpperMs": -0.10399986058473587,
+          "verificationStartedRequests": 0,
+          "networkEventsPresentBeforeExplicitVerification": 4
+        },
+        {
+          "id": "measured-2-linearized",
+          "variant": "linearized",
+          "reportedDataBytesBeforeRender": 87189,
+          "uncertainBytes": 0,
+          "afterBytes": 0,
+          "clockWidthMs": 4.531999584287405,
+          "latestDataEventToEarliestRenderBoundaryMs": 18.577000126242638,
+          "resourceTimingCompletionToRenderMs": 21.100000143051147,
+          "verificationStartAfterRenderMs": 4.299999952316284,
+          "verificationBoundaryLowerMinusRenderUpperMs": -0.23199943825602531,
+          "verificationStartedRequests": 0,
+          "networkEventsPresentBeforeExplicitVerification": 4
+        },
+        {
+          "id": "measured-2-nonlinearized",
+          "variant": "nonlinearized",
+          "reportedDataBytesBeforeRender": 86329,
+          "uncertainBytes": 0,
+          "afterBytes": 0,
+          "clockWidthMs": 4.488999722525477,
+          "latestDataEventToEarliestRenderBoundaryMs": 28.98900001309812,
+          "resourceTimingCompletionToRenderMs": 31.5,
+          "verificationStartAfterRenderMs": 4.599999904632568,
+          "verificationBoundaryLowerMinusRenderUpperMs": 0.11100014671683311,
+          "verificationStartedRequests": 0,
+          "networkEventsPresentBeforeExplicitVerification": 4
+        }
+      ],
+      "baselineSourceHashCount": 12,
+      "baselineSourceMismatches": [],
+      "currentDiagnosticSourceMismatches": [
+        "packages/runner/src/partial-loading.ts",
+        "packages/runner/dist/partial-loading.js"
+      ],
+      "snapshotSourceCount": 19,
+      "snapshotSourceMismatches": []
+    },
+    {
+      "run": "run-9xURGW",
+      "auditStatus": "passed",
+      "reportSha256": "758f67d77b6fecb697b3f61a656e2233b0e388bb541d5c54001851ff5ed9137c",
+      "observerProbe": {
+        "clockWidthMs": 4.673999501392245,
+        "rangeTransfers": [
+          {
+            "phase": "first",
+            "class": "at-or-before",
+            "reportedBodyBytes": 4096,
+            "status": 206,
+            "contentRange": "bytes 0-4095/49152"
+          },
+          {
+            "phase": "second",
+            "class": "after",
+            "reportedBodyBytes": 4096,
+            "status": 206,
+            "contentRange": "bytes 4096-8191/49152"
+          }
+        ]
+      },
+      "trials": [
+        {
+          "id": "measured-1-nonlinearized",
+          "variant": "nonlinearized",
+          "reportedDataBytesBeforeRender": 86329,
+          "uncertainBytes": 0,
+          "afterBytes": 0,
+          "clockWidthMs": 4.642999731004238,
+          "latestDataEventToEarliestRenderBoundaryMs": 104.63900025933981,
+          "resourceTimingCompletionToRenderMs": 107.29999995231628,
+          "verificationStartAfterRenderMs": 6.099999904632568,
+          "verificationBoundaryLowerMinusRenderUpperMs": 1.4570001512765884,
+          "verificationStartedRequests": 0,
+          "networkEventsPresentBeforeExplicitVerification": 4
+        },
+        {
+          "id": "measured-1-linearized",
+          "variant": "linearized",
+          "reportedDataBytesBeforeRender": 87189,
+          "uncertainBytes": 0,
+          "afterBytes": 0,
+          "clockWidthMs": 4.501999588683248,
+          "latestDataEventToEarliestRenderBoundaryMs": 28.256000252440572,
+          "resourceTimingCompletionToRenderMs": 30.800000190734863,
+          "verificationStartAfterRenderMs": 6.5,
+          "verificationBoundaryLowerMinusRenderUpperMs": 1.9980003125965595,
+          "verificationStartedRequests": 0,
+          "networkEventsPresentBeforeExplicitVerification": 4
+        },
+        {
+          "id": "measured-2-linearized",
+          "variant": "linearized",
+          "reportedDataBytesBeforeRender": 87189,
+          "uncertainBytes": 0,
+          "afterBytes": 0,
+          "clockWidthMs": 4.571999656036496,
+          "latestDataEventToEarliestRenderBoundaryMs": 20.318000111728907,
+          "resourceTimingCompletionToRenderMs": 22.90000009536743,
+          "verificationStartAfterRenderMs": 3.8999998569488525,
+          "verificationBoundaryLowerMinusRenderUpperMs": -0.6719997618347406,
+          "verificationStartedRequests": 0,
+          "networkEventsPresentBeforeExplicitVerification": 4
+        },
+        {
+          "id": "measured-2-nonlinearized",
+          "variant": "nonlinearized",
+          "reportedDataBytesBeforeRender": 86329,
+          "uncertainBytes": 0,
+          "afterBytes": 0,
+          "clockWidthMs": 4.517000168561935,
+          "latestDataEventToEarliestRenderBoundaryMs": 31.187999760732055,
+          "resourceTimingCompletionToRenderMs": 33.799999952316284,
+          "verificationStartAfterRenderMs": 4.6000001430511475,
+          "verificationBoundaryLowerMinusRenderUpperMs": 0.08299993351101875,
+          "verificationStartedRequests": 0,
+          "networkEventsPresentBeforeExplicitVerification": 4
+        }
+      ],
+      "baselineSourceHashCount": 12,
+      "baselineSourceMismatches": [],
+      "currentDiagnosticSourceMismatches": [],
+      "snapshotSourceCount": 19,
+      "snapshotSourceMismatches": []
+    }
+  ],
+  "totalPdfTrials": 8,
+  "observerProbe206Transfers": 4,
+  "pdfRangeRequests": 0,
+  "pdfObserved206Responses": 0,
+  "allPdfCdpBodiesReportedBeforeRender": true,
+  "allPdfCompletedResourceTimingBodiesFullBeforeRender": true,
+  "explicitVerificationAddedNetworkRequests": 0,
+  "claim": "In these eight unthrottled loopback diagnostic trials, a single full HTTP 200 PDF response was reported complete before first-page render. Timestamp-classified CDP data accounted for the complete file before the earliest mapped render boundary, and completed ResourceTiming entries independently agreed. Partial loading was not observed. This is not an exact physical-arrival byte measurement or a performance comparison. Clock classification is conditional on the explicit 1 ms resolution margins and stable-offset assumption."
+}

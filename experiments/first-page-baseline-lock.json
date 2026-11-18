@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "purpose": "preserve-four-run-baseline-during-partial-loading-diagnostic",
+  "manifestSha256": "92929ca2eb94964f13c592e11551d7821f8a8b110ba546596aa951c8deae2f8a",
+  "sourceHashes": {
+    "package.json": "4adc8c7e740bd8ba1b6b0f5d3746382f156ae99930156b2cacca1dcf14b6a489",
+    "pnpm-lock.yaml": "039ef192dc874885ef22a76929755f8cfefe6f6be8484d5d8cf18e340f8dae82",
+    "experiments/first-page-local.json": "0d5496d149defd5cd42352fc352e1dd4b53b4152b0d886e8b2f1383005e9a319",
+    "packages/runner/package.json": "b8713187bab4b3510da348b5214ed5d1ce70b4c5768568aea971f86c5e347429",
+    "packages/runner/src/run.ts": "b78528ab4b86e21b55174bbc89030a49efa146046c0864269075f75d3ba52fd1",
+    "packages/runner/src/server.ts": "554c4df06fb7586c64c72fa3f8b54c0b0edd0b9d6b7325096d95a654329ba015",
+    "packages/runner/src/protocol.ts": "c75d34fea96d8fceff23692f373687d4d923f5436d0901bba59c53149ed97e28",
+    "packages/runner/dist/run.js": "2cd2f8aa0915eb8454cc2af35cc2feb0a126914f9589b7d1d8f2aa68eca26195",
+    "packages/runner/dist/server.js": "d73615c156d5268a19adf1e86bd9a40cac4efcc18242ceb54dfee632bc4d9302",
+    "packages/runner/dist/protocol.js": "044e855b0cd48e99ee5e5bc13be26cd9a9a9a6228a14f172da3295fe00288847",
+    "packages/runner/viewer/index.html": "e2dbfee640d06d295f09ec4a6216fc3e52c879ddf9a51cc144a6a2f3d606ca59",
+    "packages/runner/viewer/viewer.mjs": "772c01bf0be8be40659037660f3893cb8c79446d961f6aa1171f5b5a2caf9c9c"
+  },
+  "pixelSha256": "527747daf68cf54de7953e3fa106a4c0c044b6162d782bb5f8838e158575e947"
+}

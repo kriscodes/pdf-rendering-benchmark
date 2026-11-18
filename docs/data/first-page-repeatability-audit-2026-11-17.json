@@ -1,0 +1,270 @@
+{
+  "auditStatus": "passed",
+  "issues": [],
+  "runs": [
+    {
+      "run": "run-e3Sman",
+      "startedAt": "2026-11-17T07:33:39.176Z",
+      "startedAtPacific": "2026-11-16T23:33:39.176000-08:00",
+      "finishedAt": "2026-11-17T07:33:44.363Z",
+      "status": "passed",
+      "auditPassed": true,
+      "warmupTrials": 4,
+      "measuredTrials": 20,
+      "byVariant": {
+        "nonlinearized": {
+          "count": 10,
+          "medianMs": 73.75,
+          "minMs": 67,
+          "maxMs": 83.20000004768372,
+          "p25Ms": 72.67499989271164,
+          "p75Ms": 81.85000002384186
+        },
+        "linearized": {
+          "count": 10,
+          "medianMs": 72.99999988079071,
+          "minMs": 66.10000014305115,
+          "maxMs": 78.59999990463257,
+          "p25Ms": 72.02499997615814,
+          "p75Ms": 74.30000001192093
+        }
+      },
+      "differenceOfMediansMs": -0.7500001192092896,
+      "pairedDifference": {
+        "definition": "linearized minus nonlinearized",
+        "count": 10,
+        "medianMs": -3.799999952316284,
+        "minMs": -11.0,
+        "maxMs": 6.0
+      },
+      "pairedDifferencesMs": [
+        1.299999713897705,
+        -5.599999904632568,
+        -5.299999952316284,
+        -6.799999713897705,
+        6.0,
+        4.200000047683716,
+        -11.0,
+        1.2999999523162842,
+        -10.300000190734863,
+        -2.299999952316284
+      ],
+      "pairedSigns": {
+        "linearizedFaster": 6,
+        "linearizedSlower": 4,
+        "equal": 0
+      },
+      "reportSha256": "483c454a0c28adfdc73dbf5e28069c8348389294003a66f96d15ddc9d76d19d4"
+    },
+    {
+      "run": "run-gPX30J",
+      "startedAt": "2026-11-18T01:03:16.421Z",
+      "startedAtPacific": "2026-11-17T17:03:16.421000-08:00",
+      "finishedAt": "2026-11-18T01:03:22.649Z",
+      "status": "passed",
+      "auditPassed": true,
+      "warmupTrials": 4,
+      "measuredTrials": 20,
+      "byVariant": {
+        "nonlinearized": {
+          "count": 10,
+          "medianMs": 71.15000009536743,
+          "minMs": 67.60000014305115,
+          "maxMs": 85.90000009536743,
+          "p25Ms": 69.17500013113022,
+          "p75Ms": 78.44999992847443
+        },
+        "linearized": {
+          "count": 10,
+          "medianMs": 75.35000002384186,
+          "minMs": 68.20000004768372,
+          "maxMs": 89.69999980926514,
+          "p25Ms": 70.42499989271164,
+          "p75Ms": 82.05000001192093
+        }
+      },
+      "differenceOfMediansMs": 4.199999928474426,
+      "pairedDifference": {
+        "definition": "linearized minus nonlinearized",
+        "count": 10,
+        "medianMs": -0.10000014305114746,
+        "minMs": -10.200000047683716,
+        "maxMs": 20.59999966621399
+      },
+      "pairedDifferencesMs": [
+        13.900000095367432,
+        -0.8000001907348633,
+        0.5999999046325684,
+        7.200000047683716,
+        -7.200000047683716,
+        -1,
+        -1.8000001907348633,
+        2.5999999046325684,
+        -10.200000047683716,
+        20.59999966621399
+      ],
+      "pairedSigns": {
+        "linearizedFaster": 5,
+        "linearizedSlower": 5,
+        "equal": 0
+      },
+      "reportSha256": "a2a6e58caeec27bf56992ef7bae9ddcda8e19ae184baf6a11a85edc3b656759e"
+    },
+    {
+      "run": "run-nW2Myj",
+      "startedAt": "2026-11-18T01:03:24.174Z",
+      "startedAtPacific": "2026-11-17T17:03:24.174000-08:00",
+      "finishedAt": "2026-11-18T01:03:30.204Z",
+      "status": "passed",
+      "auditPassed": true,
+      "warmupTrials": 4,
+      "measuredTrials": 20,
+      "byVariant": {
+        "nonlinearized": {
+          "count": 10,
+          "medianMs": 97.24999988079071,
+          "minMs": 66.79999995231628,
+          "maxMs": 121.69999980926514,
+          "p25Ms": 86.14999997615814,
+          "p75Ms": 110.30000013113022
+        },
+        "linearized": {
+          "count": 10,
+          "medianMs": 83.10000002384186,
+          "minMs": 71.80000019073486,
+          "maxMs": 113.5,
+          "p25Ms": 80.82499998807907,
+          "p75Ms": 98.200000166893
+        }
+      },
+      "differenceOfMediansMs": -14.149999856948853,
+      "pairedDifference": {
+        "definition": "linearized minus nonlinearized",
+        "count": 10,
+        "medianMs": -4.7499998807907104,
+        "minMs": -45.799999713897705,
+        "maxMs": 16.40000009536743
+      },
+      "pairedDifferencesMs": [
+        -4.8999998569488525,
+        11.600000143051147,
+        5.000000238418579,
+        10.200000047683716,
+        -20.200000047683716,
+        -45.799999713897705,
+        -6.400000095367432,
+        16.40000009536743,
+        -4.599999904632568,
+        -29.299999952316284
+      ],
+      "pairedSigns": {
+        "linearizedFaster": 6,
+        "linearizedSlower": 4,
+        "equal": 0
+      },
+      "reportSha256": "71ec417bfaf82133d3f43735fdb4308162d00aa7a4db219a30f6a78416b5fee1"
+    },
+    {
+      "run": "run-NhoNyB",
+      "startedAt": "2026-11-18T01:03:31.784Z",
+      "startedAtPacific": "2026-11-17T17:03:31.784000-08:00",
+      "finishedAt": "2026-11-18T01:03:36.656Z",
+      "status": "passed",
+      "auditPassed": true,
+      "warmupTrials": 4,
+      "measuredTrials": 20,
+      "byVariant": {
+        "nonlinearized": {
+          "count": 10,
+          "medianMs": 75.65000009536743,
+          "minMs": 70.79999995231628,
+          "maxMs": 101.90000009536743,
+          "p25Ms": 71.52500009536743,
+          "p75Ms": 91.17500001192093
+        },
+        "linearized": {
+          "count": 10,
+          "medianMs": 81.54999995231628,
+          "minMs": 69.59999990463257,
+          "maxMs": 91.29999995231628,
+          "p25Ms": 73.39999997615814,
+          "p75Ms": 88.35000002384186
+        }
+      },
+      "differenceOfMediansMs": 5.8999998569488525,
+      "pairedDifference": {
+        "definition": "linearized minus nonlinearized",
+        "count": 10,
+        "medianMs": -1.0000001192092896,
+        "minMs": -17.40000009536743,
+        "maxMs": 17.700000047683716
+      },
+      "pairedDifferencesMs": [
+        -17.40000009536743,
+        -1.2000000476837158,
+        -16.799999952316284,
+        -16.300000190734863,
+        -0.8000001907348633,
+        -1.2000000476837158,
+        14.5,
+        7.3999998569488525,
+        17.700000047683716,
+        10.799999952316284
+      ],
+      "pairedSigns": {
+        "linearizedFaster": 6,
+        "linearizedSlower": 4,
+        "equal": 0
+      },
+      "reportSha256": "ee111ae6cf84084c5349390d1f8d9a8e9de00cb89f766e321f1730e7a41097fa"
+    }
+  ],
+  "controlsAndEnvironmentIdentical": true,
+  "currentCorpusMatchesAllReports": true,
+  "sourceHashCount": 12,
+  "totalTrials": 96,
+  "measuredTrials": 80,
+  "warmupTrials": 16,
+  "realWorkers": 96,
+  "httpPdf200Count": 96,
+  "rangeRequests": 0,
+  "environment": {
+    "node": "v24.22.1",
+    "platform": "darwin",
+    "release": "24.6.0",
+    "arch": "arm64",
+    "cpu": "Apple M2",
+    "logicalCpus": 8,
+    "memoryBytes": 8589934592,
+    "pdfjs": "5.6.205",
+    "playwright": "1.62.1",
+    "qpdf": "qpdf version 12.4.2",
+    "declaredChromium": [
+      {
+        "name": "chromium-headless-shell",
+        "revision": "1234",
+        "installByDefault": true,
+        "browserVersion": "151.0.7922.34",
+        "title": "Chrome Headless Shell"
+      }
+    ],
+    "executableOverride": null,
+    "chromium": "151.0.7922.34",
+    "userAgent": "Mozilla/5.0 (Macintosh; Intel Mac OS X 10_15_7) AppleWebKit/537.36 (KHTML, like Gecko) HeadlessChrome/151.0.7922.34 Safari/537.36"
+  },
+  "acrossRunMedianRangeMs": {
+    "nonlinearized": {
+      "min": 71.15000009536743,
+      "max": 97.24999988079071
+    },
+    "linearized": {
+      "min": 72.99999988079071,
+      "max": 83.10000002384186
+    }
+  },
+  "acrossRunPairedMedianRangeMs": {
+    "min": -4.7499998807907104,
+    "max": -0.10000014305114746
+  },
+  "restoredPdfIdentityMatches": true
+}

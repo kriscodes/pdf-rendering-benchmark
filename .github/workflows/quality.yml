@@ -1,0 +1,57 @@
+name: Code quality
+
+on:
+  pull_request:
+  push:
+
+permissions:
+  contents: read
+
+concurrency:
+  group: quality-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  quality:
+    runs-on: ubuntu-24.04
+    timeout-minutes: 15
+    env:
+      CI: "true"
+      PYTHONDONTWRITEBYTECODE: "1"
+      PLAYWRIGHT_SKIP_BROWSER_DOWNLOAD: "1"
+    steps:
+      - name: Check out source without persisted credentials
+        uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1
+        with:
+          persist-credentials: false
+      - name: Set up declared quality runtime
+        uses: actions/setup-node@949feb2413d6458794dcd2491c4babbbce0c15c1 # v7.1.0
+        with:
+          node-version-file: .nvmrc
+          package-manager-cache: false
+      - name: Set up Python for checks
+        uses: actions/setup-python@6d4fd22b20465ccc0f7354476588e8df7c9ca0e0 # v7.1.0
+        with:
+          python-version: "3.13"
+      - name: Install isolated pinned quality tools
+        run: |
+          npm install --prefix "$RUNNER_TEMP/quality-tools" --no-package-lock --ignore-scripts --no-audit --no-fund @biomejs/biome@2.6.8 pnpm@11.28.12
+          python -m venv "$RUNNER_TEMP/quality-python"
+          "$RUNNER_TEMP/quality-python/bin/python" -m pip install --disable-pip-version-check ruff==0.17.5
+          echo "$RUNNER_TEMP/quality-tools/node_modules/.bin" >> "$GITHUB_PATH"
+          echo "$RUNNER_TEMP/quality-python/bin" >> "$GITHUB_PATH"
+      - name: Install frozen project dependencies in the fresh CI checkout
+        run: |
+          pnpm install --frozen-lockfile --ignore-scripts
+          python -m venv .venv
+          .venv/bin/python -m pip install --disable-pip-version-check -r packages/corpus/requirements.txt
+      - name: Lint with explicit frozen findings
+        run: python tools/quality/check.py
+      - name: Type-check TypeScript
+        run: pnpm typecheck
+      - name: Run workspace unit tests
+        run: pnpm test
+      - name: Test audit, launcher, and lint safeguards
+        run: |
+          .venv/bin/python -m unittest discover -s packages/runner/scripts -p 'test_*.py' -v
+          .venv/bin/python -m unittest discover -s tools/quality -p 'test_*.py' -v

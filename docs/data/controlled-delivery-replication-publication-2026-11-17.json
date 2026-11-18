@@ -1,0 +1,15 @@
+{
+  "archivePath": "results/raw/controlled-delivery-replication/publication-2026-11-17/pdf-rendering-lab-001-controlled-delivery-replication-2026-11-17.zip",
+  "archiveBytes": 2675211,
+  "archiveSha256": "8c3f7eb1418ae0d14ef16fde1bc02d3790a17a7f0176c5f9e17064069485fac6",
+  "zipEntries": 222,
+  "manifestVerifiedFiles": 221,
+  "notionPage": "https://app.notion.com/p/41ce978488068154aefcc49a6ca8759a",
+  "localArchiveVerified": true,
+  "remoteDownloadVerified": true,
+  "newAttempts": 3,
+  "acceptedNewRuns": 0,
+  "downloadVerifiedAt": "2026-11-18T06:41:38.029012+00:00",
+  "notionFileReference": "notion-file-block://41ce9784-8806-812d-a3fd-c069f243ecfd/056e4fbf-6749-404b-819d-80a3a2ee29ad?space_id=096e05a5-b0ae-459a-9d0f-8fe43646f54d&name=pdf-rendering-lab-001-controlled-delivery-replication-2026-11-17.zip",
+  "verifiedManifestFiles": 221
+}

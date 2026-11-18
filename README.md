@@ -1,50 +1,50 @@
 # PDF Rendering Benchmark
 
-Infrastructure in development for reproducible investigations into how PDF structure, network delivery, and rendering architecture affect browser rendering performance.
+Open-source, reproducible investigations into how PDF structure, network delivery and rendering architecture affect browser rendering performance.
 
-**Status: corpus foundation. No browser timing runner or published performance results are available.**
+**Status — November 18, 2026:** the controlled corpus, local browser benchmarks, diagnostics, independent audits and quality checks are implemented. The final fixed-window campaign remains in progress: one rejected performance window and two pending windows. No final timing conclusion is available.
+
+Start with the [documentation index](docs/README.md), [current execution record](docs/final-windows-results.md) and [contribution guide](CONTRIBUTING.md).
+
+## Preserve the active experiment
+
+The scheduled measurement checkout remains on `feat/corpus-text-pair`, using the exact files and runtimes in the [frozen plan](experiments/final-windows.json). Merging the project into `main` does not authorize rebuilding, updating dependencies, regenerating PDFs, switching that checkout, or repeating a scheduled run. This merged README differs from the frozen snapshot; do not use a fresh `main` checkout as a replacement measurement environment. Run development checks in a separate environment, outside measurement periods.
 
 ## What is implemented
 
-The `main` branch contains a pnpm and TypeScript workspace with a small `@pdf-benchmark/corpus` package:
+The corpus generator creates and validates a controlled pair of 100-page text PDFs. Both variants come from the same source and use the same qpdf settings; only one adds linearization. The generator remains a smoke test. Separate browser runners measure first-page canvas rendering with PDF.js in local Chromium.
 
-- A `PdfDocumentProfile` type for page count, content type, and linearization status.
-- A profile-description helper.
-- Build and type-check commands.
+The workspace includes corpus/profile helpers, generation and verification, first-page benchmarks, partial-loading diagnostics, controlled delivery, bounded clock-observer diagnostics, independent evidence audits, fixed-window scheduling, and pinned lint/CI checks. Software-test success and observer validity do not establish performance acceptance.
 
-The workspace is scaffolding for future benchmark components. It does not currently render PDFs, collect browser timings, or compare rendering performance.
+## Development setup
 
-## Corpus work in progress
-
-The separate [`feat/corpus-text-pair` branch](https://github.com/kriscodes/pdf-rendering-benchmark/tree/feat/corpus-text-pair) adds a [synthetic PDF-pair generator](https://github.com/kriscodes/pdf-rendering-benchmark/blob/feat/corpus-text-pair/packages/corpus/scripts/generate_text_pair.py). This work is not yet included in `main`.
-
-The generator creates a 100-page text document and produces linearized and non-linearized variants from the same source. It validates page counts and PDF structure with qpdf, checks linearization, and records SHA-256 hashes and tool versions in a manifest. Generation uses fixed content and deterministic settings; repeat-generation hashes and visual equivalence must be checked in the chosen environment.
-
-These are corpus validation checks. They do not measure rendering speed or establish a performance improvement.
-
-## Set up main
-
-Use Node **24.22.3** from `.nvmrc` and pnpm **11.28.12** from `package.json`.
-
-After cloning the repository and selecting `main`, install the locked dependencies and run the package checks:
+For a fresh development environment, use Node **24.22.3** from `.nvmrc` and pnpm **11.28.12** from `package.json`. Follow [corpus setup](docs/corpus-validation.md#setup) for Python and qpdf requirements, and [quality tooling](tools/quality/README.md) for lint commands. The active experiment preserves different runtime versions in its plan.
 
 ```sh
-pnpm install --frozen-lockfile
+pnpm install --frozen-lockfile --ignore-scripts
 pnpm typecheck
-pnpm build
+pnpm test
 ```
 
-The corpus package compiles to `packages/corpus/dist/`. The root `test` command only delegates to packages that define a test script; none currently do, so it is not evidence of test coverage. There is no development server or browser benchmark command on `main`.
+`pnpm test` builds runner JavaScript and includes local HTTP tests. These commands belong outside the frozen measurement checkout. See the contribution guide for Python audit/launcher tests and side effects.
+
+In a fresh corpus workspace, `pnpm corpus:pilot` generates the pair and replaces files under `corpus/generated/pilot/`. `pnpm corpus:verify` preserves that pair, checks repeatability and all-page raster equivalence, and writes a separate validation report with visual samples. See [corpus validation](docs/corpus-validation.md) for controls and limitations.
+
+For a separate browser pilot, follow [first-page benchmark setup](docs/first-page-local.md) to install the pinned Chromium binary. `pnpm bench:first-page` builds and runs the pilot, saving raw trials, summaries and samples under `results/raw/first-page-local/`. Do not use it to supplement the fixed-window schedule. This small local full-response experiment does not establish a network-delivery or general linearization speed benefit.
+
+## Evidence and limitations
+
+The [four-run comparison](docs/first-page-repeatability-2026-11-17.md) retains all measured trials and excluded warmups; timing varied between sessions. Subsequent diagnostic and controlled-delivery evidence is indexed in the documentation. Protocols, environment versions, raw failures, independent audits and limitations are retained separately from summaries. Results identify their source revision; rejected or partial runs are not performance estimates.
+
+[GitHub quality checks](https://github.com/kriscodes/pdf-rendering-benchmark/actions/runs/44362585984) passed for the merged feature head. Eleven frozen lint findings remain visible, and the [source security review](docs/security-review-2026-11-18.md) documents a conditional shared-temporary-file issue with a safe invocation and deferred repair. This local controlled-corpus harness is not a public upload service.
+
+The [PDF Rendering Lab 001 notebook](https://app.notion.com/p/41ce9784880681528bc3c71d28407372) collects protocols, work logs, results and verified evidence under Labs.
 
 ## Relationship to Engineering Lab
 
-[Engineering Lab](https://lab.kristiansalmeron.com/) is the publication home for research questions, methods, and eventual findings; its [source repository](https://github.com/kriscodes/lab) is separate from this benchmark workspace.
+[Engineering Lab](https://lab.kristiansalmeron.com/) is the publication home for research questions, methods and findings. Its [source repository](https://github.com/kriscodes/lab) is separate from this benchmark workspace.
 
-Lab's proposed study, **The Cost of Rendering Progress**, investigates intermediate-frame update overhead and cadence within a renderer, with network acquisition kept separate. This repository has a broader intended scope spanning document structure, delivery, and rendering. The current corpus work does not implement or validate that proposed study.
-
-## Before publishing findings
-
-A publishable experiment needs a documented protocol, a runnable measurement harness, defined metrics, recorded environment and dependency versions, raw trials including failures, repeatability checks, and limitations. Results should identify the exact source revision and distinguish observed measurements from hypotheses.
+The site's proposed study, **The Cost of Rendering Progress**, concerns intermediate-frame update overhead and cadence, with network acquisition kept separate. This repository's loading and linearization experiments do not implement or validate that hypothesis. The [website concepts](docs/design/lab-001/README.md) propose a separate loading-study page; they are mockups, not deployed features.
 
 ## License
 

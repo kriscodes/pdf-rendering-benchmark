@@ -1,0 +1,191 @@
+{
+  "schemaVersion": 1,
+  "purpose": "independent-rejected-replication-clock-diagnostic",
+  "ledgerSha256": "836ef8b53c64692fc4b4a7560f563a31d5c36733ad0bd8cfeca7e51b09d2f7bd",
+  "clockMethod": "Intersect [beforeSeconds - pageNowMs / 1000 - margin, afterSeconds - pageNowMs / 1000 + margin]; add render boundary margin on both ends. These are assumed resolution margins, not a proven universal clock bound.",
+  "attempts": [
+    {
+      "ordinal": 1,
+      "reportPath": "/Users/kristian/Documents/labs/pdf-rendering-benchmark/results/raw/controlled-delivery-replication/batch-z0z3m48b/replicate-1/report.json",
+      "reportSha256": "1f8fae1fd5991e59e0f1d5a95bc59e9c6d7efe1ebda4dad94d27f3bf281ac7b8",
+      "runnerPid": 17057,
+      "exitCode": 1,
+      "recordedTrials": 4,
+      "recordedPassedTrials": 3,
+      "recordedMeasuredTrials": 0,
+      "failedTrial": {
+        "id": "warmup-1-nonlinearized-range-disabled",
+        "phase": "warmup",
+        "block": 1,
+        "position": 4,
+        "condition": "nonlinearized-range-disabled",
+        "status": "failed",
+        "error": "AssertionError [ERR_ASSERTION]: Clock boundary too imprecise"
+      },
+      "retainedClockSamples": [
+        {
+          "beforeSeconds": 1418339.004587,
+          "pageNowMs": 68.59999990463257,
+          "afterSeconds": 1418339.005763
+        },
+        {
+          "beforeSeconds": 1418340.172872,
+          "pageNowMs": 1238,
+          "afterSeconds": 1418340.175824
+        },
+        {
+          "beforeSeconds": 1418340.203585,
+          "pageNowMs": 1268.5,
+          "afterSeconds": 1418340.2091
+        }
+      ],
+      "offsetInterval": {
+        "lowerSeconds": 1418338.9349870002,
+        "upperSeconds": 1418338.9381630002
+      },
+      "boundary": {
+        "lowerSeconds": 1418340.116687,
+        "upperSeconds": 1418340.1218629999
+      },
+      "recomputedBoundaryWidthMs": 5.175999831408262,
+      "maximumBoundaryWidthMs": 5,
+      "resolutionMarginMs": 1,
+      "independentClockRejectionConfirmed": true,
+      "observerProbeStatus": "passed",
+      "calibrationStages": [
+        {
+          "stage": "before",
+          "status": "passed"
+        }
+      ],
+      "failedTrialDownloadedPdfAndPixelHashesMatch": true,
+      "summaryAbsent": true,
+      "matchesOriginalAllRecordedMetadata": true
+    },
+    {
+      "ordinal": 2,
+      "reportPath": "/Users/kristian/Documents/labs/pdf-rendering-benchmark/results/raw/controlled-delivery-replication/batch-z0z3m48b/replicate-2/report.json",
+      "reportSha256": "9592712ad7ec3e34566c2a1df908e110b18f541a8619d2b243ad7c32c9d4e8e6",
+      "runnerPid": 17099,
+      "exitCode": 1,
+      "recordedTrials": 3,
+      "recordedPassedTrials": 2,
+      "recordedMeasuredTrials": 0,
+      "failedTrial": {
+        "id": "warmup-1-linearized-range-disabled",
+        "phase": "warmup",
+        "block": 1,
+        "position": 3,
+        "condition": "linearized-range-disabled",
+        "status": "failed",
+        "error": "AssertionError [ERR_ASSERTION]: Clock boundary too imprecise"
+      },
+      "retainedClockSamples": [
+        {
+          "beforeSeconds": 1418349.512988,
+          "pageNowMs": 58.10000014305115,
+          "afterSeconds": 1418349.516649
+        },
+        {
+          "beforeSeconds": 1418350.536277,
+          "pageNowMs": 1081.9000000953674,
+          "afterSeconds": 1418350.53888
+        },
+        {
+          "beforeSeconds": 1418350.588596,
+          "pageNowMs": 1132.9000000953674,
+          "afterSeconds": 1418350.589929
+        }
+      ],
+      "offsetInterval": {
+        "lowerSeconds": 1418349.454696,
+        "upperSeconds": 1418349.4579799997
+      },
+      "boundary": {
+        "lowerSeconds": 1418350.5039960004,
+        "upperSeconds": 1418350.5092799999
+      },
+      "recomputedBoundaryWidthMs": 5.283999489620328,
+      "maximumBoundaryWidthMs": 5,
+      "resolutionMarginMs": 1,
+      "independentClockRejectionConfirmed": true,
+      "observerProbeStatus": "passed",
+      "calibrationStages": [
+        {
+          "stage": "before",
+          "status": "passed"
+        }
+      ],
+      "failedTrialDownloadedPdfAndPixelHashesMatch": true,
+      "summaryAbsent": true,
+      "matchesOriginalAllRecordedMetadata": true
+    },
+    {
+      "ordinal": 3,
+      "reportPath": "/Users/kristian/Documents/labs/pdf-rendering-benchmark/results/raw/controlled-delivery-replication/batch-z0z3m48b/replicate-3/report.json",
+      "reportSha256": "a4cafefac2dacaa5ff4c423d556948ee78250f3372153b393508ef8fcbdc44d9",
+      "runnerPid": 17131,
+      "exitCode": 1,
+      "recordedTrials": 1,
+      "recordedPassedTrials": 0,
+      "recordedMeasuredTrials": 0,
+      "failedTrial": {
+        "id": "warmup-1-nonlinearized-range-enabled",
+        "phase": "warmup",
+        "block": 1,
+        "position": 1,
+        "condition": "nonlinearized-range-enabled",
+        "status": "failed",
+        "error": "AssertionError [ERR_ASSERTION]: Clock boundary too imprecise"
+      },
+      "retainedClockSamples": [
+        {
+          "beforeSeconds": 1418358.086121,
+          "pageNowMs": 299.09999990463257,
+          "afterSeconds": 1418358.09156
+        },
+        {
+          "beforeSeconds": 1418359.51612,
+          "pageNowMs": 1733.0999999046326,
+          "afterSeconds": 1418359.521793
+        },
+        {
+          "beforeSeconds": 1418359.609683,
+          "pageNowMs": 1827.2000000476837,
+          "afterSeconds": 1418359.615226
+        }
+      ],
+      "offsetInterval": {
+        "lowerSeconds": 1418357.786021,
+        "upperSeconds": 1418357.789026
+      },
+      "boundary": {
+        "lowerSeconds": 1418359.4530210001,
+        "upperSeconds": 1418359.458026
+      },
+      "recomputedBoundaryWidthMs": 5.004999926313758,
+      "maximumBoundaryWidthMs": 5,
+      "resolutionMarginMs": 1,
+      "independentClockRejectionConfirmed": true,
+      "observerProbeStatus": "passed",
+      "calibrationStages": [
+        {
+          "stage": "before",
+          "status": "passed"
+        }
+      ],
+      "failedTrialDownloadedPdfAndPixelHashesMatch": true,
+      "summaryAbsent": true,
+      "matchesOriginalAllRecordedMetadata": true
+    }
+  ],
+  "exports": {
+    "conditionRows": 7,
+    "historicalOnlyTrialRows": 64,
+    "historicalOnlyWarmupRows": 16,
+    "newAcceptedTimingRows": 0,
+    "failedSummariesAbsent": true,
+    "csvUsesLf": true,
+    "acrossSessionStatus": "not-estimable: no accepted additional run"
+  }
+}

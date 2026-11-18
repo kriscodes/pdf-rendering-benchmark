@@ -1,0 +1,511 @@
+{
+  "reportSha256": "a4008e456fb236af2c1e9a4aecd6de1b7ebefbf2b473aed2084dbb2136f8ce0c",
+  "auditSha256": "36f3e40fb289494185bc09b131c815d0890b080f4f52b17c7d7b4bb94d4e5b58",
+  "comparablePairs": 47,
+  "nestedWidthDifferenceMs": {
+    "count": 48,
+    "minimum": -0.4229999613016844,
+    "median": -0.19850011449307203,
+    "maximum": -0.07099984213709831
+  },
+  "actualArmNetworkDifferences": {
+    "renderBeforeBytes": {
+      "pairedDifference": {
+        "count": 47,
+        "minimum": -2048,
+        "median": 0,
+        "maximum": 4096
+      },
+      "differentPairs": 12,
+      "changed": [
+        {
+          "pairId": "session-1-block-1-nonlinearized-range-enabled",
+          "condition": "nonlinearized-range-enabled",
+          "low": 92473,
+          "high": 96569,
+          "difference": 4096
+        },
+        {
+          "pairId": "session-1-block-2-linearized-range-enabled",
+          "condition": "linearized-range-enabled",
+          "low": 105621,
+          "high": 107669,
+          "difference": 2048
+        },
+        {
+          "pairId": "session-2-block-1-nonlinearized-range-enabled",
+          "condition": "nonlinearized-range-enabled",
+          "low": 94521,
+          "high": 92473,
+          "difference": -2048
+        },
+        {
+          "pairId": "session-2-block-1-linearized-range-enabled",
+          "condition": "linearized-range-enabled",
+          "low": 107669,
+          "high": 105621,
+          "difference": -2048
+        },
+        {
+          "pairId": "session-2-block-2-nonlinearized-range-enabled",
+          "condition": "nonlinearized-range-enabled",
+          "low": 90425,
+          "high": 94521,
+          "difference": 4096
+        },
+        {
+          "pairId": "session-2-block-4-nonlinearized-range-enabled",
+          "condition": "nonlinearized-range-enabled",
+          "low": 96569,
+          "high": 94521,
+          "difference": -2048
+        },
+        {
+          "pairId": "session-2-block-4-linearized-range-enabled",
+          "condition": "linearized-range-enabled",
+          "low": 105621,
+          "high": 107669,
+          "difference": 2048
+        },
+        {
+          "pairId": "session-3-block-1-nonlinearized-range-enabled",
+          "condition": "nonlinearized-range-enabled",
+          "low": 94521,
+          "high": 92473,
+          "difference": -2048
+        },
+        {
+          "pairId": "session-3-block-2-nonlinearized-range-enabled",
+          "condition": "nonlinearized-range-enabled",
+          "low": 94521,
+          "high": 96569,
+          "difference": 2048
+        },
+        {
+          "pairId": "session-3-block-3-linearized-range-enabled",
+          "condition": "linearized-range-enabled",
+          "low": 105621,
+          "high": 103573,
+          "difference": -2048
+        },
+        {
+          "pairId": "session-3-block-3-nonlinearized-range-enabled",
+          "condition": "nonlinearized-range-enabled",
+          "low": 94521,
+          "high": 92473,
+          "difference": -2048
+        },
+        {
+          "pairId": "session-3-block-4-linearized-range-enabled",
+          "condition": "linearized-range-enabled",
+          "low": 107669,
+          "high": 105621,
+          "difference": -2048
+        }
+      ]
+    },
+    "renderUncertainBytes": {
+      "pairedDifference": {
+        "count": 47,
+        "minimum": 0,
+        "median": 0,
+        "maximum": 4096
+      },
+      "differentPairs": 1,
+      "changed": [
+        {
+          "pairId": "session-1-block-1-nonlinearized-range-enabled",
+          "condition": "nonlinearized-range-enabled",
+          "low": 0,
+          "high": 4096,
+          "difference": 4096
+        }
+      ]
+    },
+    "renderAfterBytes": {
+      "pairedDifference": {
+        "count": 47,
+        "minimum": -8192,
+        "median": 0,
+        "maximum": 2048
+      },
+      "differentPairs": 12,
+      "changed": [
+        {
+          "pairId": "session-1-block-1-nonlinearized-range-enabled",
+          "condition": "nonlinearized-range-enabled",
+          "low": 47417,
+          "high": 39225,
+          "difference": -8192
+        },
+        {
+          "pairId": "session-1-block-2-linearized-range-enabled",
+          "condition": "linearized-range-enabled",
+          "low": 35989,
+          "high": 33941,
+          "difference": -2048
+        },
+        {
+          "pairId": "session-2-block-1-nonlinearized-range-enabled",
+          "condition": "nonlinearized-range-enabled",
+          "low": 45369,
+          "high": 47417,
+          "difference": 2048
+        },
+        {
+          "pairId": "session-2-block-1-linearized-range-enabled",
+          "condition": "linearized-range-enabled",
+          "low": 33941,
+          "high": 35989,
+          "difference": 2048
+        },
+        {
+          "pairId": "session-2-block-2-nonlinearized-range-enabled",
+          "condition": "nonlinearized-range-enabled",
+          "low": 49465,
+          "high": 45369,
+          "difference": -4096
+        },
+        {
+          "pairId": "session-2-block-4-nonlinearized-range-enabled",
+          "condition": "nonlinearized-range-enabled",
+          "low": 43321,
+          "high": 45369,
+          "difference": 2048
+        },
+        {
+          "pairId": "session-2-block-4-linearized-range-enabled",
+          "condition": "linearized-range-enabled",
+          "low": 35989,
+          "high": 33941,
+          "difference": -2048
+        },
+        {
+          "pairId": "session-3-block-1-nonlinearized-range-enabled",
+          "condition": "nonlinearized-range-enabled",
+          "low": 45369,
+          "high": 47417,
+          "difference": 2048
+        },
+        {
+          "pairId": "session-3-block-2-nonlinearized-range-enabled",
+          "condition": "nonlinearized-range-enabled",
+          "low": 45369,
+          "high": 43321,
+          "difference": -2048
+        },
+        {
+          "pairId": "session-3-block-3-linearized-range-enabled",
+          "condition": "linearized-range-enabled",
+          "low": 35989,
+          "high": 38037,
+          "difference": 2048
+        },
+        {
+          "pairId": "session-3-block-3-nonlinearized-range-enabled",
+          "condition": "nonlinearized-range-enabled",
+          "low": 45369,
+          "high": 47417,
+          "difference": 2048
+        },
+        {
+          "pairId": "session-3-block-4-linearized-range-enabled",
+          "condition": "linearized-range-enabled",
+          "low": 33941,
+          "high": 35989,
+          "difference": 2048
+        }
+      ]
+    },
+    "measurementRequests": {
+      "pairedDifference": {
+        "count": 47,
+        "minimum": 0,
+        "median": 0,
+        "maximum": 0
+      },
+      "differentPairs": 0,
+      "changed": []
+    },
+    "verificationUncertainRequests": {
+      "pairedDifference": {
+        "count": 47,
+        "minimum": 0,
+        "median": 0,
+        "maximum": 0
+      },
+      "differentPairs": 0,
+      "changed": []
+    },
+    "verificationRequests": {
+      "pairedDifference": {
+        "count": 47,
+        "minimum": 0,
+        "median": 0,
+        "maximum": 0
+      },
+      "differentPairs": 0,
+      "changed": []
+    }
+  },
+  "initial200CompletionChangedPairs": [],
+  "failedTrial": {
+    "id": "session-1-block-1-linearized-range-enabled-three",
+    "independentAuditReason": "session-1-block-1-linearized-range-enabled-three: write lateness 161.61329099999966",
+    "allOutOfLimitWrites": [
+      {
+        "url": "/pdf/text-100-linearized.pdf?trial=session-1-block-1-linearized-range-enabled-three",
+        "writeIndexZeroBased": 10,
+        "lagMs": 161.61329099999966,
+        "bytes": 2048
+      }
+    ],
+    "clock": {
+      "sampleCount": 3,
+      "status": "passed",
+      "reason": null,
+      "message": null,
+      "offset": {
+        "lowerSeconds": 1452470.1700310002,
+        "upperSeconds": 1452470.172692,
+        "clockResolutionMarginMs": 1,
+        "assumption": "The configured margin assumes a bound on page-clock quantization/coarsening; it is not a proven universal browser bound. Calibration also assumes a stable additive clock offset across the trial."
+      },
+      "boundary": {
+        "lowerSeconds": 1452471.6924310003,
+        "upperSeconds": 1452471.697092,
+        "clockResolutionMarginMs": 1,
+        "assumption": "The configured margin assumes a bound on page-clock quantization/coarsening; it is not a proven universal browser bound. Calibration also assumes a stable additive clock offset across the trial."
+      },
+      "widthMs": 4.660999635234475,
+      "verificationBoundary": {
+        "lowerSeconds": 1452471.6988310001,
+        "upperSeconds": 1452471.7034919998,
+        "clockResolutionMarginMs": 1,
+        "assumption": "The configured margin assumes a bound on page-clock quantization/coarsening; it is not a proven universal browser bound. Calibration also assumes a stable additive clock offset across the trial."
+      }
+    },
+    "rawFirstPageRenderMs": 1401.3000001907349,
+    "sampleRetained": false
+  },
+  "guardClockWidths": {
+    "reference": {
+      "count": 6,
+      "minimum": 4.310999531298876,
+      "median": 4.389499663375318,
+      "maximum": 4.500999813899398
+    },
+    "candidate": {
+      "count": 6,
+      "minimum": 4.166999831795692,
+      "median": 4.204999888315797,
+      "maximum": 4.321999615058303
+    }
+  },
+  "perSessionMetrics": [
+    {
+      "session": 1,
+      "comparable": 15,
+      "widths": {
+        "three": {
+          "reference": {
+            "count": 16,
+            "minimum": 4.3919996824115515,
+            "median": 4.506499506533146,
+            "maximum": 4.660999635234475,
+            "p25": 4.44174965377897,
+            "p75": 4.543999733868986
+          }
+        },
+        "fifteen": {
+          "reference": {
+            "count": 16,
+            "minimum": 4.376999568194151,
+            "median": 4.4564997078850865,
+            "maximum": 4.602999426424503,
+            "p25": 4.409999819472432,
+            "p75": 4.4992497423663735
+          },
+          "candidate": {
+            "count": 16,
+            "minimum": 4.155999515205622,
+            "median": 4.244499956257641,
+            "maximum": 4.352999851107597,
+            "p25": 4.216999921482056,
+            "p75": 4.289249598514289
+          }
+        }
+      },
+      "paired": {
+        "firstPageRenderMs": {
+          "count": 15,
+          "minimum": -21.40000009536743,
+          "median": -0.10000014305114746,
+          "maximum": 51.00000023841858,
+          "p25": -6.700000047683716,
+          "p75": 8.950000047683716
+        },
+        "renderToVerificationStartMs": {
+          "count": 15,
+          "minimum": -37.799999952316284,
+          "median": 4.699999809265137,
+          "maximum": 9.299999952316284,
+          "p25": 3.299999952316284,
+          "p75": 5.699999928474426
+        },
+        "observerCollectionMs": {
+          "count": 15,
+          "minimum": -14.621751000000586,
+          "median": 9.488333999997849,
+          "maximum": 14.599248999991687,
+          "p25": 6.795374500001344,
+          "p75": 11.344645999996828
+        },
+        "observationWindowMs": {
+          "count": 15,
+          "minimum": -14.14325099999769,
+          "median": 6.510707999997976,
+          "maximum": 63.29179199999635,
+          "p25": 2.2808750000021973,
+          "p75": 13.684062499996799
+        }
+      }
+    },
+    {
+      "session": 2,
+      "comparable": 16,
+      "widths": {
+        "three": {
+          "reference": {
+            "count": 16,
+            "minimum": 4.375999793410301,
+            "median": 4.451999790035188,
+            "maximum": 4.573999904096127,
+            "p25": 4.423499514814466,
+            "p75": 4.531999817118049
+          }
+        },
+        "fifteen": {
+          "reference": {
+            "count": 16,
+            "minimum": 4.310999996960163,
+            "median": 4.455499816685915,
+            "maximum": 4.710999550297856,
+            "p25": 4.404499544762075,
+            "p75": 4.505999677348882
+          },
+          "candidate": {
+            "count": 16,
+            "minimum": 4.153999499976635,
+            "median": 4.228999721817672,
+            "maximum": 4.33299969881773,
+            "p25": 4.204499709885567,
+            "p75": 4.271499812602997
+          }
+        }
+      },
+      "paired": {
+        "firstPageRenderMs": {
+          "count": 16,
+          "minimum": -28.40000009536743,
+          "median": -1.5499999523162842,
+          "maximum": 38.40000009536743,
+          "p25": -14.300000131130219,
+          "p75": 11.500000059604645
+        },
+        "renderToVerificationStartMs": {
+          "count": 16,
+          "minimum": -0.09999990463256836,
+          "median": 4.0,
+          "maximum": 7.400000095367432,
+          "p25": 2.25,
+          "p75": 4.7749998569488525
+        },
+        "observerCollectionMs": {
+          "count": 16,
+          "minimum": 5.06870799997705,
+          "median": 8.933874999995169,
+          "maximum": 20.958916000003228,
+          "p25": 7.754958499992426,
+          "p75": 9.761999750011455
+        },
+        "observationWindowMs": {
+          "count": 16,
+          "minimum": -16.8315419999999,
+          "median": 5.66962500000227,
+          "maximum": 34.858374000003096,
+          "p25": -7.296052000001509,
+          "p75": 14.133781500000623
+        }
+      }
+    },
+    {
+      "session": 3,
+      "comparable": 16,
+      "widths": {
+        "three": {
+          "reference": {
+            "count": 16,
+            "minimum": 4.378999816253781,
+            "median": 4.483999684453011,
+            "maximum": 4.644999746233225,
+            "p25": 4.451249667908996,
+            "p75": 4.560749686788768
+          }
+        },
+        "fifteen": {
+          "reference": {
+            "count": 16,
+            "minimum": 4.367999732494354,
+            "median": 4.4454996241256595,
+            "maximum": 4.524999763816595,
+            "p25": 4.4112493633292615,
+            "p75": 4.4812498963437974
+          },
+          "candidate": {
+            "count": 16,
+            "minimum": 4.1849997360259295,
+            "median": 4.26649977453053,
+            "maximum": 4.33899974450469,
+            "p25": 4.226999823004007,
+            "p75": 4.284249502234161
+          }
+        }
+      },
+      "paired": {
+        "firstPageRenderMs": {
+          "count": 16,
+          "minimum": -18.299999952316284,
+          "median": -2.1499998569488525,
+          "maximum": 21.59999990463257,
+          "p25": -11.300000131130219,
+          "p75": 3.0749999284744263
+        },
+        "renderToVerificationStartMs": {
+          "count": 16,
+          "minimum": -0.19999980926513672,
+          "median": 3.399999976158142,
+          "maximum": 7.900000095367432,
+          "p25": 0.9749999642372131,
+          "p75": 4.824999749660492
+        },
+        "observerCollectionMs": {
+          "count": 16,
+          "minimum": 5.204543000014382,
+          "median": 8.646792500003357,
+          "maximum": 12.76337600001716,
+          "p25": 7.696760750033718,
+          "p75": 10.458404500011966
+        },
+        "observationWindowMs": {
+          "count": 16,
+          "minimum": -14.905916000003344,
+          "median": 5.851083500005188,
+          "maximum": 24.510708000001614,
+          "p25": -5.031311499998992,
+          "p75": 13.676062250000541
+        }
+      }
+    }
+  ]
+}

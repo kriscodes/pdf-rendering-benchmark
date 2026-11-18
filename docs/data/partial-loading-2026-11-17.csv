@@ -1,0 +1,9 @@
+run,pair,position,variant,status,firstPageRenderMs,pdfBytes,pdfRequests,rangeRequests,observed206,cdpBodyBytesAtOrBeforeRender,cdpUncertainBytes,cdpPostRenderBodyBytes,completedResourceBodyBytes,verificationStartedRequests,clockBoundaryWidthMs
+run-QAWtig,1,1,nonlinearized,passed,135.90000009536743,86329,1,0,0,86329,0,0,86329,0,4.43999981507659
+run-QAWtig,1,2,linearized,passed,67.70000004768372,87189,1,0,0,87189,0,0,87189,0,4.403999773785472
+run-QAWtig,2,1,linearized,passed,66.40000009536743,87189,1,0,0,87189,0,0,87189,0,4.531999584287405
+run-QAWtig,2,2,nonlinearized,passed,80.10000014305115,86329,1,0,0,86329,0,0,86329,0,4.488999722525477
+run-9xURGW,1,1,nonlinearized,passed,207.40000009536743,86329,1,0,0,86329,0,0,86329,0,4.642999731004238
+run-9xURGW,1,2,linearized,passed,101.90000009536743,87189,1,0,0,87189,0,0,87189,0,4.501999588683248
+run-9xURGW,2,1,linearized,passed,71.29999995231628,87189,1,0,0,87189,0,0,87189,0,4.571999656036496
+run-9xURGW,2,2,nonlinearized,passed,85.5,86329,1,0,0,86329,0,0,86329,0,4.517000168561935
