@@ -1,0 +1,20 @@
+{
+  "id": "finish-pdf-lab-001-fixed-windows",
+  "kind": "heartbeat",
+  "name": "Finish PDF Lab 001 fixed windows",
+  "status": "ACTIVE",
+  "rrule": "FREQ=DAILY;COUNT=3;BYHOUR=9,15;BYMINUTE=0;BYSECOND=0",
+  "created_at": 1795019836140,
+  "updated_at": 1795019836140,
+  "verification": "Saved local configuration inspected after successful creation; execution not yet observed.",
+  "timezone": "America/Los_Angeles",
+  "protocol": "docs/final-windows.md",
+  "notionPage": "https://app.notion.com/p/41ce9784880681ca958ac1a6484f4eb2",
+  "expectedTargetsUTC": [
+    "2026-11-18T17:00:00Z",
+    "2026-11-18T23:00:00Z",
+    "2026-11-19T17:00:00Z"
+  ],
+  "noCatchUp": true,
+  "maximumOccurrences": 3
+}
