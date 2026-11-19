@@ -1,0 +1,15 @@
+{
+  "id": "finish-pdf-lab-001-fixed-windows",
+  "status": "ACTIVE",
+  "rrule": "FREQ=HOURLY;INTERVAL=1;BYMINUTE=5;BYSECOND=0",
+  "updated_at": 1795078908585,
+  "target_thread_id": "01a1e7e7-28fe-74d1-850d-ba41c3e7e57f",
+  "reason": "Wakeup at 08:59:53 UTC arrived outside all measurement slots, while window 2 had no claim. Hourly admission checks avoid dependence on an unverified wall-clock timezone interpretation. Cause of missed delivery is not established.",
+  "measurementScheduleChanged": false,
+  "remainingWindowUTC": {
+    "ordinal": 3,
+    "opensAtUTC": "2026-11-19T17:00:00Z",
+    "latestStartAtUTC": "2026-11-19T18:00:00Z"
+  },
+  "note": "No new measurement slots or replacement runs. Delete automation after final publication."
+}

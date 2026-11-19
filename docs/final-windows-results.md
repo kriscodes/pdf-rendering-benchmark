@@ -1,6 +1,6 @@
 # Final fixed-window campaign: execution record
 
-Status: window 1 completed and its performance attempt was rejected by the unchanged clock gate. Windows 2 and 3 remain scheduled. This is not the final scientific conclusion.
+Status as of November 19, 09:00 UTC: window 1 completed and its performance attempt was rejected by the unchanged clock gate. Window 2 was missed without measurement; window 3 remains scheduled. The frozen campaign auditor has a missed-ledger reporting defect, documented below. This is not the final scientific conclusion.
 
 The prospective protocol is [final-windows.md](final-windows.md), with machine-readable schedule and frozen hashes in [final-windows.json](../experiments/final-windows.json). The existing branch remains `feat/corpus-text-pair`. Protocol commit: `4df7821` (before all new measurements). Parent commit: `942be7b`.
 
@@ -9,7 +9,7 @@ The prospective protocol is [final-windows.md](final-windows.md), with machine-r
 | Window | Pacific target | Allowed suite start (UTC) | Outcome |
 | --- | --- | --- | --- |
 | 1 | November 18, 09:00 | November 18, 17:00–18:00 | Rejected performance attempt; observer diagnostic complete |
-| 2 | November 18, 15:00 | November 18, 23:00–November 19, 00:00 | Pending |
+| 2 | November 18, 15:00 | November 18, 23:00–November 19, 00:00 | Missed; zero invocations; frozen audit discrepancy disclosed below |
 | 3 | November 19, 09:00 | November 19, 17:00–18:00 | Pending |
 
 All intervals include their opening and exclude their closing. Each suite contains the frozen 96-trial observer integration diagnostic followed by one frozen 64-trial performance attempt, subject to each runner's original rejection behavior. No replacements or catch-up measurements are allowed. Later window outcomes must be appended without deleting earlier progress exports.
@@ -70,6 +70,18 @@ Lightweight documentation reads and security-tool administration occurred during
 Window 1 was committed as `625d4bb`. Its evidence ZIP was published to Notion and downloaded for verification: 5,184,064 bytes, SHA-256 `c936fcbabb1a20b626dd08f788561d3742c70815d0c24e2ca3080e3565053e5b`, with 203 manifest-listed files plus the manifest. The downloaded archive and every file size/hash match. The [publication receipt](data/final-windows-window-1-publication.json) contains the stable file reference. This ZIP is close to the workspace's 5 MiB limit; later bundles may need separate complete ZIP parts with per-part manifests and verified combined coverage. A large archive is not a reason to change or repeat a measurement.
 
 ## Continuing a scheduled window
+
+### Window 2 — missed; recorded November 19, 09:00 UTC
+
+The heartbeat arrived at `2026-11-19T08:59:53.609Z`, outside all fixed measurement slots. Inspection found no window-2 claim or ledger. The unchanged launcher was invoked with `--window 2` at `09:00:39.730195+00:00`, after its exclusive deadline of `00:00:00Z`. It returned `missed` (exit 2), retained the irreversible claim and source snapshots, and launched neither runner. Its ledger has zero attempts and no admission, Node identity, report, image or runner log. No replacement or catch-up measurement was made. The ledger's generic `completionMeaning` text is not an execution claim; its `status` and empty attempts are authoritative.
+
+The unchanged audit command used fresh prefix `docs/data/final-windows-progress-window-2`. It verified all 1,134 frozen files and retained window 1's rejection, but exited 1 with `window 2: Missing Node identity on an executed window`. Inspection of `validate_ledger` shows that absent Node identity is allowed only for aborted/interrupted windows, although the launcher's missed path intentionally returns before initializing Node. This is an audit classification defect, not evidence of a measurement or permission to repair the raw ledger. The frozen auditor, tests, launcher and failed JSON/CSV exports remain unchanged.
+
+The separate [ledger review](data/final-windows-window-2-ledger-review.json) passed 14 checks: late claim, matching plan/claim/ledger, no admission or attempts, both runners unattempted, exact evidence inventory, matching source-snapshot hashes and all frozen-file hashes. It records the evidence-supported `missed` interpretation without replacing the failed campaign audit or accepting performance data. Final publication must explicitly reconcile this discrepancy; the campaign audit is **not** reported as passing.
+
+Current progress is **0/3 accepted new performance windows, one rejected, one missed and one pending**. At most one new window can now pass, so the predeclared requirement of two accepted windows for a between-window timing comparison cannot be met. Window 3 must still be accounted for under the fixed stopping rule; no optional early stop is taken. Its original start interval remains November 19, 17:00–18:00 UTC (09:00–10:00 Pacific).
+
+The saved heartbeat used a wall-clock recurrence without an explicit timezone field; this observed 09:00 UTC wakeup does not establish the cause of the missed slot. Only the follow-up cadence was changed to hourly admission checks at minute 05, with the same UTC measurement guards and once-only claims. This does not change the plan or authorize additional measurements. The [follow-up scheduling receipt](data/final-windows-followup-schedule-2026-11-19.json) records the saved update. Delete the heartbeat after final publication is complete. No dependency installation, rebuild, test run or browser measurement was performed during this update. Archive publication is recorded below once verified.
 
 Read the protocol, plan and existing claim/ledger first. The launcher owns the durable once-only admission check. It must never be bypassed with a direct runner invocation to repair an unfavorable, interrupted, blocked or missed result.
 

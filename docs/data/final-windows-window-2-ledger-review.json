@@ -1,0 +1,31 @@
+{
+  "schemaVersion": 1,
+  "purpose": "supplemental missed-window evidence review; does not replace the frozen audit",
+  "verifiedAtUTC": "2026-11-19T09:02:29.006004+00:00",
+  "window": 2,
+  "outcome": "missed",
+  "acceptedPerformanceWindow": false,
+  "attemptedTrials": 0,
+  "ledgerSha256": "cf8d126357e1f1c52b970d4fac7dbde492412a624e8f11d9e1dbd71104365334",
+  "claimSha256": "88d19416c198640ce78b8aa26ff9d78269febe017e68432323fca807b692baeb",
+  "frozenAuditStatus": "failed",
+  "frozenAuditIssue": "window 2: Missing Node identity on an executed window",
+  "checks": {
+    "ledgerRecordsMissed": true,
+    "zeroRunnerAttempts": true,
+    "noAdmission": true,
+    "bothRunnersUnattempted": true,
+    "claimAfterExclusiveDeadline": true,
+    "ledgerMatchesClaimTime": true,
+    "finishAfterClaim": true,
+    "claimAndLedgerMatchPlan": true,
+    "claimMatchesOutput": true,
+    "noReportsLogsOrImages": true,
+    "planSnapshotMatches": true,
+    "launcherSnapshotMatches": true,
+    "helperSnapshotMatches": true,
+    "allFrozenFilesUnchanged": true
+  },
+  "interpretation": "The launcher takes the missed branch before initializing Node identity. The auditor permits absent identity only for aborted/interrupted states. Null identity is expected for this no-execution record. Frozen code and failed export are retained. No performance acceptance gate is waived.",
+  "limits": "The campaign audit still reports failure. Final publication must disclose this discrepancy and account for missed slots using the retained ledger and this supplemental review. The ledger completionMeaning is a generic template; status missed and empty attempts establish that neither invocation ran."
+}
