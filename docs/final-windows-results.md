@@ -83,6 +83,10 @@ Current progress is **0/3 accepted new performance windows, one rejected, one mi
 
 The saved heartbeat used a wall-clock recurrence without an explicit timezone field; this observed 09:00 UTC wakeup does not establish the cause of the missed slot. Only the follow-up cadence was changed to hourly admission checks at minute 05, with the same UTC measurement guards and once-only claims. This does not change the plan or authorize additional measurements. The [follow-up scheduling receipt](data/final-windows-followup-schedule-2026-11-19.json) records the saved update. Delete the heartbeat after final publication is complete. No dependency installation, rebuild, test run or browser measurement was performed during this update. Archive publication is recorded below once verified.
 
+Window-2 evidence and the audit discrepancy were committed as `aed644c`. The archive was attached to the existing Notion campaign page and downloaded for verification at `2026-11-19T09:04:32.227436+00:00`: 2,719,570 bytes, SHA-256 `3b594bd38733aa5ec3bc6b216bb29e5b7dcc3d0bee429c070a4c62bf9072b14e`, exactly 147 manifest-listed files plus the manifest. The downloaded ZIP and every file size/hash matched. The [publication receipt](data/final-windows-window-2-publication.json) records its stable attachment reference. This completes publication of the missed-slot evidence; it does not turn the failed frozen campaign audit into a pass or finish window 3.
+
+### Remaining-window procedure
+
 Read the protocol, plan and existing claim/ledger first. The launcher owns the durable once-only admission check. It must never be bypassed with a direct runner invocation to repair an unfavorable, interrupted, blocked or missed result.
 
 ```sh

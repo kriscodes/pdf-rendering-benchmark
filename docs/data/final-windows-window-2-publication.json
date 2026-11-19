@@ -1,0 +1,15 @@
+{
+  "window": 2,
+  "archivePath": "/Users/kristian/Documents/labs/pdf-rendering-benchmark/results/raw/final-windows/publication/window-2-evidence.zip",
+  "bytes": 2719570,
+  "sha256": "3b594bd38733aa5ec3bc6b216bb29e5b7dcc3d0bee429c070a4c62bf9072b14e",
+  "manifestFiles": 147,
+  "gitCommit": "aed644cc8c45c06d412cd790d6dd06cb2847ca97",
+  "downloadVerification": "passed",
+  "verifiedAtUTC": "2026-11-19T09:04:32.227436+00:00",
+  "stableNotionFile": "notion-file-block://41de9784-8806-81b6-ae72-d76645a2cb9d/34a3d0ed-19be-47d7-b05a-74c18dbe97d5?space_id=096e05a5-b0ae-459a-9d0f-8fe43646f54d&name=pdf-lab-001-final-window-2-evidence.zip",
+  "page": "https://app.notion.com/p/41ce9784880681ca958ac1a6484f4eb2",
+  "downloadPath": "/Users/kristian/Documents/labs/pdf-rendering-benchmark/results/raw/final-windows/publication/window-2-download-verified.zip",
+  "scientificOutcome": "missed; zero invocations",
+  "campaignAuditStatus": "failed; frozen missed-ledger classification defect disclosed in supplemental review"
+}
