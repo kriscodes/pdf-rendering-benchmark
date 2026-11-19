@@ -1,0 +1,42 @@
+{
+  "schemaVersion": 1,
+  "purpose": "closing interpretation alongside unchanged frozen audit",
+  "reviewedAtUTC": "2026-11-19T17:06:55.080929+00:00",
+  "frozenAuditPath": "docs/data/final-windows-final-2026-11-19.json",
+  "frozenAuditSha256": "da5b7473c30c7cfc38b4395c890b4d2f6454466e32a165eb5b47e55e97471122",
+  "frozenAuditStatus": "failed",
+  "frozenAuditIssue": "window 2: Missing Node identity on an executed window",
+  "supplementalMissedReviewSha256": "c02187b80258622410339d561cda20bc357c0e4be11163940996b394010b0a14",
+  "evidenceOutcomes": [
+    {
+      "window": 1,
+      "outcome": "rejected",
+      "performanceAccepted": false
+    },
+    {
+      "window": 2,
+      "outcome": "missed",
+      "performanceAccepted": false,
+      "interpretationBasis": "unchanged missed ledger, empty attempts, late claim and previously published supplemental verification"
+    },
+    {
+      "window": 3,
+      "outcome": "accepted",
+      "performanceAccepted": true,
+      "auditedTrials": {
+        "all": 64,
+        "measured": 48,
+        "warmups": 16
+      }
+    }
+  ],
+  "acceptedNewWindows": 1,
+  "plannedNewWindows": 3,
+  "allMeasurementSlotsTerminal": true,
+  "conclusion": "Insufficient accepted new evidence for a between-window timing comparison.",
+  "reconciliation": "The sole frozen-audit failure is the already documented null-Node-identity rule on the unexecuted missed slot. No execution or performance result is accepted for that slot. All executed reports remain audited by the unchanged auditors; only window 3 is independently accepted. The failed audit is preserved and is not relabeled as passing.",
+  "historicalPilotRole": "separate historical context; excluded from new-window count and comparison",
+  "measurementInputsAndAcceptanceGatesChanged": false,
+  "publicationStatus": "pending verified final archive; see subsequent publication receipt",
+  "remainingTechnicalIssue": "Repair and regression-test missed-ledger auditor handling only in a separately authorized future code change. No frozen code repair is part of this campaign."
+}

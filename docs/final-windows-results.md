@@ -1,6 +1,6 @@
 # Final fixed-window campaign: execution record
 
-Status as of November 19, 09:00 UTC: window 1 completed and its performance attempt was rejected by the unchanged clock gate. Window 2 was missed without measurement; window 3 remains scheduled. The frozen campaign auditor has a missed-ledger reporting defect, documented below. This is not the final scientific conclusion.
+Status as of November 19, 17:06 UTC: all three measurement slots are terminal: window 1 rejected, window 2 missed, window 3 independently accepted. **1/3 new performance windows accepted: insufficient accepted evidence for a between-window timing comparison.** Final archive publication is pending verification. The frozen auditor's missed-ledger reporting defect remains disclosed and is reconciled in the closing review without changing code or accepting missed data.
 
 The prospective protocol is [final-windows.md](final-windows.md), with machine-readable schedule and frozen hashes in [final-windows.json](../experiments/final-windows.json). The existing branch remains `feat/corpus-text-pair`. Protocol commit: `4df7821` (before all new measurements). Parent commit: `942be7b`.
 
@@ -10,7 +10,7 @@ The prospective protocol is [final-windows.md](final-windows.md), with machine-r
 | --- | --- | --- | --- |
 | 1 | November 18, 09:00 | November 18, 17:00–18:00 | Rejected performance attempt; observer diagnostic complete |
 | 2 | November 18, 15:00 | November 18, 23:00–November 19, 00:00 | Missed; zero invocations; frozen audit discrepancy disclosed below |
-| 3 | November 19, 09:00 | November 19, 17:00–18:00 | Pending |
+| 3 | November 19, 09:00 | November 19, 17:00–18:00 | Completed and independently accepted: 16 warmups + 48 measured trials |
 
 All intervals include their opening and exclude their closing. Each suite contains the frozen 96-trial observer integration diagnostic followed by one frozen 64-trial performance attempt, subject to each runner's original rejection behavior. No replacements or catch-up measurements are allowed. Later window outcomes must be appended without deleting earlier progress exports.
 
@@ -116,3 +116,36 @@ Commit exports and the updated record before packaging. Package each window sepa
 Do not overwrite existing ZIPs. If a new edition is needed, name it explicitly and preserve the earlier file. The package contains the selected window's raw files, the committed project, original PDFs/manifest, and a per-file SHA-256 manifest. Runtime binaries and older raw archives are referenced by preserved hashes rather than redistributed. Upload with the Notion file-upload tools, attach to the existing campaign page, download the saved attachment, verify ZIP bytes and every manifest entry, then save and commit a publication receipt. Do not include a receipt in the archive it hashes.
 
 After the final slot, audit all three ledgers into a fresh final export; retain earlier progress exports. Publish the final accepted-window count, separate accepted-run contrasts, failure reasons, clock/operation distinctions, limitations, archive checks and closing commits. Disable the campaign heartbeat after finalization. No broad benchmark completion or performance-repeatability claim is authorized by this work.
+
+## Window 3 — November 19, 09:01–09:05 Pacific
+
+The scheduled heartbeat arrived at `2026-11-19T17:00:59.088Z`. After inspection of the protocol, plan, existing claims and clean preserved branch, the exact authorized launcher command used `--window 3`. Its claim was recorded at `17:01:37.767145+00:00`, admission at `17:01:41.608615+00:00`, and completion at `17:05:35.723060+00:00`. Both invocations exited 0 without timeout. All six preservation/runtime checks passed, and both runner process groups and protected browser processes were verified absent afterward. No tests, builds, uploads, dependency installation or other benchmark work was intentionally run concurrently; only process-output polling occurred. This is not proof of an otherwise idle machine.
+
+The observer diagnostic ran from `17:01:41.612134` to `17:04:04.158103` UTC: 96/96 attempted and operation-valid workloads, all six session guards passed, and all 144 clock analyses passed (48 actual-three references, 48 high-arm nested references, 48 high-arm candidates). There were zero too-wide or non-overlap clock rejections and zero candidate-only gains among 48 eligible high-arm executions. All 48 adjacent perturbation pairs were comparable; none were excluded. Fifteen minus three brackets had paired medians of +9.761 ms observer collection, +3.400 ms render-to-verification delay, and +1.900 ms first-page render (range −30.900 to +118.500 ms). These are descriptive diagnostic observations; they establish neither equivalence nor a reason to adopt fifteen brackets.
+
+The performance invocation ran from `17:04:05.345419` to `17:05:34.424638` UTC. All 64 trials passed (16 warmups excluded, 48 measured, 12 per condition), as did the original pre/post controls, source/corpus checks, pixels, network checks and strict clock gate. The unchanged independent performance auditor accepted this window.
+
+| Window 3 condition | First-page render median (ms) |
+| --- | ---: |
+| Nonlinearized, range enabled | 1008.40 |
+| Linearized, range enabled | 1110.65 |
+| Nonlinearized, range disabled | 968.15 |
+| Linearized, range disabled | 977.05 |
+
+Within this window only, paired block medians were +100.35 ms for linearized minus nonlinearized with ranges enabled; +7.20 ms with ranges disabled; +32.65 ms for enabled minus disabled ranges on the nonlinearized PDF; +132.10 ms on the linearized PDF; and +100.45 ms for the difference of structure effects. A paired median is not the difference of condition medians. These single-window values are descriptive, not evidence of general linearization harm or benefit.
+
+Report SHA-256 values: observer `696918b1fbc5e667f6855114d4bfa0f20df6bdb3ef8414e4f64577bb751011db`; performance `3eac448b9168a829f3be752994210234d1dffa45ef96caa2ab794755535adfc3`. The ledger and full raw reports/logs/images/source snapshots remain under `results/raw/final-windows/window-3/`.
+
+## Closing conclusion and audit reconciliation
+
+The stopping rule is satisfied for measurement: all three declared slots have terminal outcomes, with no retries, replacements or additional trials. **Accepted new performance windows: 1/3.** The campaign provides **insufficient accepted new evidence for a between-window timing comparison**. No cross-window timing contrast, pooled partial estimate, significance test, repeatability claim or universal linearization claim is made. No observer change is adopted.
+
+Window 1 remains rejected at a 5.105 ms uncertainty width; its partial timings are excluded. Window 2 remains missed with zero invocations, not a measured failure. Window 3 supplies the sole accepted new estimate. Actual performance invocation start separation between windows 1 and 3 was 86,314.832373 seconds (about 23 h 58 m 35 s); this is scheduling context, not a comparison of accepted windows.
+
+The original accepted pilot remains separate historical context, with report `results/raw/controlled-delivery/run-VnOBcz/report.json`, from November 18, 05:21:54.389–05:23:26.814 UTC (November 17 Pacific). The final audit independently revalidated it, but it does not count toward the three new windows or rescue the two-window threshold. Earlier reports and archives are retained unchanged.
+
+Command: `audit_final_windows.py --plan experiments/final-windows.json --ledger-root results/raw/final-windows --output-prefix docs/data/final-windows-final-2026-11-19`. The fresh [final JSON](data/final-windows-final-2026-11-19.json) and [CSV](data/final-windows-final-2026-11-19.csv) preserve the unchanged auditor's exit-1 result. It verified all 1,134 frozen files, independently audited both executed observer reports and the new accepted performance report, and identified the sole known missed-ledger defect. It labels window 2 `integrity-failed` because its null Node identity is rejected before its missed status is handled. **The campaign audit did not pass.**
+
+The [closing review](data/final-windows-closing-review-2026-11-19.json) binds this final export to unchanged ledger/report hashes and the previously published 14-check missed-slot review. It reconciles the evidence-supported missed outcome without rewriting the failed export, raw ledger or frozen code. There is no missing executed report and no waiver of a performance acceptance rule. The defect remains a future software repair; the explicit reconciliation accounts for this campaign's evidence. Publication must retain both the failed audit and supplemental review rather than present an unqualified clean-audit claim.
+
+Limits remain one machine, one PDF pair, one renderer/runtime, one synthetic delivery profile, fixed diagnostic-before-performance order, uncontrolled OS/font caches and background load, render-promise completion rather than physical presentation, and body-event accounting rather than unique byte coverage. The reasons for window 1's wider clock interval and window 2's missed delivery are unestablished. Publication verification and shutdown are recorded below when complete.
