@@ -1,0 +1,11 @@
+{
+  "automationId": "finish-pdf-lab-001-fixed-windows",
+  "status": "deleted",
+  "confirmedAtUTC": "2026-11-19T17:12:52.875670+00:00",
+  "confirmation": "Automation tool returned deleteStatus deleted; saved automation configuration is absent.",
+  "reason": "All three measurement slots are terminal; conclusion and download-verified evidence published.",
+  "closingPublicationCommit": "3c68a8f",
+  "acceptedNewPerformanceWindows": "1/3",
+  "aggregateAuditCaveat": "Frozen missed-ledger reporting defect retained and reconciled in closing review.",
+  "preservedFilesVerified": 1134
+}
