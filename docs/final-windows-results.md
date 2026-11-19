@@ -1,6 +1,6 @@
 # Final fixed-window campaign: execution record
 
-Status as of November 19, 17:06 UTC: all three measurement slots are terminal: window 1 rejected, window 2 missed, window 3 independently accepted. **1/3 new performance windows accepted: insufficient accepted evidence for a between-window timing comparison.** Final archive publication is pending verification. The frozen auditor's missed-ledger reporting defect remains disclosed and is reconciled in the closing review without changing code or accepting missed data.
+Closed November 19, after final archive download verification at 17:10 UTC: all three measurement slots are terminal and the requested evidence is published. Window 1 rejected, window 2 missed, window 3 independently accepted. **1/3 new performance windows accepted: insufficient accepted evidence for a between-window timing comparison.** The frozen auditor's missed-ledger reporting defect remains disclosed and is reconciled in the closing review without changing code or accepting missed data.
 
 The prospective protocol is [final-windows.md](final-windows.md), with machine-readable schedule and frozen hashes in [final-windows.json](../experiments/final-windows.json). The existing branch remains `feat/corpus-text-pair`. Protocol commit: `4df7821` (before all new measurements). Parent commit: `942be7b`.
 
@@ -149,3 +149,17 @@ Command: `audit_final_windows.py --plan experiments/final-windows.json --ledger-
 The [closing review](data/final-windows-closing-review-2026-11-19.json) binds this final export to unchanged ledger/report hashes and the previously published 14-check missed-slot review. It reconciles the evidence-supported missed outcome without rewriting the failed export, raw ledger or frozen code. There is no missing executed report and no waiver of a performance acceptance rule. The defect remains a future software repair; the explicit reconciliation accounts for this campaign's evidence. Publication must retain both the failed audit and supplemental review rather than present an unqualified clean-audit claim.
 
 Limits remain one machine, one PDF pair, one renderer/runtime, one synthetic delivery profile, fixed diagnostic-before-performance order, uncontrolled OS/font caches and background load, render-promise completion rather than physical presentation, and body-event accounting rather than unique byte coverage. The reasons for window 1's wider clock interval and window 2's missed delivery are unestablished. Publication verification and shutdown are recorded below when complete.
+
+## Verified final publication
+
+Closing evidence commit: `0ed35d2`. The full local ZIP is 7,456,725 bytes, SHA-256 `c740f758ff7c98ec2449dc9361df6530c29dac1271d9e9919ea09eed187cad52`, exceeding the Notion 5 MiB limit. It was retained locally and split into three complete ZIP parts; no evidence was omitted to fit the limit.
+
+| Part | Bytes | Manifest-listed files | SHA-256 |
+| --- | ---: | ---: | --- |
+| 1: project, original corpus, plan, claim/ledger, logs and audits | 2,743,531 | 153 | `6ccdefa0ff0420d24126d7c2e5df9d4b78448ad54eb42574d19b98c6ad7a30dd` |
+| 2: observer reports, snapshots and images | 3,705,584 | 54 | `ad67d82e40fbafe57724a9da1d54c648eb21f27163facaafe5ec13c4064ab574` |
+| 3: performance reports and snapshots | 1,029,663 | 24 | `4f90c808c0a08e275487afd05eb6a7123e5f5613fc6923a32538821355fad2b8` |
+
+Each part has its own manifest plus the complete expected inventory. All three attachments were saved on the existing Notion campaign page, downloaded and verified at `2026-11-19T17:10:05.378013+00:00`. Exact ZIP sizes/hashes, every per-part file size/hash, and the disjoint combined inventory of 231 files matched. The [final publication receipt](data/final-windows-final-publication-2026-11-19.json) records stable Notion references and verification details. Earlier preparation, window-1 and window-2 archives remain separately available with their original verified receipts.
+
+The final conclusion and publication confirmation are saved on the campaign page and linked from the Lab 001 home. Measurement and requested evidence publication are complete; the scientific conclusion is insufficient accepted evidence. No more measurement is authorized by this campaign. The aggregate frozen-audit failure remains explicitly disclosed; software repair is deferred. The public website is still the previously deployed dated snapshot and needs a separate content publication update; it was not modified by this measurement campaign.

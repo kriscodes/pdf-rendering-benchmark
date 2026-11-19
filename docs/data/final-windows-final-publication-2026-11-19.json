@@ -1,0 +1,44 @@
+{
+  "gitCommit": "0ed35d2cf8464b2468f97fd9071ab3e41147130a",
+  "fullArchiveSHA256": "c740f758ff7c98ec2449dc9361df6530c29dac1271d9e9919ea09eed187cad52",
+  "combinedManifestFiles": 231,
+  "exactDisjointCoverageVerified": true,
+  "parts": [
+    {
+      "part": 1,
+      "path": "/Users/kristian/Documents/labs/pdf-rendering-benchmark/results/raw/final-windows/publication/window-3-evidence-part-1.zip",
+      "bytes": 2743531,
+      "sha256": "6ccdefa0ff0420d24126d7c2e5df9d4b78448ad54eb42574d19b98c6ad7a30dd",
+      "manifestFiles": 153,
+      "stableNotionFile": "notion-file-block://41de9784-8806-81a4-ae9e-fa32979fb613/407bde8e-4760-46cc-bf21-e0b38dba5320?space_id=096e05a5-b0ae-459a-9d0f-8fe43646f54d&name=pdf-lab-001-final-window-3-part-1.zip",
+      "downloadPath": "/Users/kristian/Documents/labs/pdf-rendering-benchmark/results/raw/final-windows/publication/window-3-part-1-download-verified.zip",
+      "downloadVerification": "passed"
+    },
+    {
+      "part": 2,
+      "path": "/Users/kristian/Documents/labs/pdf-rendering-benchmark/results/raw/final-windows/publication/window-3-evidence-part-2.zip",
+      "bytes": 3705584,
+      "sha256": "ad67d82e40fbafe57724a9da1d54c648eb21f27163facaafe5ec13c4064ab574",
+      "manifestFiles": 54,
+      "stableNotionFile": "notion-file-block://41de9784-8806-814d-bead-d4573f814312/c659c0d7-82c5-4efd-91e8-7ddaee415bcc?space_id=096e05a5-b0ae-459a-9d0f-8fe43646f54d&name=pdf-lab-001-final-window-3-part-2.zip",
+      "downloadPath": "/Users/kristian/Documents/labs/pdf-rendering-benchmark/results/raw/final-windows/publication/window-3-part-2-download-verified.zip",
+      "downloadVerification": "passed"
+    },
+    {
+      "part": 3,
+      "path": "/Users/kristian/Documents/labs/pdf-rendering-benchmark/results/raw/final-windows/publication/window-3-evidence-part-3.zip",
+      "bytes": 1029663,
+      "sha256": "4f90c808c0a08e275487afd05eb6a7123e5f5613fc6923a32538821355fad2b8",
+      "manifestFiles": 24,
+      "stableNotionFile": "notion-file-block://41de9784-8806-81a0-adfa-f113ab796e84/7d715f36-7189-4789-bf93-7ceebee2b159?space_id=096e05a5-b0ae-459a-9d0f-8fe43646f54d&name=pdf-lab-001-final-window-3-part-3.zip",
+      "downloadPath": "/Users/kristian/Documents/labs/pdf-rendering-benchmark/results/raw/final-windows/publication/window-3-part-3-download-verified.zip",
+      "downloadVerification": "passed"
+    }
+  ],
+  "verifiedAtUTC": "2026-11-19T17:10:05.378013+00:00",
+  "downloadVerification": "passed",
+  "combinedCoverage": "231 distinct manifest-listed files, all entries and bytes verified; no missing or duplicate evidence",
+  "page": "https://app.notion.com/p/41ce9784880681ca958ac1a6484f4eb2",
+  "campaignOutcome": "1/3 accepted new performance windows; insufficient accepted evidence for between-window comparison",
+  "aggregateFrozenAudit": "failed with disclosed missed-ledger defect; supplemental closing review retained"
+}
