@@ -47,5 +47,3 @@ The separate [source security review](security-review-2026-11-18.md) identified 
 Additional security findings must be recorded with their evidence and status. This page makes no claim about dependency vulnerability status, remote CI execution or a clean security scan. Frozen source changes, header additions, naming improvements and modularization remain unimplemented until campaign finalization and an explicitly reviewed follow-up change.
 
 ## Published record
-
-The [Lab 001 quality and security page](https://app.notion.com/p/41ce9784880681eebe16c66a29162bbc) contains this review, the security assessment, and the quality-tool guide. Its evidence archive contains all 130 tracked project files at commit `a4543b8a955d12ccabca6966b1ad2149ca7f019c` and all eleven retained validation logs, plus a per-file manifest. Download verification confirmed the archive checksum, exact inventory and all 141 file hashes. The [publication receipt](data/code-quality-publication-2026-11-18.json) records its stable Notion attachment reference and scope. This publication note and receipt were added afterward to avoid a circular archive reference.

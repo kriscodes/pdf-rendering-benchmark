@@ -15,7 +15,6 @@ Their timings are not pooled or compared with the earlier performance baseline.
 The [declared protocol](partial-loading-local.md) and
 [experiment JSON](../experiments/partial-loading-local.json) specify the controls.
 The result is also documented in the lab's
-[partial-loading detail page](https://app.notion.com/p/41ce978488068166a4a7d41aa7b3e914).
 
 ## Executions and source provenance
 
@@ -135,12 +134,12 @@ passed; see the [audit record](data/partial-loading-audit-2026-11-17.json).
 
 Both runs used Apple M2, eight logical CPUs, 8 GiB memory, macOS/Darwin 24.6.0
 arm64, Node 24.22.1, PDF.js 5.6.205, Playwright 1.62.1, qpdf 12.4.2, and Chromium
-151.0.7922.34, without an executable override. The session used pnpm 11.25.0;
+151.0.7922.34, without an executable override. The runs used pnpm 11.25.0;
 declared Node 24.22.3 and pnpm 11.28.12 remain unverified. No package script or
 dependency version changed for this diagnostic.
 
 ```sh
-export PATH="/Users/kristian/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin:$PATH"
+# Select the Node version recorded for this experiment before running commands.
 export pnpm_config_verify_deps_before_run=false
 pnpm --filter @pdf-benchmark/runner build
 node packages/runner/dist/partial-loading.js

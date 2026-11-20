@@ -104,14 +104,14 @@ commands used installed pnpm 11.25.0 and Python 3.13.18. Dependencies, PDF bytes
 benchmark source, settings, and calibration thresholds were not changed.
 
 ```sh
-export PATH="/Users/kristian/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin:$PATH"
+# Select the Node version recorded for this experiment before running commands.
 export pnpm_config_verify_deps_before_run=false
 pnpm test
 pnpm typecheck
 .venv/bin/python -m unittest discover -s packages/runner/scripts -p 'test_*.py' -v
 .venv/bin/python packages/runner/scripts/run_delivery_replicates.py \
   --plan experiments/controlled-delivery-replication.json \
-  --node /Users/kristian/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node
+  --node "$(command -v node)"
 .venv/bin/python packages/runner/scripts/compare_delivery_replicates.py \
   --plan experiments/controlled-delivery-replication.json \
   --ledger results/raw/controlled-delivery-replication/batch-z0z3m48b/ledger.json \

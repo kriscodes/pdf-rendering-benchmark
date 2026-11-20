@@ -32,5 +32,4 @@ general linearization speed benefit.
 The [four-run repeatability comparison](docs/first-page-repeatability-2026-11-17.md)
 retains every measured trial and excluded warmup from the original pilot and
 three unchanged repeats. All runs passed, but timing varied between sessions.
-The [PDF Rendering Lab 001 notebook](https://app.notion.com/p/41ce9784880681528bc3c71d28407372)
 collects the protocol, work log, results, and evidence under Labs.

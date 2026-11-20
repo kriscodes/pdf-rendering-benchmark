@@ -28,8 +28,8 @@ from `.nvmrc` (24.22.3) and the declared pnpm version (11.28.12); the exact decl
 JavaScript toolchain was not verified.
 
 ```sh
-# Local runtime selection for this session only.
-export PATH="/Users/kristian/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin:$PATH"
+# Select the recorded runtime for reproduction.
+# Select the Node version recorded for this experiment before running commands.
 
 pnpm typecheck
 pnpm build
@@ -77,7 +77,7 @@ single-channel one-pixel difference.
 ## Evidence and environment
 
 The successful local report is
-[`report.json`](../results/raw/corpus-validation/run-d0i4b2xy/report.json), with six
+`../results/raw/corpus-validation/run-d0i4b2xy/report.json`, with six
 PNGs in its `samples/` directory. The initial failed report remains in
 `results/raw/corpus-validation/run-_kzbuor4/`. Generated evidence is ignored by
 Git and will not exist in a fresh clone; rerun the documented command to produce
