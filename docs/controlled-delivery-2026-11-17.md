@@ -158,9 +158,9 @@ pnpm 11.28.12 versions were not exercised. Python analysis used the existing
 `.venv` (Python 3.13.18). No dependency versions or lockfiles were changed.
 
 ```sh
-# Use the installed Node 24 runtime; this session-only pnpm override avoids
+# Use the installed Node 24 runtime; the recorded pnpm override avoids
 # an automatic dependency reinstall. Existing frozen dependencies are retained.
-export PATH="/Users/kristian/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin:$PATH"
+# Select the Node version recorded for this experiment before running commands.
 export pnpm_config_verify_deps_before_run=false
 pnpm test
 pnpm typecheck

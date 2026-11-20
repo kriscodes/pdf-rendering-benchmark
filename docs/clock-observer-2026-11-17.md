@@ -86,7 +86,7 @@ The CSV retains all 36 scheduled rows, separate operational/clock/classification
 The installed runtime was Node 24.22.1, pnpm 11.25.0, Python 3.13.18, Playwright 1.62.1 and Chromium 151.0.7922.34 on Darwin 24.6.0 arm64, Apple M2, 8 logical CPUs and 8 GiB RAM. Repository-declared Node 24.22.3 and pnpm 11.28.12 remain unexercised. PDF.js 5.6.205 is preserved but not loaded by this diagnostic.
 
 ```sh
-export PATH="/Users/kristian/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin:$PATH"
+# Select the Node version recorded for this experiment before running commands.
 export pnpm_config_verify_deps_before_run=false
 pnpm test
 pnpm typecheck

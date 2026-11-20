@@ -7,8 +7,6 @@ warmup trials**, across four runs. This is a descriptive repeatability check on
 one machine, not a statistical-significance test or a general linearization speed
 claim.
 
-The lab home is [PDF Rendering Lab 001](https://app.notion.com/p/41ce9784880681528bc3c71d28407372),
-under [Labs](https://app.notion.com/p/41ce97848806810fac45d7c2520d5b10).
 The implementation is recorded in commit `1e9d25a`,
 `Build corpus validation and local first-page benchmark`, on the unchanged
 `feat/corpus-text-pair` branch. This record adds observations without changing the
@@ -118,7 +116,7 @@ first-page review rather than inspection of every browser-rendered document page
 
 ## Missing-artifact recovery before the repeats
 
-At the start of this session, both generated PDFs were absent from
+Before these repeat runs, both generated PDFs were absent from
 `corpus/generated/pilot/`, while the original manifest remained. The reason for
 their absence is unknown. The unchanged generator reconstructed the pair in
 `results/raw/corpus-validation/restore-lrdr5evj/`. Its source hash and complete
@@ -144,15 +142,15 @@ fields also match those in the retained manifest.
 All four reports identify Apple M2, eight logical CPUs, 8 GiB memory,
 macOS/Darwin 24.6.0 arm64, Node 24.22.1, PDF.js 5.6.205, Playwright 1.62.1,
 qpdf 12.4.2, and Chromium Headless Shell 151.0.7922.34, revision 1234, without
-an executable override. The session used pnpm 11.25.0. The declared Node
+an executable override. The runs used pnpm 11.25.0. The declared Node
 24.22.3 and pnpm 11.28.12 remain unverified; the actual Node satisfies the
 24.x engine constraint.
 
-The same session-only runtime selection and pnpm pre-run-check setting as the
+The same runtime selection and pnpm pre-run-check setting as the
 original execution were used:
 
 ```sh
-export PATH="/Users/kristian/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin:$PATH"
+# Select the Node version recorded for this experiment before running commands.
 export pnpm_config_verify_deps_before_run=false
 
 # Reconstruct into a separate directory; verify identities before restoring PDFs.
@@ -172,7 +170,7 @@ git diff --check
 Workspace typecheck and all **37 tests (22 corpus + 15 runner)** passed on
 November 17. Each benchmark command builds the runner before measurement; build
 time is excluded. The restoration command above records the directory used in
-this session; ordinary benchmark runs read existing validated inputs and do not
+these repeat runs; ordinary benchmark runs read existing validated inputs and do not
 regenerate them. The restoration itself did not rerun the all-page Poppler
 comparison; it recovered the exact previously validated PDF bytes.
 

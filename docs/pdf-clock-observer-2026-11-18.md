@@ -112,7 +112,7 @@ Both independent audits confirmed all 96 retained full-document hashes/lengths, 
 Runtime: Node 24.22.1, pnpm 11.25.0, Python 3.13.18, PDF.js 5.6.205, Playwright 1.62.1, Chromium 151.0.7922.34 and qpdf 12.4.2 on Darwin 24.6.0 arm64, Apple M2, 8 logical CPUs, 8 GiB RAM. Repository-declared Node 24.22.3 and pnpm 11.28.12 remain unexercised. No dependencies were changed.
 
 ```sh
-export PATH="/Users/kristian/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin:$PATH"
+# Select the Node version recorded for this experiment before running commands.
 export pnpm_config_verify_deps_before_run=false
 pnpm test
 pnpm typecheck

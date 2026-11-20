@@ -38,8 +38,6 @@ The [four-run comparison](docs/first-page-repeatability-2026-11-17.md) retains a
 
 [GitHub quality checks](https://github.com/kriscodes/pdf-rendering-benchmark/actions/runs/44362585984) passed for the merged feature head. Eleven frozen lint findings remain visible, and the [source security review](docs/security-review-2026-11-18.md) documents a conditional shared-temporary-file issue with a safe invocation and deferred repair. This local controlled-corpus harness is not a public upload service.
 
-The [PDF Rendering Lab 001 notebook](https://app.notion.com/p/41ce9784880681528bc3c71d28407372) collects protocols, work logs, results and verified evidence under Labs.
-
 ## Relationship to Engineering Lab
 
 [Engineering Lab](https://lab.kristiansalmeron.com/) is the publication home for research questions, methods and findings. Its [source repository](https://github.com/kriscodes/lab) is separate from this benchmark workspace.

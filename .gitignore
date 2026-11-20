@@ -175,3 +175,14 @@ __pycache__/
 
 # Generated PDF corpus and local validation artifacts
 /corpus/generated/
+
+# Local tooling and working records
+[Aa][Gg][Ee][Nn][Tt].md
+[Aa][Gg][Ee][Nn][Tt][Ss].md
+[Cc][Ll][Aa][Uu][Dd][Ee].md
+.agents/
+.claude/
+.codex/
+.openai/
+docs/verification/
+docs/reviews/
