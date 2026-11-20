@@ -28,7 +28,7 @@ If runtime, branch, frozen-file integrity, exclusive execution, or process clean
 2. Invoke the unchanged `packages/runner/dist/pdf-clock-observer.js` with a new output directory. Preserve its fixed 3 sessions × 4 Williams blocks × 4 conditions × 2 adjacent observer arms: 96 diagnostic trials. Keep all records, operational outcomes, session guards, nested three-bracket reference and fifteen-bracket candidate results. Clock rejection alone follows that runner's existing continuation rule.
 3. Verify process cleanup and frozen inputs. Invoke the unchanged `packages/runner/dist/controlled-delivery.js` with a separate new output directory. Preserve 16 warmups + 48 measured trials, the original three-bracket observer, strict 5 ms boundary gate, and original pre/post controls. Its existing early rejection behavior stays unchanged.
 4. Verify cleanup and frozen inputs again. Retain raw reports, console output, reports' source snapshots, images, timestamps, process exit and timeout status, and checksums. Audit after measurement, without intentional concurrent tests, builds, uploads, or other benchmark campaigns.
-5. Independently audit each report and append the window outcome to Lab 001. Commit the new protocol, tooling, result exports, and documentation in meaningful steps. Ignored raw evidence is published as checksum-verified Notion attachments; earlier published archives remain available.
+5. Independently audit each report and append the window outcome to Lab 001. Retain the original protocol, result exports, and checksum-verified raw evidence for reproducibility.
 
 Maximum scheduled work: 288 integration trials and 192 performance trials across three windows. Early failures can reduce attempted counts; the maximum is not a quota to fill.
 
@@ -60,12 +60,12 @@ Local scheduled execution depends on the desktop app, machine and required tools
 
 ## Execution commands
 
-Run from `/Users/kristian/Documents/labs/pdf-rendering-benchmark`. No rebuild or dependency installation is part of a measurement window; use preserved compiled files.
+Run from the repository root. No rebuild or dependency installation is part of a measurement window; use preserved compiled files.
 
 ```sh
 .venv/bin/python packages/runner/scripts/run_final_windows.py \
   --plan experiments/final-windows.json \
-  --node /Users/kristian/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node \
+  --node "$(command -v node)" \
   --window 1
 ```
 

@@ -14,13 +14,7 @@ The prospective protocol is [final-windows.md](final-windows.md), with machine-r
 
 All intervals include their opening and exclude their closing. Each suite contains the frozen 96-trial observer integration diagnostic followed by one frozen 64-trial performance attempt, subject to each runner's original rejection behavior. No replacements or catch-up measurements are allowed. Later window outcomes must be appended without deleting earlier progress exports.
 
-The local app heartbeat `finish-pdf-lab-001-fixed-windows` was created and its saved configuration verified on November 18, before the first window. It targets this existing chat, with three occurrences at local 09:00/15:00 beginning today. Its prompt gives the absolute UTC deadlines, ledger checks, no-retry rule, audit/publication instructions and final stopping rule. The saved configuration is evidence of scheduling, not proof that any future wakeup or measurement executed. Execution requires the local machine/app/tools to be available; missed windows stay missed.
-
 Reporting target: November 19, 11:00 Pacific (19:00 UTC). Measurements end after the third fixed slot; delayed publication may continue without authorizing additional measurements. The final record must distinguish completed procedure from insufficient accepted performance evidence.
-
-## Notion record
-
-The [final campaign page](https://app.notion.com/p/41ce9784880681ca958ac1a6484f4eb2) is a child of [PDF Rendering Lab 001](https://app.notion.com/p/41ce9784880681528bc3c71d28407372). The prospective protocol and pending table were published before measurement. The Lab 001 home has an added status callout; prior findings remain intact. An attempted replacement of the historical callout was automatically rejected; an additive status update succeeded, resolving the issue without removing historical content.
 
 ## Preparation validation — November 18, before 09:00 Pacific
 
@@ -44,11 +38,11 @@ Calling the actual launcher for window 1 before 17:00 UTC returned `not-open` (e
 
 Review found that Playwright launches Chromium in a separate process group. The launcher therefore checks both the runner group and protected browser processes after execution; a successful Node exit alone is not cleanup proof. Unverified cleanup blocks subsequent execution and archival of potentially changing raw files. The independent auditor checks these recorded facts separately from the completion flag.
 
-The preparation archive was published to the final campaign's Notion page and downloaded for verification before the first measurement window. It contains the project at `249a0cd`, original PDFs/manifest, protocol, frozen plan, launcher/auditor/tests, and preflight exports: 115 manifest-listed files plus the manifest. The ZIP is 597,436 bytes; SHA-256 `8028ed9a73cb8788f07dc33411525306991dde1cfbcf880da6632bd9299050b4`. Downloaded ZIP bytes, exact entry inventory, and every listed file's size/hash match. The [publication receipt](data/final-windows-preparation-publication-2026-11-18.json) records its stable Notion reference. This archive contains preparation evidence only, not new benchmark measurements.
+The preparation archive was verified before the first measurement window. It contains the project at `249a0cd`, original PDFs/manifest, protocol, frozen plan, launcher/auditor/tests, and preflight exports: 115 manifest-listed files plus the manifest. The ZIP is 597,436 bytes; SHA-256 `8028ed9a73cb8788f07dc33411525306991dde1cfbcf880da6632bd9299050b4`. Downloaded ZIP bytes, exact entry inventory, and every listed file's size/hash match. This archive contains preparation evidence only, not new benchmark measurements.
 
 ## Window 1 — November 18, 09:03–09:06 Pacific
 
-The suite started from the active chat within its declared interval: `2026-11-18T17:03:06.042535+00:00` to `17:06:25.687193+00:00`. This establishes an on-time launcher execution, not proof of automatic scheduler delivery. Its irreversible claim is retained. No replacement invocation was made.
+The suite started within its declared interval: `2026-11-18T17:03:06.042535+00:00` to `17:06:25.687193+00:00`. This establishes an on-time launcher execution, not proof of automatic scheduler delivery. Its irreversible claim is retained. No replacement invocation was made.
 
 The observer diagnostic collected all 96 trials; all 96 workloads and 144 clock analyses passed. All six pre/post control stages passed, and all 48 adjacent arm pairs were independently comparable. There were zero candidate-only clock acceptance gains among the 48 valid high-arm executions. Fifteen minus three brackets had paired medians of +8.359 ms for collection, +3.350 ms from render to verification, and +5.500 ms for first-page render (range −79.400 to +31.600 ms). These are instrumentation observations, not performance replication or evidence of equivalence.
 
@@ -67,36 +61,4 @@ The invocation used the protocol's exact `run_final_windows.py --window 1` comma
 
 Lightweight documentation reads and security-tool administration occurred during the suite. Source-review workers and quality verification started after it finished. This was not a controlled idle-machine run, and no causal explanation for the clock-width rejection is inferred from these activities.
 
-Window 1 was committed as `625d4bb`. Its evidence ZIP was published to Notion and downloaded for verification: 5,184,064 bytes, SHA-256 `c936fcbabb1a20b626dd08f788561d3742c70815d0c24e2ca3080e3565053e5b`, with 203 manifest-listed files plus the manifest. The downloaded archive and every file size/hash match. The [publication receipt](data/final-windows-window-1-publication.json) contains the stable file reference. This ZIP is close to the workspace's 5 MiB limit; later bundles may need separate complete ZIP parts with per-part manifests and verified combined coverage. A large archive is not a reason to change or repeat a measurement.
-
-## Continuing a scheduled window
-
-Read the protocol, plan and existing claim/ledger first. The launcher owns the durable once-only admission check. It must never be bypassed with a direct runner invocation to repair an unfavorable, interrupted, blocked or missed result.
-
-```sh
-.venv/bin/python packages/runner/scripts/run_final_windows.py \
-  --plan experiments/final-windows.json \
-  --node /Users/kristian/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node \
-  --window 1
-```
-
-Use the appropriate fixed ordinal. During measurements, avoid concurrent tests, builds, uploads and other benchmark campaigns. Audit afterward using a new output prefix:
-
-```sh
-.venv/bin/python packages/runner/scripts/audit_final_windows.py \
-  --plan experiments/final-windows.json \
-  --ledger-root results/raw/final-windows \
-  --output-prefix docs/data/final-windows-progress-window-1
-```
-
-Commit exports and the updated record before packaging. Package each window separately to keep attachments below the workspace's 5 MiB limit:
-
-```sh
-.venv/bin/python packages/runner/scripts/package_final_window.py \
-  --window 1 \
-  --output results/raw/final-windows/publication/window-1-evidence.zip
-```
-
-Do not overwrite existing ZIPs. If a new edition is needed, name it explicitly and preserve the earlier file. The package contains the selected window's raw files, the committed project, original PDFs/manifest, and a per-file SHA-256 manifest. Runtime binaries and older raw archives are referenced by preserved hashes rather than redistributed. Upload with the Notion file-upload tools, attach to the existing campaign page, download the saved attachment, verify ZIP bytes and every manifest entry, then save and commit a publication receipt. Do not include a receipt in the archive it hashes.
-
-After the final slot, audit all three ledgers into a fresh final export; retain earlier progress exports. Publish the final accepted-window count, separate accepted-run contrasts, failure reasons, clock/operation distinctions, limitations, archive checks and closing commits. Disable the campaign heartbeat after finalization. No broad benchmark completion or performance-repeatability claim is authorized by this work.
+Window 1 was committed as `625d4bb`. Its evidence ZIP was verified: 5,184,064 bytes, SHA-256 `c936fcbabb1a20b626dd08f788561d3742c70815d0c24e2ca3080e3565053e5b`, with 203 manifest-listed files plus the manifest. The downloaded archive and every file size/hash match.

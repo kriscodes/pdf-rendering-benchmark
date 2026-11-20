@@ -86,7 +86,7 @@ the bundled Node 24.x runtime. Dependency resolution and frozen installation
 succeeded against the updated lockfile with lifecycle scripts disabled:
 
 ```sh
-export PATH="/Users/kristian/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin:$PATH"
+# Select the Node version recorded for this experiment before running commands.
 pnpm install --lockfile-only --ignore-scripts --fetch-retries=0 --fetch-timeout=15000
 CI=true pnpm install --frozen-lockfile --ignore-scripts --fetch-retries=0 --fetch-timeout=15000
 node packages/runner/node_modules/playwright/cli.js install chromium --only-shell
@@ -131,7 +131,7 @@ failed run remains at `results/raw/first-page-local/run-zeoSxt/report.json`.
 ## Evidence and remaining coverage
 
 The complete machine-readable evidence is
-[`report.json`](../results/raw/first-page-local/run-e3Sman/report.json), with the
+`../results/raw/first-page-local/run-e3Sman/report.json`, with the
 two PNGs under its `samples/` directory. Its SHA-256 is
 `483c454a0c28adfdc73dbf5e28069c8348389294003a66f96d15ddc9d76d19d4`.
 It contains unrounded timings including all warmups, request logs, input and

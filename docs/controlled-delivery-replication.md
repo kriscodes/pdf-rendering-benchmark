@@ -89,7 +89,7 @@ independent machines or cross-day replications.
 ```sh
 .venv/bin/python packages/runner/scripts/run_delivery_replicates.py \
   --plan experiments/controlled-delivery-replication.json \
-  --node /Users/kristian/.cache/codex-runtimes/codex-primary-runtime/dependencies/node/bin/node
+  --node "$(command -v node)"
 
 .venv/bin/python packages/runner/scripts/compare_delivery_replicates.py \
   --plan experiments/controlled-delivery-replication.json \
